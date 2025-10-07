@@ -2,12 +2,12 @@
   <!-- Background gradient -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#12385D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3BB8A4;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00C2FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#3BB8A4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A7E3F2;stop-opacity:1" />
     </linearGradient>
     <!-- Shield icon path -->
     <path id="shield" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,7 +38,7 @@
     </text>
     
     <!-- Seniors text -->
-    <text x="0" y="90" text-anchor="middle" fill="#00C2FF" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" letter-spacing="2px">
+    <text x="0" y="90" text-anchor="middle" fill="#3BB8A4" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" letter-spacing="2px">
       Seniors
     </text>
     

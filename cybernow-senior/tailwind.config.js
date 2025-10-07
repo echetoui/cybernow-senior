@@ -26,10 +26,30 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: '#f0f5f9',
+          100: '#dde8f2',
+          200: '#b8d1e6',
+          300: '#8fb3d6',
+          400: '#6691c2',
+          500: '#12385D',
+          600: '#0f2e4d',
+          700: '#0c253e',
+          800: '#081c2e',
+          900: '#05131f',
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          50: '#f0fdf9',
+          100: '#dcfcf0',
+          200: '#bbf7e1',
+          300: '#8aeeca',
+          400: '#52ddb0',
+          500: '#3BB8A4',
+          600: '#2d9985',
+          700: '#247a6b',
+          800: '#1e6157',
+          900: '#1a5049',
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -51,45 +71,27 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom brand colors for CyberNow Seniors
-        brand: {
-          DEFAULT: '#0A2540',
-          50: '#f1f6fb',
-          100: '#e5eef6',
-          200: '#cfdded',
-          500: '#0A2540',
-          600: '#092135',
-          700: '#071c2a',
-          800: '#06171f',
-          900: '#051215',
-        },
-        'accent-cyan': {
-          DEFAULT: '#00C2FF',
-          50: '#f0fbff',
-          100: '#e0f7ff',
-          200: '#b3edff',
-          500: '#00C2FF',
-          600: '#00a8e6',
-          700: '#008fcc',
-          800: '#0076b3',
-          900: '#005d99',
-        },
-        danger: {
-          DEFAULT: '#D92D20',
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          500: '#D92D20',
-          600: '#c32621',
-          700: '#ad1f1c',
-          800: '#971917',
-          900: '#801412',
+        // CyberNow Seniors Custom Colors
+        info: {
+          DEFAULT: '#A7E3F2',
+          50: '#f0fdfe',
+          100: '#ccf7fe',
+          200: '#A7E3F2',
+          300: '#67d8ea',
+          400: '#22bdd4',
+          500: '#06a2ba',
+          600: '#08829c',
+          700: '#0e687e',
+          800: '#155569',
+          900: '#164758',
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        // Design tokens rayons
+        'cybernow': '12px',
       },
       keyframes: {
         "accordion-down": {
@@ -109,11 +111,33 @@ module.exports = {
         'body': ['18px', { lineHeight: '1.6' }],
         'xl-button': ['20px', { lineHeight: '1.4' }],
       },
+      spacing: {
+        // Design tokens espacements CyberNow
+        '2': '8px',
+        '3': '12px', 
+        '4': '16px',
+        '6': '24px',
+        '8': '32px',
+        '12': '48px',
+        '16': '64px',
+      },
+      boxShadow: {
+        // Design tokens ombres
+        'cybernow': '0 6px 24px rgba(18, 56, 93, 0.10)',
+      },
+      backgroundImage: {
+        // Gradient CTA CyberNow
+        'gradient-cta': 'linear-gradient(135deg, #12385D, #3BB8A4)',
+      },
       minHeight: {
         'touch': '44px',
       },
       minWidth: {
         'touch': '44px',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-sora)', 'system-ui', 'sans-serif'],
       }
     },
   },

@@ -43,9 +43,9 @@ const sizeConfig = {
 
 const variantConfig = {
   default: {
-    icon: 'text-brand',
-    cybernow: 'text-brand',
-    seniors: 'text-foreground'
+    icon: 'text-primary',
+    cybernow: 'text-primary',
+    seniors: 'text-secondary'
   },
   white: {
     icon: 'text-white',
@@ -53,9 +53,9 @@ const variantConfig = {
     seniors: 'text-white/90'
   },
   dark: {
-    icon: 'text-slate-900',
-    cybernow: 'text-slate-900',
-    seniors: 'text-slate-700'
+    icon: 'text-primary',
+    cybernow: 'text-primary',
+    seniors: 'text-secondary'
   }
 };
 
@@ -97,7 +97,7 @@ export function Logo({
           <span className={cn(
             sizeClasses.cybernow,
             variantClasses.cybernow,
-            'tracking-wide font-extrabold'
+            'tracking-wide font-heading font-bold'
           )}>
             CYBERNOW
           </span>
@@ -105,7 +105,7 @@ export function Logo({
           <span className={cn(
             sizeClasses.seniors,
             variantClasses.seniors,
-            'tracking-wide -mt-1'
+            'tracking-wide -mt-1 font-heading font-semibold'
           )}>
             Seniors
           </span>

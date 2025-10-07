@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { Inter, Sora } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -12,6 +12,14 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  weight: ['400', '500'],
+});
+
+const sora = Sora({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sora',
+  weight: ['600', '700'],
 });
 
 interface LayoutProps {
@@ -118,7 +126,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const organizationSchema = generateSchema('Organization', {});
 
   return (
-    <html lang={locale} className={inter.variable}>
+    <html lang={locale} className={`${inter.variable} ${sora.variable}`}>
       <head>
         {/* Schema.org structured data */}
         {organizationSchema && (

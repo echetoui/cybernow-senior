@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --radius: 1rem;
+  --radius: 12px; /* Design token rayon CyberNow */
   
-  /* Base colors optimized for seniors accessibility */
-  --background: 0 0% 100%;
-  --foreground: 222 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222 84% 4.9%;
+  /* CyberNow Seniors Design Tokens */
+  --background: 44 21% 97%; /* #FAF9F5 Beige doux */
+  --foreground: 222 84% 4.9%; /* #0F172A Text */
+  --card: 0 0% 100%; /* #FFFFFF Surface */
+  --card-foreground: 222 84% 4.9%; /* #0F172A */
   --popover: 0 0% 100%;
   --popover-foreground: 222 84% 4.9%;
-  --primary: 222 47% 11%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 210 40% 96%;
+  --primary: 209 69% 22%; /* #12385D Deep Blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 170 52% 48%; /* #3BB8A4 Teal */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 44 21% 97%; /* Background beige */
   --muted-foreground: 215 16% 47%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222 47% 11%;
+  --accent: 192 81% 80%; /* #A7E3F2 Sky */
+  --accent-foreground: 222 84% 4.9%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --ring: 222 47% 11%;
+  --ring: 209 69% 22%; /* Primary */
 }
 
 .dark {
@@ -68,13 +68,15 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     font-size: 18px;
     line-height: 1.6;
+    font-weight: 400;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    font-family: var(--font-sora), system-ui, sans-serif;
+    font-weight: 600;
     line-height: 1.2;
   }
   
