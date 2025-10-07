@@ -21,6 +21,7 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        "ring": "#A7E3F2", // Pour focus-visible:ring-ring
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

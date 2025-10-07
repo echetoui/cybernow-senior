@@ -6,15 +6,16 @@ import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
 const buttonVariants = cva(
-  // Base styles - accessibilité seniors + design tokens
+  // Base styles modernes - style data-slot optimisé
   [
-    "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl",
-    "font-medium transition-all duration-200 ease-in-out",
-    "focus:outline-none focus-visible:ring-2 focus-visible:ring-cnw-info/80",
-    "focus-visible:ring-offset-2 focus-visible:ring-offset-white",
-    "dark:focus-visible:ring-offset-neutral-900",
+    "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-cybernow",
+    "text-sm font-medium transition-all",
     "disabled:pointer-events-none disabled:opacity-50",
-    "motion-safe:hover:transition-all motion-safe:active:transition-all",
+    "[&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4",
+    "shrink-0 [&_svg]:shrink-0",
+    "outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+    "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+    "has-[>svg]:px-3",
     // Respect prefers-reduced-motion
     "motion-reduce:transition-none motion-reduce:hover:transform-none motion-reduce:active:transform-none",
   ],
@@ -22,42 +23,33 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: [
-          "bg-cnw-gradient text-white shadow-cnw-button",
+          "shadow-cybernow bg-cnw-gradient text-white",
           "hover:bg-cnw-gradient-hover hover:shadow-lg",
           "motion-safe:active:scale-[0.98]",
-          "dark:hover:shadow-cnw-button/50",
         ],
         secondary: [
-          "border-2 border-cnw-primary text-cnw-primary bg-white",
-          "hover:border-cnw-secondary hover:text-cnw-secondary hover:bg-cnw-info/10",
-          "active:bg-cnw-info/20",
-          "dark:bg-neutral-900 dark:hover:bg-neutral-800",
+          "shadow-cybernow bg-secondary text-secondary-foreground",
+          "hover:bg-secondary/80",
+          "border border-secondary",
         ],
         ghost: [
           "bg-transparent text-cnw-primary",
           "hover:bg-cnw-info/10 hover:text-cnw-primary",
-          "active:bg-cnw-info/20",
-          "dark:text-cnw-info dark:hover:bg-cnw-info/10",
         ],
         link: [
           "text-cnw-primary underline underline-offset-4",
           "hover:text-cnw-secondary hover:no-underline",
-          "active:text-cnw-primary/80",
-          "dark:text-cnw-info dark:hover:text-cnw-secondary",
         ],
       },
       size: {
         sm: [
-          "h-10 px-4 text-cnw-sm min-h-[2.5rem]", // 40px min
-          "gap-1.5",
+          "h-9 px-4 py-2 min-h-11", // Style moderne optimisé
         ],
         md: [
-          "h-12 px-6 text-cnw-md min-h-[3rem]", // 48px min - défaut ≥18px
-          "gap-2",
+          "h-12 px-6 py-3 min-h-12", // Taille confortable seniors
         ],
         lg: [
-          "h-14 px-7 text-cnw-lg min-h-[3.5rem]", // 56px min
-          "gap-2.5",
+          "h-14 px-8 py-4 min-h-14", // Grande taille pour CTA
         ],
       },
       iconPosition: {
@@ -130,6 +122,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
+        data-slot="button"
         className={cn(buttonVariants({ variant, size, iconPosition, className }))}
         ref={ref}
         disabled={isDisabled}

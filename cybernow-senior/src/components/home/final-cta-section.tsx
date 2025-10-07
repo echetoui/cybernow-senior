@@ -1,10 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { MessageCircle } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { ColoredIcon } from '@/components/ui/ColoredIcon';
+import { CTAButtons } from '@/components/ui/CTAButtons';
 
 export function FinalCtaSection() {
   const t = useTranslations();
@@ -27,31 +24,11 @@ export function FinalCtaSection() {
             {t('home.cta.subtitle')}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="min-h-14 px-8 text-xl-button bg-white text-primary hover:bg-white/90 focus-visible:outline-white"
-            >
-              <a href={`tel:${t('common.phone')}`}>
-                <ColoredIcon name="phone" size="sm" className="mr-3" />
-                {t('buttons.callNow')}
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="min-h-14 px-8 text-xl-button border-white text-white hover:bg-white hover:text-primary focus-visible:outline-white"
-            >
-              <Link href="/contact">
-                <MessageCircle className="h-5 w-5 mr-3" aria-hidden="true" />
-                {t('buttons.contactUs')}
-              </Link>
-            </Button>
-          </div>
+          <CTAButtons 
+            size="lg"
+            layout="horizontal"
+            className="max-w-lg mx-auto"
+          />
 
           <div className="mt-8 text-sm text-white/80">
             <p>{t('contact.phoneInfo.schedule')}</p>

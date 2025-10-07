@@ -1,10 +1,8 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Phone, ArrowRight } from 'lucide-react';
 import { ColoredIcon } from '@/components/ui/ColoredIcon';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { CTAButtons } from '@/components/ui/CTAButtons';
 import { Logo } from '@/components/ui/logo';
 
 export function HeroSection() {
@@ -54,30 +52,13 @@ export function HeroSection() {
             {t('home.hero.subtitle')}
           </p>
 
-          {/* Primary Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              asChild
+          {/* Primary Actions - Style moderne avec data-slot */}
+          <div className="mb-12">
+            <CTAButtons 
               size="lg"
-              className="min-h-14 px-8 text-xl-button bg-gradient-cta hover:bg-gradient-cta/90 focus-visible:outline-primary"
-            >
-              <a href={`tel:${t('common.phone')}`}>
-                <Phone className="h-5 w-5 mr-3" aria-hidden="true" />
-                {t('buttons.callNow')}
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="min-h-14 px-8 text-xl-button border-primary text-primary hover:bg-gradient-cta hover:text-white focus-visible:outline-primary"
-            >
-              <Link href="/contact">
-                {t('buttons.getCallback')}
-                <ArrowRight className="h-5 w-5 ml-3" aria-hidden="true" />
-              </Link>
-            </Button>
+              layout="horizontal"
+              className="max-w-md mx-auto"
+            />
           </div>
 
           {/* Trust Badges */}
