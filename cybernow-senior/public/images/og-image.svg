@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C2FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+    <!-- Shield icon path -->
+    <path id="shield" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative pattern -->
+  <circle cx="100" cy="100" r="80" fill="white" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="100" fill="white" opacity="0.05"/>
+  <circle cx="1000" cy="150" r="60" fill="white" opacity="0.03"/>
+  
+  <!-- Main content container -->
+  <g transform="translate(600, 315)">
+    <!-- Logo Shield Icon (scaled up significantly) -->
+    <g transform="translate(-60, -80) scale(10, 10)">
+      <use href="#shield" fill="none" stroke="url(#shieldGradient)"/>
+      <!-- Shield fill with subtle pattern -->
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#shieldGradient)" opacity="0.8"/>
+      <!-- Inner highlight -->
+      <path d="M12 6l6 2v5c0 4-6 8-6 8s-6-4-6-8V8l6-2z" fill="white" opacity="0.2"/>
+    </g>
+    
+    <!-- CYBERNOW text -->
+    <text x="0" y="30" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" letter-spacing="3px">
+      CYBERNOW
+    </text>
+    
+    <!-- Seniors text -->
+    <text x="0" y="90" text-anchor="middle" fill="#00C2FF" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" letter-spacing="2px">
+      Seniors
+    </text>
+    
+    <!-- Tagline -->
+    <text x="0" y="140" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" opacity="0.9">
+      Sécurité numérique pour les aînés au Québec
+    </text>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#shieldGradient)"/>
+</svg>

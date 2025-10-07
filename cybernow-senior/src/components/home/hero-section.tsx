@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Phone, ArrowRight, Check } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Logo } from '@/components/ui/logo';
 
 export function HeroSection() {
   const t = useTranslations();
@@ -21,6 +22,16 @@ export function HeroSection() {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Logo imposant */}
+          <div className="mb-8 flex justify-center">
+            <Logo 
+              size="xl" 
+              variant="default" 
+              showText={true}
+              className="transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
           {/* Main Headlines */}
           <h1 
             id="hero-title"

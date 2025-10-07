@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Phone, Shield, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, Shield } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { AccessibilityControls } from '@/components/ui/accessibility-controls';
+import { LogoLink } from '@/components/ui/logo';
 // import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
@@ -38,15 +39,12 @@ export function SiteHeader() {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <Link 
+            <LogoLink 
               href="/" 
-              className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity focus-visible:outline-brand rounded-lg p-1"
-              aria-label="Accueil CyberNow Seniors"
-            >
-              <Shield className="h-8 w-8 text-brand" aria-hidden="true" />
-              <span className="text-brand">{t('common.cybernow')}</span>
-              <span className="text-foreground">{t('common.seniors')}</span>
-            </Link>
+              size="md"
+              variant="default"
+              ariaLabel="Accueil CyberNow Seniors"
+            />
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-6" aria-label="Navigation principale">

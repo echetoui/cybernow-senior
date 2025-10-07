@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'CyberNow Seniors',
       images: [
         {
-          url: `${baseUrl}/images/og-image.jpg`,
+          url: `${baseUrl}/images/og-image.svg`,
           width: 1200,
           height: 630,
           alt: title,
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title,
       description,
-      images: [`${baseUrl}/images/og-image.jpg`],
+      images: [`${baseUrl}/images/og-image.svg`],
       creator: '@cybernowseniors',
     },
     
