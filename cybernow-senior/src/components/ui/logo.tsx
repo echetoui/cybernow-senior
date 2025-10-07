@@ -12,18 +12,18 @@ interface LogoProps {
 
 const sizeConfig = {
   sm: {
+    icon: 'h-5 w-5',
+    text: 'text-sm',
+    container: 'gap-1.5',
+    cybernow: 'text-sm font-bold leading-none',
+    seniors: 'text-xs font-medium leading-none'
+  },
+  md: {
     icon: 'h-6 w-6',
     text: 'text-base',
     container: 'gap-2',
-    cybernow: 'text-base font-bold',
-    seniors: 'text-sm font-medium'
-  },
-  md: {
-    icon: 'h-8 w-8',
-    text: 'text-xl',
-    container: 'gap-2',
-    cybernow: 'text-xl font-bold',
-    seniors: 'text-base font-medium'
+    cybernow: 'text-base font-bold leading-none',
+    seniors: 'text-sm font-medium leading-none'
   },
   lg: {
     icon: 'h-12 w-12',
@@ -70,12 +70,12 @@ export function Logo({
 
   return (
     <div className={cn(
-      'flex items-center', 
+      'flex items-center justify-center', 
       sizeClasses.container,
       className
     )}>
       {/* Icon avec effet de protection */}
-      <div className="relative">
+      <div className="relative flex items-center">
         <Shield 
           className={cn(
             sizeClasses.icon, 
@@ -92,7 +92,7 @@ export function Logo({
       </div>
       
       {showText && (
-        <div className="flex flex-col leading-none">
+        <div className="flex flex-col justify-center leading-none">
           {/* CYBERNOW */}
           <span className={cn(
             sizeClasses.cybernow,
@@ -105,7 +105,7 @@ export function Logo({
           <span className={cn(
             sizeClasses.seniors,
             variantClasses.seniors,
-            'tracking-wide -mt-1 font-heading font-semibold'
+            'tracking-wide font-heading font-semibold'
           )}>
             Seniors
           </span>

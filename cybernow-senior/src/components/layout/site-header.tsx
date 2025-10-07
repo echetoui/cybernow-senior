@@ -37,13 +37,14 @@ export function SiteHeader() {
         role="banner"
       >
         <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-20 items-center justify-between min-h-[80px]">
             {/* Logo */}
             <LogoLink 
               href="/" 
-              size="md"
+              size="sm"
               variant="default"
               ariaLabel="Accueil CyberNow Seniors"
+              className="flex-shrink-0 self-center"
             />
 
             {/* Desktop Navigation */}
