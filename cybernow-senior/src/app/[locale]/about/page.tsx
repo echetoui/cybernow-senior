@@ -57,7 +57,7 @@ export default function AboutPage() {
           <section className="mb-16">
             <Card className="border-2 border-brand/20 bg-gradient-to-br from-brand/5 to-transparent">
               <CardContent className="p-8 md:p-12 text-center">
-                <h2 className="text-3xl font-bold mb-6 text-brand">
+                <h2 className="text-3xl font-bold mb-6 text-primary">
                   {t('about.mission.title')}
                 </h2>
                 <p className="text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto">
@@ -77,12 +77,12 @@ export default function AboutPage() {
               {values.map((value) => {
                 const Icon = value.icon;
                 return (
-                  <Card key={value.key} className="text-center border-2 hover:border-brand/20 transition-colors group">
+                  <Card key={value.key} className="text-center border-2 hover:border-primary/20 transition-colors group">
                     <CardContent className="p-8">
                       <div className="mb-6 flex justify-center">
-                        <div className="p-4 bg-brand/10 rounded-2xl group-hover:bg-brand/20 transition-colors">
+                        <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
                           <Icon 
-                            className="h-8 w-8 text-brand" 
+                            className="h-8 w-8 text-primary" 
                             aria-hidden="true"
                           />
                         </div>
@@ -118,15 +118,15 @@ export default function AboutPage() {
               <CardContent className="p-8 text-center">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-brand mb-2">15+</div>
+                    <div className="text-3xl font-bold text-primary mb-2">15+</div>
                     <p className="text-muted-foreground">Années d&apos;expérience</p>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-brand mb-2">500+</div>
+                    <div className="text-3xl font-bold text-primary mb-2">500+</div>
                     <p className="text-muted-foreground">Aînés accompagnés</p>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-brand mb-2">24/7</div>
+                    <div className="text-3xl font-bold text-primary mb-2">24/7</div>
                     <p className="text-muted-foreground">Support disponible</p>
                   </div>
                 </div>
@@ -135,11 +135,11 @@ export default function AboutPage() {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center bg-brand text-white rounded-2xl p-8 md:p-12">
+          <section className="text-center bg-gradient-cta text-white rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl font-bold mb-4">
               Prêt à protéger votre vie numérique ?
             </h2>
-            <p className="text-xl mb-8 text-brand-foreground/90">
+            <p className="text-xl mb-8 text-primary-foreground/90">
               Notre équipe est là pour vous accompagner à chaque étape.
             </p>
             
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 asChild
                 size="lg"
                 variant="secondary"
-                className="min-h-12 px-8 bg-white text-brand hover:bg-white/90"
+                className="min-h-12 px-8 bg-white text-primary hover:bg-white/90"
               >
                 <a href={`tel:${t('common.phone')}`}>
                   <Phone className="h-5 w-5 mr-3" aria-hidden="true" />
@@ -160,7 +160,7 @@ export default function AboutPage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="min-h-12 px-8 border-white text-white hover:bg-white hover:text-brand"
+                className="min-h-12 px-8 border-white text-white hover:bg-white hover:text-primary"
               >
                 <Link href="/contact">
                   <MessageCircle className="h-5 w-5 mr-3" aria-hidden="true" />

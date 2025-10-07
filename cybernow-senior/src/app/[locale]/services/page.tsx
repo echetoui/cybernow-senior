@@ -83,13 +83,13 @@ export default function ServicesPage() {
                 return (
                   <Card 
                     key={service.key}
-                    className="border-2 hover:border-brand/20 hover:shadow-lg transition-all group h-full"
+                    className="border-2 hover:border-primary/20 hover:shadow-lg transition-all group h-full"
                   >
                     <CardHeader>
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="p-4 bg-brand/10 rounded-2xl group-hover:bg-brand/20 transition-colors">
+                        <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
                           <Icon 
-                            className="h-8 w-8 text-brand" 
+                            className="h-8 w-8 text-primary" 
                             aria-hidden="true"
                           />
                         </div>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
                         <ul className="space-y-2">
                           {Array.from({ length: 4 }, (_, i) => (
                             <li key={i} className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" aria-hidden="true" />
+                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" aria-hidden="true" />
                               <span className="text-sm text-muted-foreground">
                                 {t(`services.${service.key}.features.${i}`)}
                               </span>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                       <Button
                         asChild
                         variant="outline"
-                        className="w-full min-h-12 border-brand text-brand hover:bg-brand hover:text-white"
+                        className="w-full min-h-12 border-primary text-primary hover:bg-gradient-cta hover:text-white"
                       >
                         <Link href={service.href}>
                           {t('common.learnMore')}
@@ -147,7 +147,7 @@ export default function ServicesPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="min-h-12 px-8 bg-brand hover:bg-brand/90"
+                  className="min-h-12 px-8 bg-gradient-cta hover:bg-gradient-cta/90"
                 >
                   <a href={`tel:${t('common.phone')}`}>
                     {t('buttons.callNow')}
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="min-h-12 px-8 border-brand text-brand hover:bg-brand hover:text-white"
+                  className="min-h-12 px-8 border-primary text-primary hover:bg-gradient-cta hover:text-white"
                 >
                   <Link href="/contact">
                     {t('buttons.contactUs')}

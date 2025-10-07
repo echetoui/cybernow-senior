@@ -215,7 +215,7 @@ export function ContactForm() {
         type="submit"
         size="lg"
         disabled={submissionState === 'submitting'}
-        className="w-full min-h-14 text-xl-button bg-brand hover:bg-brand/90 focus-visible:outline-brand"
+        className="w-full min-h-14 text-xl-button bg-gradient-cta hover:bg-gradient-cta/90 focus-visible:outline-primary"
       >
         {submissionState === 'submitting' ? (
           <>

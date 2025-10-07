@@ -10,19 +10,19 @@ export function FinalCtaSection() {
 
   return (
     <section 
-      className="py-16 lg:py-20 bg-brand text-white"
+      className="py-16 lg:py-20 bg-gradient-cta text-white"
       aria-labelledby="cta-title"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             id="cta-title"
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-heading font-bold mb-4 text-white"
           >
             {t('home.cta.title')}
           </h2>
           
-          <p className="text-xl mb-8 text-brand-foreground/90">
+          <p className="text-xl mb-8 text-white/90 font-sans">
             {t('home.cta.subtitle')}
           </p>
 
@@ -31,7 +31,7 @@ export function FinalCtaSection() {
               asChild
               size="lg"
               variant="secondary"
-              className="min-h-14 px-8 text-xl-button bg-white text-brand hover:bg-white/90 focus-visible:outline-white"
+              className="min-h-14 px-8 text-xl-button bg-white text-primary hover:bg-white/90 focus-visible:outline-white"
             >
               <a href={`tel:${t('common.phone')}`}>
                 <Phone className="h-5 w-5 mr-3" aria-hidden="true" />
@@ -43,7 +43,7 @@ export function FinalCtaSection() {
               asChild
               size="lg"
               variant="outline"
-              className="min-h-14 px-8 text-xl-button border-white text-white hover:bg-white hover:text-brand focus-visible:outline-white"
+              className="min-h-14 px-8 text-xl-button border-white text-white hover:bg-white hover:text-primary focus-visible:outline-white"
             >
               <Link href="/contact">
                 <MessageCircle className="h-5 w-5 mr-3" aria-hidden="true" />
@@ -52,7 +52,7 @@ export function FinalCtaSection() {
             </Button>
           </div>
 
-          <div className="mt-8 text-sm text-brand-foreground/80">
+          <div className="mt-8 text-sm text-white/80">
             <p>{t('contact.phoneInfo.schedule')}</p>
           </div>
         </div>

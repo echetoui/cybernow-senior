@@ -173,7 +173,7 @@ export default function AlertsPage() {
               {/* Resources Link */}
               <Card>
                 <CardContent className="p-6 text-center">
-                  <Eye className="h-8 w-8 text-brand mx-auto mb-3" aria-hidden="true" />
+                  <Eye className="h-8 w-8 text-primary mx-auto mb-3" aria-hidden="true" />
                   <h3 className="font-medium mb-2">
                     Guides de prévention
                   </h3>
@@ -184,7 +184,7 @@ export default function AlertsPage() {
                     asChild
                     variant="outline"
                     size="sm"
-                    className="border-brand text-brand hover:bg-brand hover:text-white"
+                    className="border-primary text-primary hover:bg-gradient-cta hover:text-white"
                   >
                     <Link href="/resources">
                       {t('buttons.viewAllResources')}

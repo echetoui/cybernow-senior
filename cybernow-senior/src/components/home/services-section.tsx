@@ -57,13 +57,13 @@ export function ServicesSection() {
               return (
                 <Card 
                   key={service.key}
-                  className="border-2 hover:border-brand/20 hover:shadow-lg transition-all group"
+                  className="border-2 hover:border-primary/20 hover:shadow-lg transition-all group"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-brand/10 rounded-xl group-hover:bg-brand/20 transition-colors flex-shrink-0">
+                      <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors flex-shrink-0">
                         <Icon 
-                          className="h-6 w-6 text-brand" 
+                          className="h-6 w-6 text-primary" 
                           aria-hidden="true"
                         />
                       </div>
@@ -78,7 +78,7 @@ export function ServicesSection() {
                         
                         <Link
                           href={service.href}
-                          className="inline-flex items-center text-brand hover:text-brand/80 font-medium focus-visible:outline-brand rounded px-1 py-1"
+                          className="inline-flex items-center text-primary hover:text-primary/80 font-medium focus-visible:outline-primary rounded px-1 py-1"
                         >
                           {t('common.learnMore')}
                           <ArrowRight className="h-4 w-4 ml-1" aria-hidden="true" />
@@ -96,7 +96,7 @@ export function ServicesSection() {
               asChild
               variant="outline"
               size="lg"
-              className="min-h-12 px-8 border-brand text-brand hover:bg-brand hover:text-white focus-visible:outline-brand"
+              className="min-h-12 px-8 border-primary text-primary hover:bg-gradient-cta hover:text-white focus-visible:outline-primary"
             >
               <Link href="/services">
                 {t('buttons.getAllServices')}

@@ -12,7 +12,7 @@ export default function NotFound() {
         <div className="max-w-2xl mx-auto text-center">
           {/* 404 Illustration */}
           <div className="mb-8">
-            <div className="text-8xl md:text-9xl font-bold text-brand/20 mb-4">
+            <div className="text-8xl md:text-9xl font-bold text-primary/20 mb-4">
               404
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function NotFound() {
             <Button
               asChild
               size="lg"
-              className="min-h-12 px-8 bg-brand hover:bg-brand/90"
+              className="min-h-12 px-8 bg-gradient-cta hover:bg-gradient-cta/90"
             >
               <Link href="/">
                 <Home className="h-5 w-5 mr-3" aria-hidden="true" />
@@ -43,7 +43,7 @@ export default function NotFound() {
               asChild
               variant="outline"
               size="lg"
-              className="min-h-12 px-8 border-brand text-brand hover:bg-brand hover:text-white"
+              className="min-h-12 px-8 border-primary text-primary hover:bg-gradient-cta hover:text-white"
               onClick={() => window.history.back()}
             >
               <button type="button">

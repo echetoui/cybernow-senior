@@ -60,7 +60,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-xl flex items-center gap-3">
-                    <Phone className="h-6 w-6 text-brand" aria-hidden="true" />
+                    <Phone className="h-6 w-6 text-primary" aria-hidden="true" />
                     {t('contact.phoneInfo.title')}
                   </CardTitle>
                 </CardHeader>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full min-h-14 text-xl-button bg-brand hover:bg-brand/90"
+                    className="w-full min-h-14 text-xl-button bg-gradient-cta hover:bg-gradient-cta/90"
                   >
                     <a href={`tel:${t('common.phone')}`}>
                       <Phone className="h-5 w-5 mr-3" aria-hidden="true" />
@@ -119,7 +119,7 @@ export default function ContactPage() {
                       <h3 className="font-medium mb-2">Courriel</h3>
                       <a 
                         href={`mailto:${t('common.email')}`}
-                        className="text-brand hover:text-brand/80 transition-colors focus-visible:outline-brand rounded px-1 py-1"
+                        className="text-primary hover:text-primary/80 transition-colors focus-visible:outline-primary rounded px-1 py-1"
                       >
                         {t('common.email')}
                       </a>

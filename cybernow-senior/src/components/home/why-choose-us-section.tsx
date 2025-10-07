@@ -42,13 +42,13 @@ export function WhyChooseUsSection() {
               return (
                 <Card 
                   key={feature.key}
-                  className="text-center border-2 hover:border-brand/20 transition-colors group"
+                  className="text-center border-2 hover:border-primary/20 transition-colors group"
                 >
                   <CardContent className="p-8">
                     <div className="mb-6 flex justify-center">
-                      <div className="p-4 bg-brand/10 rounded-2xl group-hover:bg-brand/20 transition-colors">
+                      <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
                         <Icon 
-                          className="h-8 w-8 text-brand" 
+                          className="h-8 w-8 text-primary" 
                           aria-hidden="true"
                         />
                       </div>

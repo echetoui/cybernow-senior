@@ -35,7 +35,7 @@ export function HeroSection() {
           {/* Main Headlines */}
           <h1 
             id="hero-title"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight"
           >
             {t('home.hero.title')}
           </h1>
@@ -49,7 +49,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="min-h-14 px-8 text-xl-button bg-brand hover:bg-brand/90 focus-visible:outline-brand"
+              className="min-h-14 px-8 text-xl-button bg-gradient-cta hover:bg-gradient-cta/90 focus-visible:outline-primary"
             >
               <a href={`tel:${t('common.phone')}`}>
                 <Phone className="h-5 w-5 mr-3" aria-hidden="true" />
@@ -61,7 +61,7 @@ export function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="min-h-14 px-8 text-xl-button border-brand text-brand hover:bg-brand hover:text-white focus-visible:outline-brand"
+              className="min-h-14 px-8 text-xl-button border-primary text-primary hover:bg-gradient-cta hover:text-white focus-visible:outline-primary"
             >
               <Link href="/contact">
                 {t('buttons.getCallback')}
