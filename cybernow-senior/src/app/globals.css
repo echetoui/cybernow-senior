@@ -5,9 +5,9 @@
 :root {
   --radius: 12px; /* Design token rayon CyberNow */
   
-  /* CyberNow Seniors Design Tokens */
+  /* CyberNow Seniors Design Tokens - Optimisés pour contrastes AA/AAA */
   --background: 44 21% 97%; /* #FAF9F5 Beige doux */
-  --foreground: 222 84% 4.9%; /* #0F172A Text */
+  --foreground: 222 100% 6%; /* #0F172A Text - Contraste optimisé */
   --card: 0 0% 100%; /* #FFFFFF Surface */
   --card-foreground: 222 84% 4.9%; /* #0F172A */
   --popover: 0 0% 100%;
@@ -92,27 +92,133 @@
     @apply text-2xl md:text-3xl;
   }
   
-  /* Accessibility: Minimum touch target size 44px */
-  button, [role="button"], input[type="submit"], input[type="button"], a {
-    min-height: 44px;
-    min-width: 44px;
+  /* Accessibilité Seniors: Tailles de texte minimales */
+  p, span, div, li, td, th, label, input, textarea, select, button {
+    font-size: 18px;
+    line-height: 1.6;
   }
   
-  /* Focus styles for better accessibility */
+  /* Tailles de texte plus grandes pour les seniors */
+  .text-seniors-sm { font-size: 18px; }
+  .text-seniors-base { font-size: 20px; }
+  .text-seniors-lg { font-size: 22px; }
+  
+  /* Accessibilité: Minimum touch target size 44px */
+  button, [role="button"], input[type="submit"], input[type="button"], a, 
+  .btn, .button, [role="tab"], [role="menuitem"] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+  
+  /* Focus styles renforcés pour seniors */
   a:focus-visible, 
   button:focus-visible, 
   input:focus-visible, 
   textarea:focus-visible, 
   select:focus-visible,
-  [tabindex]:focus-visible {
-    @apply outline-2 outline-offset-2 outline-primary;
-    outline-style: solid;
+  [tabindex]:focus-visible,
+  [role="button"]:focus-visible,
+  [role="tab"]:focus-visible,
+  [role="menuitem"]:focus-visible {
+    outline: 3px solid #3BB8A4;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 5px #3BB8A4;
   }
   
-  /* Skip link for screen readers */
+  /* Skip link amélioré */
   .skip-link {
-    @apply absolute -top-96 left-4 z-50 bg-primary text-primary-foreground px-4 py-2 rounded-lg;
-    @apply focus-visible:top-4;
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 9999;
+    background: #12385D;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: top 0.3s ease;
+  }
+  
+  .skip-link:focus {
+    top: 16px;
+  }
+  
+  /* Navigation clavier améliorée */
+  [tabindex="0"]:focus-visible,
+  [tabindex="-1"]:focus-visible {
+    outline: 3px solid #3BB8A4;
+    outline-offset: 2px;
+  }
+  
+  /* Respect prefers-reduced-motion pour les seniors */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Animations douces par défaut */
+  * {
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+  }
+  
+  /* Animation douce pour les hovers */
+  button:hover, a:hover, [role="button"]:hover {
+    transform: translateY(-1px);
+    transition: transform 200ms ease-out;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    button:hover, a:hover, [role="button"]:hover {
+      transform: none;
+    }
+  }
+  
+  /* Formulaires accessibles pour seniors */
+  input, textarea, select {
+    font-size: 18px !important;
+    padding: 16px !important;
+    border: 2px solid #CCCCCC;
+    border-radius: 12px;
+    line-height: 1.6;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: #3BB8A4;
+    box-shadow: 0 0 0 3px rgba(59, 184, 164, 0.2);
+  }
+  
+  label {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+    display: block;
+  }
+  
+  /* Messages d'erreur visibles */
+  .error-message {
+    color: #D92D20;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  
+  /* États de validation */
+  input:invalid, textarea:invalid, select:invalid {
+    border-color: #D92D20;
+  }
+  
+  input:valid, textarea:valid, select:valid {
+    border-color: #3BB8A4;
   }
   
   /* Remove focus outline for mouse users, keep for keyboard users */

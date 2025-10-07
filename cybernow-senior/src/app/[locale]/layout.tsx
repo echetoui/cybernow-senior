@@ -169,6 +169,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       
       <body className="min-h-screen bg-background font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
+          {/* Skip link pour l'accessibilité */}
+          <a href="#main-content" className="skip-link">
+            {locale === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
+          </a>
+          
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
             
