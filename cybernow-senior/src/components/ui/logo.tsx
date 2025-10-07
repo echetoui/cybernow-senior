@@ -8,6 +8,7 @@ interface LogoProps {
   variant?: 'default' | 'white' | 'dark';
   showText?: boolean;
   className?: string;
+  alt?: string;
 }
 
 const sizeConfig = {
@@ -63,7 +64,8 @@ export function Logo({
   size = 'md', 
   variant = 'default', 
   showText = true, 
-  className 
+  className,
+  alt = "Logo Cybernow Seniors - Protection numérique pour aînés"
 }: LogoProps) {
   const sizeClasses = sizeConfig[size];
   const variantClasses = variantConfig[variant];
@@ -75,7 +77,7 @@ export function Logo({
       className
     )}>
       {/* Icon avec effet de protection */}
-      <div className="relative flex items-center">
+      <div className="relative flex items-center" role="img" aria-label={alt}>
         <Shield 
           className={cn(
             sizeClasses.icon, 
@@ -84,11 +86,6 @@ export function Logo({
           )} 
           aria-hidden="true" 
         />
-        {/* Effet de brillance subtile */}
-        <div className={cn(
-          'absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-sm',
-          sizeClasses.icon
-        )} />
       </div>
       
       {showText && (

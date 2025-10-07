@@ -89,7 +89,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 md:space-y-8" noValidate>
       {/* Honeypot field (hidden) */}
       <div className="hidden">
         <Input
@@ -122,11 +122,12 @@ export function ContactForm() {
           type="text"
           placeholder={t('contact.form.namePlaceholder')}
           className={cn(
-            "mt-2 min-h-12 text-lg",
+            "mt-3 min-h-[56px] text-lg md:text-base px-4 py-4 touch-manipulation",
             errors.name && "border-red-500 focus:border-red-500"
           )}
           aria-invalid={errors.name ? 'true' : 'false'}
           aria-describedby={errors.name ? 'name-error' : undefined}
+          autoComplete="name"
           {...register('name')}
         />
         {errors.name && (
@@ -150,11 +151,13 @@ export function ContactForm() {
           type="tel"
           placeholder={t('contact.form.phonePlaceholder')}
           className={cn(
-            "mt-2 min-h-12 text-lg",
+            "mt-3 min-h-[56px] text-lg md:text-base px-4 py-4 touch-manipulation",
             errors.phone && "border-red-500 focus:border-red-500"
           )}
           aria-invalid={errors.phone ? 'true' : 'false'}
           aria-describedby={errors.phone ? 'phone-error' : undefined}
+          autoComplete="tel"
+          inputMode="tel"
           {...register('phone')}
         />
         {errors.phone && (
@@ -177,7 +180,8 @@ export function ContactForm() {
           id="bestTime"
           type="text"
           placeholder={t('contact.form.bestTimePlaceholder')}
-          className="mt-2 min-h-12 text-lg"
+          className="mt-3 min-h-[56px] text-lg md:text-base px-4 py-4 touch-manipulation"
+          autoComplete="off"
           {...register('bestTime')}
         />
       </div>
@@ -190,9 +194,9 @@ export function ContactForm() {
         <Textarea
           id="message"
           placeholder={t('contact.form.messagePlaceholder')}
-          rows={6}
+          rows={5}
           className={cn(
-            "mt-2 text-lg resize-none",
+            "mt-3 text-lg md:text-base resize-none min-h-[120px] px-4 py-4 touch-manipulation",
             errors.message && "border-red-500 focus:border-red-500"
           )}
           aria-invalid={errors.message ? 'true' : 'false'}
@@ -215,7 +219,7 @@ export function ContactForm() {
         type="submit"
         size="lg"
         disabled={submissionState === 'submitting'}
-        className="w-full min-h-14 text-xl-button bg-gradient-cta hover:bg-gradient-cta/90 focus-visible:outline-primary"
+        className="w-full min-h-[64px] text-xl md:text-lg bg-gradient-cta hover:bg-gradient-cta/90 focus-visible:outline-primary touch-manipulation font-semibold"
       >
         {submissionState === 'submitting' ? (
           <>

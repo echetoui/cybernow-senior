@@ -28,40 +28,32 @@ export function CTAButtons({
   const phone = phoneNumber || t('common.phone');
 
   const containerClasses = layout === "horizontal" 
-    ? "flex flex-col sm:flex-row items-center justify-center gap-4"
-    : "flex flex-col items-center gap-4";
+    ? "flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
+    : "flex flex-col items-stretch gap-3";
 
   return (
     <div className={`${containerClasses} ${className}`}>
-      {/* Bouton Appeler maintenant - Style moderne primary */}
+      {/* Bouton Appeler maintenant - Mobile optimized */}
       <Button
         data-slot="button"
         variant="primary"
         size={size}
-        iconPosition="left"
-        className="w-full sm:w-auto shadow-cybernow"
+        className="w-full sm:w-auto shadow-cybernow min-h-[56px] text-lg sm:text-base touch-manipulation"
         asChild
       >
-        <a href={`tel:${phone}`}>
-          <ColoredIcon 
-            name="phone" 
-            size="sm" 
-            className="shrink-0"
-          />
+        <a href={`tel:${phone}`} className="flex items-center justify-center">
           {t('buttons.callNow')}
         </a>
       </Button>
 
-      {/* Bouton Être rappelé - Style moderne secondary */}
+      {/* Bouton Être rappelé - Mobile optimized */}
       <Button
         data-slot="button"
         variant="secondary"
         size={size}
-        iconPosition="right"
-        className="w-full sm:w-auto shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/80"
+        className="w-full sm:w-auto shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/80 min-h-[56px] text-lg sm:text-base touch-manipulation"
       >
         {t('buttons.getCallback')}
-        <MessageCircle className="shrink-0" size={16} />
       </Button>
     </div>
   );

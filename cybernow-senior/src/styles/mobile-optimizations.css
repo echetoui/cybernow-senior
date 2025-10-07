@@ -1,0 +1,193 @@
+/* Mobile-First Optimizations for Cybernow Seniors */
+
+/* Touch targets - WCAG AA: min 44x44px */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* High contrast focus for mobile */
+@media (max-width: 768px) {
+  *:focus-visible {
+    outline: 3px solid #12385D !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* Larger text on small screens for seniors */
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Better button spacing for fat fingers */
+  button, a[role="button"] {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 16px;
+  }
+  
+  /* Improved form controls */
+  input, textarea, select {
+    min-height: 56px;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  /* Better link spacing */
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  /* Improved table readability */
+  table {
+    font-size: 16px;
+  }
+  
+  th, td {
+    padding: 16px 12px;
+  }
+}
+
+/* Tablet breakpoint optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+  
+  button, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Landscape mobile adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* High-DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper borders */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Dark mode mobile optimizations */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  body {
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+  
+  button {
+    border-width: 2px;
+  }
+}
+
+/* Reduce motion for seniors */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button, a[role="button"] {
+    border: 3px solid currentColor;
+  }
+  
+  input, textarea, select {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Custom scrollbar for mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #64748b;
+    border-radius: 6px;
+  }
+}
+
+/* Skip link styling */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: #12385D;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Error states for mobile */
+@media (max-width: 768px) {
+  .error {
+    border: 3px solid #dc2626 !important;
+    background-color: #fef2f2 !important;
+  }
+  
+  .success {
+    border: 3px solid #16a34a !important;
+    background-color: #f0fdf4 !important;
+  }
+}
+
+/* Mobile menu improvements */
+@media (max-width: 1279px) {
+  #mobile-menu {
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Print styles for mobile */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 14pt;
+    line-height: 1.4;
+  }
+  
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 14pt; }
+}

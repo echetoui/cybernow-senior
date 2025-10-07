@@ -27,13 +27,18 @@
     "privacy": "Politique de confidentialité"
   },
   "buttons": {
-    "callNow": "Appeler maintenant",
-    "getCallback": "Être rappelé",
-    "reportScam": "Signaler une arnaque",
-    "contactUs": "Nous contacter",
-    "getAllServices": "Voir tous nos services",
-    "viewAllAlerts": "Voir toutes les alertes",
-    "viewAllResources": "Voir toutes les ressources"
+    "callNow": "Appelez-nous maintenant",
+    "getCallback": "Demander un rappel",
+    "reportScam": "Signaler cette arnaque",
+    "contactUs": "Contactez-nous",
+    "getAllServices": "Découvrir nos services",
+    "viewAllAlerts": "Consulter toutes les alertes",
+    "viewAllResources": "Télécharger nos guides",
+    "downloadGuide": "Télécharger le guide",
+    "readArticle": "Lire l'article",
+    "learnMore": "En apprendre plus",
+    "getStarted": "Commencer maintenant",
+    "scheduleCall": "Programmer un appel"
   },
   "language": {
     "fr": "FR",

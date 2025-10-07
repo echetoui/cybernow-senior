@@ -7,6 +7,8 @@ interface ColoredIconProps {
   size?: "sm" | "md" | "lg" | "xl";
   className?: string;
   name: "heart-handshake" | "map-pin" | "accessibility" | "shield" | "help-circle" | "alert-triangle" | "phone" | "users" | "message-square" | "clock";
+  alt?: string;
+  decorative?: boolean;
 }
 
 const sizeClasses = {
@@ -20,12 +22,38 @@ const sizeClasses = {
  * Icônes colorées et modernes pour Cybernow Seniors
  * Design vibrant avec dégradés et couleurs de la palette
  */
-export function ColoredIcon({ size = "md", className, name, ...props }: ColoredIconProps) {
+export function ColoredIcon({ 
+  size = "md", 
+  className, 
+  name, 
+  alt,
+  decorative = false,
+  ...props 
+}: ColoredIconProps) {
   const baseClasses = cn(sizeClasses[size], className);
+
+  // Alt text par défaut basé sur le nom de l'icône
+  const defaultAltTexts = {
+    "heart-handshake": "Icône aide humaine et bienveillante",
+    "map-pin": "Icône service local et proximité",
+    "accessibility": "Icône accessibilité et inclusion",
+    "shield": "Icône protection et sécurité",
+    "help-circle": "Icône aide et assistance",
+    "alert-triangle": "Icône alerte et attention",
+    "phone": "Icône téléphone et contact",
+    "users": "Icône communauté et équipe",
+    "message-square": "Icône communication et message",
+    "clock": "Icône temps et disponibilité"
+  };
+
+  const iconAlt = alt || defaultAltTexts[name];
+  const ariaProps = decorative 
+    ? { "aria-hidden": "true" } 
+    : { "aria-label": iconAlt, role: "img" };
 
   const icons = {
     "heart-handshake": (
-      <svg viewBox="0 0 24 24" fill="none" className={baseClasses} {...props}>
+      <svg viewBox="0 0 24 24" fill="none" className={baseClasses} {...ariaProps} {...props}>
         <defs>
           <linearGradient id="heart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#3BB8A4" />
@@ -239,7 +267,12 @@ export function ColoredIcon({ size = "md", className, name, ...props }: ColoredI
     )
   };
 
-  return icons[name] || null;
+  // Appliquer les attributs d'accessibilité à l'icône sélectionnée
+  const selectedIcon = icons[name];
+  if (!selectedIcon) return null;
+
+  // Clone l'élément avec les bonnes props d'accessibilité
+  return React.cloneElement(selectedIcon, ariaProps);
 }
 
 export default ColoredIcon;

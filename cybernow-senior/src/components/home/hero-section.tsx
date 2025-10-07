@@ -25,55 +25,57 @@ export function HeroSection() {
 
   return (
     <section 
-      className="bg-gradient-to-br from-slate-50 to-white py-16 lg:py-24"
+      className="bg-gradient-to-br from-slate-50 to-white py-12 md:py-16 lg:py-24"
       aria-labelledby="hero-title"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo imposant */}
-          <div className="mb-8 flex justify-center">
+          {/* Logo imposant - Responsive */}
+          <div className="mb-6 md:mb-8 flex justify-center">
             <Logo 
-              size="xl" 
+              size="lg" 
               variant="default" 
               showText={false}
               className="transform hover:scale-105 transition-transform duration-300"
             />
           </div>
           
-          {/* Main Headlines */}
+          {/* Main Headlines - Mobile optimized */}
           <h1 
             id="hero-title"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 text-primary leading-tight px-2"
           >
             {t('home.hero.title')}
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-6xl mx-auto text-center px-4 lg:whitespace-nowrap">
+          {/* Subtitle - Mobile-first typography */}
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto px-4 sm:px-2">
             {t('home.hero.subtitle')}
           </p>
 
-          {/* Primary Actions - Style moderne avec data-slot */}
-          <div className="mb-12">
+          {/* Primary Actions - Mobile-first layout */}
+          <div className="mb-8 md:mb-12 px-4 sm:px-0">
             <CTAButtons 
               size="lg"
-              layout="horizontal"
-              className="max-w-md mx-auto"
+              layout="vertical"
+              className="max-w-sm mx-auto sm:max-w-md"
             />
           </div>
 
-          {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          {/* Trust Badges - Mobile stacked */}
+          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 px-2">
             {badges.map((badge, index) => {
               return (
                 <div 
                   key={index}
-                  className="flex items-center gap-3 text-muted-foreground bg-white rounded-full px-5 py-3 shadow-md hover:shadow-lg transition-shadow"
+                  className="flex items-center justify-center gap-3 text-muted-foreground bg-white rounded-full px-4 py-3 sm:px-5 shadow-md hover:shadow-lg transition-shadow min-h-[44px] touch-manipulation"
                 >
                   <ColoredIcon 
                     name={badge.iconName}
                     size="sm"
+                    decorative={true}
                   />
-                  <span className="text-sm font-medium">{badge.text}</span>
+                  <span className="text-base sm:text-sm font-medium whitespace-nowrap">{badge.text}</span>
                 </div>
               );
             })}
