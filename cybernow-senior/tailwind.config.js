@@ -85,6 +85,16 @@ module.exports = {
           800: '#155569',
           900: '#164758',
         },
+        // Palette couleurs CyberNow spécifique pour icônes
+        'cybernow-deep': '#0A2540',
+        'cybernow-cyan': '#12B4E8', 
+        'cybernow-lime': '#B9F227',
+        // Design tokens Cybernow Seniors
+        'cnw-primary': '#12385D',
+        'cnw-secondary': '#3BB8A4',
+        'cnw-info': '#A7E3F2',
+        'cnw-bg': '#FAF9F5',
+        'cnw-text': '#0F172A'
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -92,6 +102,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
         // Design tokens rayons
         'cybernow': '12px',
+        '2xl': '16px', // Rayon standard Cybernow
       },
       keyframes: {
         "accordion-down": {
@@ -110,6 +121,10 @@ module.exports = {
       fontSize: {
         'body': ['18px', { lineHeight: '1.6' }],
         'xl-button': ['20px', { lineHeight: '1.4' }],
+        // Tailles boutons Cybernow (≥18px)
+        'cnw-sm': ['0.95rem', { lineHeight: '1.4' }], // ~15.2px
+        'cnw-md': ['1.05rem', { lineHeight: '1.4' }], // ~16.8px
+        'cnw-lg': ['1.15rem', { lineHeight: '1.4' }], // ~18.4px
       },
       spacing: {
         // Design tokens espacements CyberNow
@@ -124,10 +139,13 @@ module.exports = {
       boxShadow: {
         // Design tokens ombres
         'cybernow': '0 6px 24px rgba(18, 56, 93, 0.10)',
+        'cnw-button': '0 8px 24px rgba(18, 56, 93, 0.18)',
       },
       backgroundImage: {
         // Gradient CTA CyberNow
         'gradient-cta': 'linear-gradient(135deg, #12385D, #3BB8A4)',
+        'cnw-gradient': 'linear-gradient(to right, #12385D, #1c6d8f, #3BB8A4)',
+        'cnw-gradient-hover': 'linear-gradient(to right, #16507c, #1e799d, #49c3b2)',
       },
       minHeight: {
         'touch': '44px',

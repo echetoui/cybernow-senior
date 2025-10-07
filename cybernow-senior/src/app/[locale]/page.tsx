@@ -9,11 +9,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   
   const title = locale === 'fr' 
-    ? 'Accueil | Votre bouclier numérique, tout simplement'
+    ? 'Accueil | Restez connectés, en toute tranquillité'
     : 'Home | Your digital shield, simply';
     
   const description = locale === 'fr'
-    ? 'Protection numérique adaptée aux aînés du Québec. Un conseiller patient, local et accessible pour vous protéger au quotidien.'
+    ? 'Avec Cybernow Seniors, bénéficiez d\'un accompagnement humain et local pour sécuriser vos appareils et éviter les arnaques en ligne.'
     : 'Digital protection adapted for Quebec seniors. A patient, local and accessible advisor to protect you daily.';
 
   return {

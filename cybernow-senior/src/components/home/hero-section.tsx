@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Phone, ArrowRight, Check } from 'lucide-react';
+import { Phone, ArrowRight, Users, MessageSquare, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
@@ -10,9 +10,21 @@ export function HeroSection() {
   const t = useTranslations();
 
   const badges = [
-    t('home.hero.badges.local'),
-    t('home.hero.badges.noJargon'),
-    t('home.hero.badges.available'),
+    {
+      text: t('home.hero.badges.local'),
+      icon: Users,
+      colorClass: 'text-cybernow-deep'
+    },
+    {
+      text: t('home.hero.badges.noJargon'),
+      icon: MessageSquare,
+      colorClass: 'text-cybernow-cyan'
+    },
+    {
+      text: t('home.hero.badges.available'),
+      icon: Clock,
+      colorClass: 'text-cybernow-lime'
+    },
   ];
 
   return (
@@ -27,7 +39,7 @@ export function HeroSection() {
             <Logo 
               size="xl" 
               variant="default" 
-              showText={true}
+              showText={false}
               className="transform hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -72,15 +84,21 @@ export function HeroSection() {
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {badges.map((badge, index) => (
-              <div 
-                key={index}
-                className="flex items-center gap-2 text-muted-foreground bg-white rounded-full px-4 py-2 shadow-sm"
-              >
-                <Check className="h-4 w-4 text-green-600" aria-hidden="true" />
-                <span className="text-sm font-medium">{badge}</span>
-              </div>
-            ))}
+            {badges.map((badge, index) => {
+              const Icon = badge.icon;
+              return (
+                <div 
+                  key={index}
+                  className="flex items-center gap-2 text-muted-foreground bg-white rounded-full px-4 py-2 shadow-sm"
+                >
+                  <Icon 
+                    className={`h-4 w-4 ${badge.colorClass}`}
+                    aria-hidden="true" 
+                  />
+                  <span className="text-sm font-medium">{badge.text}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

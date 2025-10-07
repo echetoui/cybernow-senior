@@ -51,12 +51,12 @@
   },
   "home": {
     "hero": {
-      "title": "Votre bouclier numérique, tout simplement.",
-      "subtitle": "Un conseiller patient, local et accessible pour vous protéger au quotidien.",
+      "title": "Restez connectés, en toute tranquillité.",
+      "subtitle": "Avec Cybernow Seniors, bénéficiez d'un accompagnement humain et local pour sécuriser vos appareils et éviter les arnaques en ligne.",
       "badges": {
-        "local": "Local au Québec",
-        "noJargon": "Sans jargon",
-        "available": "7j/7"
+        "local": "Proximité humaine",
+        "noJargon": "Langage simple",
+        "available": "Assistance chaque jour"
       }
     },
     "whyChooseUs": {

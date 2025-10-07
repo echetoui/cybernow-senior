@@ -2,9 +2,10 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Shield, Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { LogoLink } from '@/components/ui/logo';
 
 export function SiteFooter() {
   const t = useTranslations();
@@ -28,14 +29,13 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
-            <Link 
+            <LogoLink 
               href="/" 
-              className="flex items-center gap-2 font-bold text-xl mb-4 hover:opacity-80 transition-opacity focus-visible:outline-white rounded-lg p-1"
-            >
-              <Shield className="h-8 w-8 text-accent" aria-hidden="true" />
-              <span className="text-accent">{t('common.cybernow')}</span>
-              <span>{t('common.seniors')}</span>
-            </Link>
+              size="sm"
+              variant="white"
+              ariaLabel="Accueil CyberNow Seniors"
+              className="mb-4"
+            />
             
             <p className="text-slate-300 text-body leading-relaxed mb-4">
               {t('about.mission.description')}
