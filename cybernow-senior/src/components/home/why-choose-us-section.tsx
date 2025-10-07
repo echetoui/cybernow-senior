@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from 'next-intl';
 import { HeartHandshake, MapPin, Accessibility } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';

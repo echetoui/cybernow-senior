@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Shield, Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';

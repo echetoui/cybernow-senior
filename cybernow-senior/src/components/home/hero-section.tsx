@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from 'next-intl';
 import { Phone, ArrowRight, Check } from 'lucide-react';
 import Link from 'next/link';

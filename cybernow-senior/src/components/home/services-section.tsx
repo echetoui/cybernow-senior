@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from 'next-intl';
 import { Shield, Lock, HelpCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
