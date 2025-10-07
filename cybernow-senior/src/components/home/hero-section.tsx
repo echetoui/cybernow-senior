@@ -48,7 +48,7 @@ export function HeroSection() {
             {t('home.hero.title')}
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-6xl mx-auto text-center px-4 lg:whitespace-nowrap">
             {t('home.hero.subtitle')}
           </p>
 
