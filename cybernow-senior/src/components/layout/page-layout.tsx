@@ -104,11 +104,8 @@ export function ServicePageLayout({
  */
 export function ArticlePageLayout({
   children,
-  articleTitle,
   ...props
-}: Omit<PageLayoutProps, "maxWidth"> & {
-  articleTitle?: string;
-}) {
+}: Omit<PageLayoutProps, "maxWidth">) {
   return (
     <PageLayout
       {...props}

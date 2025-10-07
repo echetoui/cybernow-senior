@@ -48,8 +48,8 @@ export function ColoredIcon({
 
   const iconAlt = alt || defaultAltTexts[name];
   const ariaProps = decorative 
-    ? { "aria-hidden": "true" } 
-    : { "aria-label": iconAlt, role: "img" };
+    ? { "aria-hidden": true as const } 
+    : { "aria-label": iconAlt, role: "img" as const };
 
   const icons = {
     "heart-handshake": (

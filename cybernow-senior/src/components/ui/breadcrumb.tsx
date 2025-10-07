@@ -58,17 +58,19 @@ export function Breadcrumb({ items, className }: BreadcrumbProps) {
  * Hook pour générer automatiquement le fil d'Ariane basé sur l'URL
  */
 export function useBreadcrumbs(pathname: string, customLabels?: Record<string, string>) {
-  const defaultLabels = {
-    '': 'Accueil',
-    'services': 'Services',
-    'resources': 'Ressources', 
-    'alerts': 'Alertes',
-    'about': 'À propos',
-    'contact': 'Contact',
-    'privacy': 'Politique de confidentialité'
-  };
-
-  const labels = { ...defaultLabels, ...customLabels };
+  const labels = React.useMemo(() => {
+    const defaultLabels = {
+      '': 'Accueil',
+      'services': 'Services',
+      'resources': 'Ressources', 
+      'alerts': 'Alertes',
+      'about': 'À propos',
+      'contact': 'Contact',
+      'privacy': 'Politique de confidentialité'
+    };
+    
+    return { ...defaultLabels, ...customLabels };
+  }, [customLabels]);
 
   const breadcrumbs = React.useMemo(() => {
     const segments = pathname.split('/').filter(Boolean);

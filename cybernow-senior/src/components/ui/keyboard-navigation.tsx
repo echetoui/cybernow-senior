@@ -170,7 +170,7 @@ export function useFocusTrap(isActive: boolean) {
 export function useScreenReaderAnnouncer() {
   const [announcement, setAnnouncement] = React.useState('');
 
-  const announce = React.useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
+  const announce = React.useCallback((message: string) => {
     setAnnouncement(message);
     
     // Clear après un délai pour permettre les nouvelles annonces
