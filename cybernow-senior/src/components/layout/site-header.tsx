@@ -48,12 +48,12 @@ export function SiteHeader() {
             />
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-6" aria-label="Navigation principale">
+            <nav className="hidden xl:flex items-center gap-4" aria-label="Navigation principale">
               {navigation.map((item) => (
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-brand rounded px-2 py-1"
+                  className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-brand rounded px-2 py-1 whitespace-nowrap flex items-center text-sm font-medium"
                 >
                   {t(`navigation.${item.key}`)}
                 </Link>
@@ -61,14 +61,15 @@ export function SiteHeader() {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2">
               <Button
                 asChild
                 variant="outline"
-                className="min-h-11"
+                size="sm"
+                className="min-h-11 text-xs"
               >
                 <a href={`tel:${t('common.phone')}`}>
-                  <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
+                  <Phone className="h-3 w-3 mr-1" aria-hidden="true" />
                   {t('buttons.callNow')}
                 </a>
               </Button>
@@ -76,15 +77,16 @@ export function SiteHeader() {
               <Button
                 asChild
                 variant="destructive"
-                className="min-h-11"
+                size="sm"
+                className="min-h-11 text-xs"
               >
                 <Link href="/contact">
-                  <Shield className="h-4 w-4 mr-2" aria-hidden="true" />
+                  <Shield className="h-3 w-3 mr-1" aria-hidden="true" />
                   {t('buttons.reportScam')}
                 </Link>
               </Button>
 
-              <div className="flex items-center gap-2 ml-2 pl-2 border-l border-border">
+              <div className="flex items-center gap-1 ml-2 pl-2 border-l border-border">
                 <LanguageSwitcher />
                 <AccessibilityControls />
               </div>
@@ -94,7 +96,7 @@ export function SiteHeader() {
             <Button
               variant="ghost"
               size="sm"
-              className="lg:hidden min-h-11 min-w-11"
+              className="xl:hidden min-h-11 min-w-11"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
@@ -112,7 +114,7 @@ export function SiteHeader() {
           {isMenuOpen && (
             <div 
               id="mobile-menu"
-              className="lg:hidden border-t border-border bg-background"
+              className="xl:hidden border-t border-border bg-background"
             >
               <nav className="px-4 py-4 space-y-3" aria-label="Navigation mobile">
                 {navigation.map((item) => (
