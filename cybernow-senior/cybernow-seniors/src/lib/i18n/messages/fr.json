@@ -1,0 +1,355 @@
+{
+  "common": {
+    "cybernow": "CYBERNOW",
+    "seniors": "Seniors",
+    "phone": "+1-514-555-0123",
+    "email": "contact@cybernowseniors.ca",
+    "address": "Montréal, Québec",
+    "skipToContent": "Aller au contenu principal",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "submit": "Envoyer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "readMore": "Lire la suite",
+    "learnMore": "En savoir plus"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "resources": "Ressources",
+    "alerts": "Alertes",
+    "about": "À propos",
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité"
+  },
+  "buttons": {
+    "callNow": "Appeler maintenant",
+    "getCallback": "Être rappelé",
+    "reportScam": "Signaler une arnaque",
+    "contactUs": "Nous contacter",
+    "getAllServices": "Voir tous nos services",
+    "viewAllAlerts": "Voir toutes les alertes",
+    "viewAllResources": "Voir toutes les ressources"
+  },
+  "language": {
+    "fr": "FR",
+    "en": "EN",
+    "switchTo": "Changer pour {language}"
+  },
+  "accessibility": {
+    "textSize": "Taille du texte",
+    "increase": "A+",
+    "decrease": "A-",
+    "currentSize": "Taille actuelle: {size}",
+    "normal": "Normale",
+    "large": "Grande",
+    "extraLarge": "Très grande"
+  },
+  "home": {
+    "hero": {
+      "title": "Votre bouclier numérique, tout simplement.",
+      "subtitle": "Un conseiller patient, local et accessible pour vous protéger au quotidien.",
+      "badges": {
+        "local": "Local au Québec",
+        "noJargon": "Sans jargon",
+        "available": "7j/7"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi nous choisir",
+      "humanHelp": {
+        "title": "Aide humaine",
+        "description": "Un conseiller dédié, qui prend le temps."
+      },
+      "localService": {
+        "title": "Service local",
+        "description": "Au Québec, pour les Québécois."
+      },
+      "inclusive": {
+        "title": "Inclusif",
+        "description": "Accessible à tous, peu importe votre niveau."
+      }
+    },
+    "services": {
+      "title": "Nos services",
+      "subtitle": "Des solutions simples pour votre sécurité numérique",
+      "proactiveShield": {
+        "title": "Bouclier proactif",
+        "description": "Surveillance et blocage des menaces."
+      },
+      "privacyConsent": {
+        "title": "Vie privée & consentements",
+        "description": "On vous aide à gérer ce qui est partagé."
+      },
+      "onlineHelp": {
+        "title": "Aide aux démarches",
+        "description": "Banque, comptes en ligne, mots de passe."
+      },
+      "scamSupport": {
+        "title": "Soutien en cas d'arnaque",
+        "description": "On analyse et on vous protège."
+      }
+    },
+    "cta": {
+      "title": "Besoin d'aide dès maintenant ?",
+      "subtitle": "Notre équipe est là pour vous accompagner"
+    }
+  },
+  "services": {
+    "title": "Nos services",
+    "subtitle": "Des solutions adaptées à vos besoins numériques",
+    "proactiveShield": {
+      "title": "Bouclier proactif",
+      "shortDescription": "Surveillance et blocage des menaces.",
+      "description": "Notre service de protection proactive surveille en permanence votre environnement numérique. Nous bloquons les menaces avant qu'elles n'atteignent vos appareils et vous alertons en cas de tentative d'intrusion.",
+      "features": [
+        "Surveillance 24h/24 et 7j/7",
+        "Blocage automatique des menaces",
+        "Alertes en temps réel",
+        "Rapport mensuel de sécurité"
+      ],
+      "faq": [
+        {
+          "question": "Comment fonctionne la surveillance ?",
+          "answer": "Notre système analyse en continu les connexions de vos appareils pour détecter toute activité suspecte."
+        },
+        {
+          "question": "Puis-je voir les menaces bloquées ?",
+          "answer": "Oui, vous recevez un rapport détaillé chaque mois avec toutes les tentatives d'intrusion bloquées."
+        }
+      ]
+    },
+    "privacyConsent": {
+      "title": "Vie privée & consentements",
+      "shortDescription": "On vous aide à gérer ce qui est partagé.",
+      "description": "Nous vous accompagnons dans la gestion de vos données personnelles en ligne. Apprenez à contrôler ce que vous partagez et avec qui.",
+      "features": [
+        "Audit de vos paramètres de confidentialité",
+        "Configuration sécurisée de vos comptes",
+        "Gestion des consentements cookies",
+        "Formation aux bonnes pratiques"
+      ],
+      "faq": [
+        {
+          "question": "Que contient l'audit de confidentialité ?",
+          "answer": "Nous vérifions tous vos comptes en ligne et vous montrons quelles informations sont publiques ou partagées."
+        },
+        {
+          "question": "Combien de temps prend la configuration ?",
+          "answer": "Entre 1 à 2 heures selon le nombre de comptes à sécuriser."
+        }
+      ]
+    },
+    "onlineHelp": {
+      "title": "Aide aux démarches",
+      "shortDescription": "Banque, comptes en ligne, mots de passe.",
+      "description": "Nous vous assistons dans toutes vos démarches numériques quotidiennes. De la banque en ligne à la création de comptes sécurisés.",
+      "features": [
+        "Assistance banque en ligne",
+        "Création de comptes sécurisés",
+        "Gestion des mots de passe",
+        "Démarches administratives en ligne"
+      ],
+      "faq": [
+        {
+          "question": "Puis-je vous faire confiance avec mes mots de passe ?",
+          "answer": "Nous ne conservons jamais vos mots de passe. Nous vous apprenons à utiliser un gestionnaire sécurisé."
+        },
+        {
+          "question": "Aidez-vous pour toutes les banques ?",
+          "answer": "Oui, nous connaissons les interfaces de toutes les principales banques québécoises."
+        }
+      ]
+    },
+    "scamSupport": {
+      "title": "Soutien en cas d'arnaque",
+      "shortDescription": "On analyse et on vous protège.",
+      "description": "Si vous avez été victime ou soupçonnez une arnaque, nous analysons la situation et vous guidons dans les étapes de protection.",
+      "features": [
+        "Analyse rapide de la situation",
+        "Plan d'action personnalisé",
+        "Accompagnement aux démarches",
+        "Prévention des récidives"
+      ],
+      "faq": [
+        {
+          "question": "Que faire si j'ai donné mes informations ?",
+          "answer": "Contactez-nous immédiatement. Nous vous guiderons pour sécuriser vos comptes en urgence."
+        },
+        {
+          "question": "Peut-on récupérer l'argent perdu ?",
+          "answer": "Nous vous accompagnons dans les démarches avec votre banque et les autorités compétentes."
+        }
+      ]
+    }
+  },
+  "alerts": {
+    "title": "Alertes aux arnaques",
+    "subtitle": "Restez informé des dernières tentatives d'escroquerie",
+    "whatToDo": {
+      "title": "Que faire si vous recevez ce type de message ?",
+      "steps": [
+        {
+          "title": "Ne pas répondre",
+          "description": "N'ouvrez aucun lien et ne donnez aucune information"
+        },
+        {
+          "title": "Vérifier",
+          "description": "Contactez directement l'organisation par téléphone"
+        },
+        {
+          "title": "Signaler",
+          "description": "Appelez-nous pour signaler la tentative d'arnaque"
+        }
+      ]
+    },
+    "reportScam": "Signaler une tentative d'arnaque",
+    "date": "Publié le {date}",
+    "category": "Catégorie: {category}",
+    "risk": "Niveau de risque: {level}",
+    "riskLevels": {
+      "low": "Faible",
+      "medium": "Moyen",
+      "high": "Élevé",
+      "critical": "Critique"
+    }
+  },
+  "resources": {
+    "title": "Ressources",
+    "subtitle": "Guides pratiques pour votre sécurité numérique",
+    "downloadPdf": "Télécharger en PDF",
+    "printFriendly": "Version imprimable",
+    "lastUpdated": "Dernière mise à jour: {date}",
+    "difficulty": "Niveau: {level}",
+    "difficultyLevels": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "readingTime": "Temps de lecture: {minutes} minutes"
+  },
+  "about": {
+    "title": "À propos de CyberNow Seniors",
+    "subtitle": "Votre partenaire de confiance pour la sécurité numérique",
+    "mission": {
+      "title": "Notre mission",
+      "description": "Rendre la technologie accessible et sécurisée pour tous les aînés du Québec. Nous croyons que chacun mérite de naviguer en ligne en toute confiance."
+    },
+    "values": {
+      "title": "Nos valeurs",
+      "patience": {
+        "title": "Patience",
+        "description": "Nous prenons le temps qu'il faut pour bien expliquer."
+      },
+      "respect": {
+        "title": "Respect",
+        "description": "Chaque question est légitime et mérite une réponse claire."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "description": "Notre équipe maîtrise les enjeux de cybersécurité."
+      }
+    },
+    "team": {
+      "title": "Notre équipe",
+      "description": "Des professionnels expérimentés, formés spécifiquement pour accompagner les aînés dans leurs démarches numériques."
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Nous sommes là pour vous aider",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "nameRequired": "Le nom est requis",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "514-555-0123",
+      "phoneRequired": "Le numéro de téléphone est requis",
+      "phoneInvalid": "Format de téléphone invalide",
+      "bestTime": "Meilleur moment pour vous appeler",
+      "bestTimePlaceholder": "Ex: En matinée entre 9h et 11h",
+      "message": "Votre message",
+      "messagePlaceholder": "Décrivez-nous votre situation ou vos questions...",
+      "messageRequired": "Le message est requis",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+      "error": "Erreur lors de l'envoi. Veuillez nous appeler directement.",
+      "fallback": "Si le formulaire ne fonctionne pas, appelez-nous directement au {phone}"
+    },
+    "phoneInfo": {
+      "title": "Par téléphone",
+      "description": "Appelez-nous directement pour une aide immédiate",
+      "hours": "Heures d'ouverture",
+      "schedule": "Lundi au dimanche: 8h à 20h"
+    },
+    "emergency": {
+      "title": "Urgence sécuritaire",
+      "description": "Si vous pensez être victime d'une arnaque en cours, appelez-nous immédiatement."
+    }
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour: {date}",
+    "sections": {
+      "overview": {
+        "title": "Aperçu",
+        "content": "CyberNow Seniors s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles."
+      },
+      "collection": {
+        "title": "Collecte d'informations",
+        "content": "Nous collectons uniquement les informations nécessaires pour vous fournir nos services : nom, numéro de téléphone, et description de vos besoins."
+      },
+      "usage": {
+        "title": "Utilisation des données",
+        "content": "Vos informations sont utilisées exclusivement pour vous contacter et vous fournir l'assistance demandée. Nous ne vendons ni ne partageons vos données avec des tiers."
+      },
+      "security": {
+        "title": "Sécurité",
+        "content": "Nous utilisons des mesures de sécurité de niveau bancaire pour protéger vos informations. Toutes les communications sont chiffrées."
+      },
+      "rights": {
+        "title": "Vos droits",
+        "content": "Vous pouvez à tout moment demander l'accès, la correction ou la suppression de vos données personnelles en nous contactant."
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "content": "Pour toute question sur cette politique, contactez-nous au {phone} ou par courriel à {email}."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Conçu au Québec avec ❤️ pour nos aînés",
+    "quickLinks": "Liens rapides",
+    "legal": "Mentions légales",
+    "social": "Suivez-nous",
+    "newsletter": {
+      "title": "Alertes sécurité",
+      "description": "Recevez nos alertes importantes par courriel",
+      "placeholder": "Votre adresse courriel",
+      "subscribe": "S'abonner"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page non trouvée",
+      "description": "La page que vous cherchez n'existe pas ou a été déplacée.",
+      "backHome": "Retour à l'accueil"
+    },
+    "500": {
+      "title": "Erreur du serveur",
+      "description": "Une erreur technique s'est produite. Veuillez réessayer plus tard.",
+      "retry": "Réessayer"
+    },
+    "offline": {
+      "title": "Connexion perdue",
+      "description": "Vérifiez votre connexion internet et réessayez.",
+      "retry": "Réessayer"
+    }
+  }
+}

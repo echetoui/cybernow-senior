@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme inline {
+  --radius: 1rem;
+  
+  /* Brand colors for CyberNow Seniors */
+  --color-brand: oklch(0.18 0.05 208);
+  --color-brand-foreground: oklch(1 0 0);
+  --color-accent-cyan: oklch(0.65 0.2 191);
+  --color-accent-cyan-foreground: oklch(1 0 0);
+  --color-danger: oklch(0.55 0.22 15);
+  --color-danger-foreground: oklch(1 0 0);
+  
+  /* Base colors optimized for seniors accessibility */
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.18 0.02 220);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.18 0.02 220);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.18 0.02 220);
+  --color-primary: oklch(0.18 0.05 208);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.97 0.005 220);
+  --color-secondary-foreground: oklch(0.18 0.02 220);
+  --color-muted: oklch(0.97 0.005 220);
+  --color-muted-foreground: oklch(0.45 0.02 220);
+  --color-accent: oklch(0.65 0.2 191);
+  --color-accent-foreground: oklch(1 0 0);
+  --color-destructive: oklch(0.55 0.22 15);
+  --color-destructive-foreground: oklch(1 0 0);
+  --color-border: oklch(0.91 0.005 220);
+  --color-input: oklch(0.91 0.005 220);
+  --color-ring: oklch(0.18 0.05 208);
+  
+  /* Utility colors */
+  --color-chart-1: oklch(0.646 0.222 41.116);
+  --color-chart-2: oklch(0.6 0.118 184.704);
+  --color-chart-3: oklch(0.398 0.07 227.392);
+  --color-chart-4: oklch(0.828 0.189 84.429);
+  --color-chart-5: oklch(0.769 0.188 70.08);
+  
+  /* Radius tokens */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+.dark {
+  --color-background: oklch(0.05 0.01 220);
+  --color-foreground: oklch(0.98 0.005 220);
+  --color-card: oklch(0.08 0.01 220);
+  --color-card-foreground: oklch(0.98 0.005 220);
+  --color-popover: oklch(0.08 0.01 220);
+  --color-popover-foreground: oklch(0.98 0.005 220);
+  --color-primary: oklch(0.98 0.005 220);
+  --color-primary-foreground: oklch(0.18 0.05 208);
+  --color-secondary: oklch(0.15 0.01 220);
+  --color-secondary-foreground: oklch(0.98 0.005 220);
+  --color-muted: oklch(0.15 0.01 220);
+  --color-muted-foreground: oklch(0.65 0.02 220);
+  --color-accent: oklch(0.65 0.2 191);
+  --color-accent-foreground: oklch(0.05 0.01 220);
+  --color-border: oklch(0.15 0.01 220);
+  --color-input: oklch(0.15 0.01 220);
+  --color-ring: oklch(0.84 0.02 220);
+}
+
+@layer base {
+  html {
+    font-size: 100%;
+  }
+  
+  html.large-text {
+    font-size: 112%;
+  }
+  
+  html.xl-text {
+    font-size: 125%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  /* Accessibility: Minimum touch target size 44px */
+  button, [role="button"], input[type="submit"], input[type="button"], a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Focus styles for better accessibility */
+  a:focus-visible, 
+  button:focus-visible, 
+  input:focus-visible, 
+  textarea:focus-visible, 
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+    outline-style: solid;
+  }
+  
+  /* Skip link for screen readers */
+  .skip-link {
+    @apply absolute -top-96 left-4 z-50 bg-brand text-brand-foreground px-4 py-2 rounded-lg;
+    @apply focus-visible:top-4;
+  }
+  
+  /* Remove focus outline for mouse users, keep for keyboard users */
+  .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  }
+}

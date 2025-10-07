@@ -1,0 +1,177 @@
+import { Inter } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { locales, type Locale } from '@/lib/i18n/config';
+import { SiteHeader } from '@/components/layout/site-header';
+import { SiteFooter } from '@/components/layout/site-footer';
+import { generateSchema } from '@/lib/utils';
+import '../globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+interface LayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cybernowseniors.ca';
+  
+  const title = locale === 'fr' 
+    ? 'CyberNow Seniors | Sécurité numérique pour les aînés au Québec'
+    : 'CyberNow Seniors | Digital security for Quebec seniors';
+    
+  const description = locale === 'fr'
+    ? 'Services de cybersécurité adaptés aux aînés. Protection proactive, formation et support humain pour naviguer en ligne en toute sécurité.'
+    : 'Cybersecurity services adapted for seniors. Proactive protection, training and human support to navigate online safely.';
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: title,
+      template: `%s | CyberNow Seniors`,
+    },
+    description,
+    keywords: locale === 'fr' 
+      ? ['cybersécurité', 'aînés', 'Québec', 'protection numérique', 'formation informatique', 'support technique']
+      : ['cybersecurity', 'seniors', 'Quebec', 'digital protection', 'computer training', 'technical support'],
+    authors: [{ name: 'CyberNow Seniors' }],
+    creator: 'CyberNow Seniors',
+    publisher: 'CyberNow Seniors',
+    category: 'Technology',
+    classification: 'Cybersecurity Services',
+    
+    openGraph: {
+      type: 'website',
+      locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
+      url: `${baseUrl}/${locale}`,
+      title,
+      description,
+      siteName: 'CyberNow Seniors',
+      images: [
+        {
+          url: `${baseUrl}/images/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${baseUrl}/images/og-image.jpg`],
+      creator: '@cybernowseniors',
+    },
+    
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        'fr-CA': `${baseUrl}/fr`,
+        'en-CA': `${baseUrl}/en`,
+      },
+    },
+    
+    verification: {
+      google: process.env.GOOGLE_VERIFICATION,
+    },
+  };
+}
+
+export default async function LocaleLayout({ children, params }: LayoutProps) {
+  const { locale } = await params;
+  
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+  const organizationSchema = generateSchema('Organization', {});
+
+  return (
+    <html lang={locale} className={inter.variable}>
+      <head>
+        {/* Schema.org structured data */}
+        {organizationSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(organizationSchema),
+            }}
+          />
+        )}
+        
+        {/* Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
+        
+        {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
+          <script
+            defer
+            data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
+            src="https://plausible.io/js/script.js"
+          />
+        )}
+      </head>
+      
+      <body className="min-h-screen bg-background font-sans antialiased">
+        <NextIntlClientProvider messages={messages}>
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            
+            <main id="main-content" className="flex-1">
+              {children}
+            </main>
+            
+            <SiteFooter />
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,355 @@
+{
+  "common": {
+    "cybernow": "CYBERNOW",
+    "seniors": "Seniors",
+    "phone": "+1-514-555-0123",
+    "email": "contact@cybernowseniors.ca",
+    "address": "Montreal, Quebec",
+    "skipToContent": "Skip to main content",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "readMore": "Read more",
+    "learnMore": "Learn more"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "resources": "Resources",
+    "alerts": "Alerts",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy"
+  },
+  "buttons": {
+    "callNow": "Call now",
+    "getCallback": "Get a callback",
+    "reportScam": "Report a scam",
+    "contactUs": "Contact us",
+    "getAllServices": "View all our services",
+    "viewAllAlerts": "View all alerts",
+    "viewAllResources": "View all resources"
+  },
+  "language": {
+    "fr": "FR",
+    "en": "EN",
+    "switchTo": "Switch to {language}"
+  },
+  "accessibility": {
+    "textSize": "Text size",
+    "increase": "A+",
+    "decrease": "A-",
+    "currentSize": "Current size: {size}",
+    "normal": "Normal",
+    "large": "Large",
+    "extraLarge": "Extra large"
+  },
+  "home": {
+    "hero": {
+      "title": "Your digital shield, simply.",
+      "subtitle": "A patient, local and accessible advisor to protect you daily.",
+      "badges": {
+        "local": "Local in Quebec",
+        "noJargon": "No jargon",
+        "available": "7 days a week"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why choose us",
+      "humanHelp": {
+        "title": "Human help",
+        "description": "A dedicated advisor who takes the time."
+      },
+      "localService": {
+        "title": "Local service",
+        "description": "In Quebec, for Quebecers."
+      },
+      "inclusive": {
+        "title": "Inclusive",
+        "description": "Accessible to all, regardless of your level."
+      }
+    },
+    "services": {
+      "title": "Our services",
+      "subtitle": "Simple solutions for your digital security",
+      "proactiveShield": {
+        "title": "Proactive shield",
+        "description": "Monitoring and blocking threats."
+      },
+      "privacyConsent": {
+        "title": "Privacy & consents",
+        "description": "We help you manage what is shared."
+      },
+      "onlineHelp": {
+        "title": "Online assistance",
+        "description": "Banking, online accounts, passwords."
+      },
+      "scamSupport": {
+        "title": "Scam support",
+        "description": "We analyze and protect you."
+      }
+    },
+    "cta": {
+      "title": "Need help right now?",
+      "subtitle": "Our team is here to assist you"
+    }
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Solutions adapted to your digital needs",
+    "proactiveShield": {
+      "title": "Proactive shield",
+      "shortDescription": "Monitoring and blocking threats.",
+      "description": "Our proactive protection service continuously monitors your digital environment. We block threats before they reach your devices and alert you to intrusion attempts.",
+      "features": [
+        "24/7 monitoring",
+        "Automatic threat blocking",
+        "Real-time alerts",
+        "Monthly security report"
+      ],
+      "faq": [
+        {
+          "question": "How does monitoring work?",
+          "answer": "Our system continuously analyzes your device connections to detect any suspicious activity."
+        },
+        {
+          "question": "Can I see blocked threats?",
+          "answer": "Yes, you receive a detailed monthly report with all blocked intrusion attempts."
+        }
+      ]
+    },
+    "privacyConsent": {
+      "title": "Privacy & consents",
+      "shortDescription": "We help you manage what is shared.",
+      "description": "We assist you in managing your personal data online. Learn to control what you share and with whom.",
+      "features": [
+        "Privacy settings audit",
+        "Secure account configuration",
+        "Cookie consent management",
+        "Best practices training"
+      ],
+      "faq": [
+        {
+          "question": "What does the privacy audit include?",
+          "answer": "We check all your online accounts and show you what information is public or shared."
+        },
+        {
+          "question": "How long does configuration take?",
+          "answer": "Between 1 to 2 hours depending on the number of accounts to secure."
+        }
+      ]
+    },
+    "onlineHelp": {
+      "title": "Online assistance",
+      "shortDescription": "Banking, online accounts, passwords.",
+      "description": "We assist you in all your daily digital tasks. From online banking to creating secure accounts.",
+      "features": [
+        "Online banking assistance",
+        "Secure account creation",
+        "Password management",
+        "Online administrative procedures"
+      ],
+      "faq": [
+        {
+          "question": "Can I trust you with my passwords?",
+          "answer": "We never store your passwords. We teach you to use a secure manager."
+        },
+        {
+          "question": "Do you help with all banks?",
+          "answer": "Yes, we know the interfaces of all major Quebec banks."
+        }
+      ]
+    },
+    "scamSupport": {
+      "title": "Scam support",
+      "shortDescription": "We analyze and protect you.",
+      "description": "If you have been a victim or suspect a scam, we analyze the situation and guide you through the protection steps.",
+      "features": [
+        "Rapid situation analysis",
+        "Personalized action plan",
+        "Procedure assistance",
+        "Preventing recurrence"
+      ],
+      "faq": [
+        {
+          "question": "What to do if I gave my information?",
+          "answer": "Contact us immediately. We will guide you to secure your accounts urgently."
+        },
+        {
+          "question": "Can we recover lost money?",
+          "answer": "We assist you in procedures with your bank and competent authorities."
+        }
+      ]
+    }
+  },
+  "alerts": {
+    "title": "Scam alerts",
+    "subtitle": "Stay informed about the latest scam attempts",
+    "whatToDo": {
+      "title": "What to do if you receive this type of message?",
+      "steps": [
+        {
+          "title": "Don't respond",
+          "description": "Don't open any links and don't give any information"
+        },
+        {
+          "title": "Verify",
+          "description": "Contact the organization directly by phone"
+        },
+        {
+          "title": "Report",
+          "description": "Call us to report the scam attempt"
+        }
+      ]
+    },
+    "reportScam": "Report a scam attempt",
+    "date": "Published on {date}",
+    "category": "Category: {category}",
+    "risk": "Risk level: {level}",
+    "riskLevels": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "critical": "Critical"
+    }
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Practical guides for your digital security",
+    "downloadPdf": "Download PDF",
+    "printFriendly": "Print-friendly version",
+    "lastUpdated": "Last updated: {date}",
+    "difficulty": "Level: {level}",
+    "difficultyLevels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate", 
+      "advanced": "Advanced"
+    },
+    "readingTime": "Reading time: {minutes} minutes"
+  },
+  "about": {
+    "title": "About CyberNow Seniors",
+    "subtitle": "Your trusted partner for digital security",
+    "mission": {
+      "title": "Our mission",
+      "description": "Making technology accessible and secure for all Quebec seniors. We believe everyone deserves to navigate online with confidence."
+    },
+    "values": {
+      "title": "Our values",
+      "patience": {
+        "title": "Patience",
+        "description": "We take the time needed to explain properly."
+      },
+      "respect": {
+        "title": "Respect",
+        "description": "Every question is legitimate and deserves a clear answer."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "description": "Our team masters cybersecurity challenges."
+      }
+    },
+    "team": {
+      "title": "Our team",
+      "description": "Experienced professionals, specifically trained to accompany seniors in their digital procedures."
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We are here to help you",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "nameRequired": "Name is required",
+      "phone": "Phone number",
+      "phonePlaceholder": "514-555-0123",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Invalid phone format",
+      "bestTime": "Best time to call you",
+      "bestTimePlaceholder": "Ex: Morning between 9am and 11am",
+      "message": "Your message",
+      "messagePlaceholder": "Describe your situation or questions...",
+      "messageRequired": "Message is required",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully! We will contact you soon.",
+      "error": "Error sending. Please call us directly.",
+      "fallback": "If the form doesn't work, call us directly at {phone}"
+    },
+    "phoneInfo": {
+      "title": "By phone",
+      "description": "Call us directly for immediate help",
+      "hours": "Opening hours",
+      "schedule": "Monday to Sunday: 8am to 8pm"
+    },
+    "emergency": {
+      "title": "Security emergency",
+      "description": "If you think you are a victim of an ongoing scam, call us immediately."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {date}",
+    "sections": {
+      "overview": {
+        "title": "Overview",
+        "content": "CyberNow Seniors is committed to protecting your privacy. This policy explains how we collect, use and protect your personal information."
+      },
+      "collection": {
+        "title": "Information collection",
+        "content": "We only collect information necessary to provide our services: name, phone number, and description of your needs."
+      },
+      "usage": {
+        "title": "Data usage",
+        "content": "Your information is used exclusively to contact you and provide the requested assistance. We do not sell or share your data with third parties."
+      },
+      "security": {
+        "title": "Security",
+        "content": "We use bank-level security measures to protect your information. All communications are encrypted."
+      },
+      "rights": {
+        "title": "Your rights",
+        "content": "You can at any time request access, correction or deletion of your personal data by contacting us."
+      },
+      "contact": {
+        "title": "Contact us",
+        "content": "For any questions about this policy, contact us at {phone} or by email at {email}."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Designed in Quebec with ❤️ for our seniors",
+    "quickLinks": "Quick links",
+    "legal": "Legal notices",
+    "social": "Follow us",
+    "newsletter": {
+      "title": "Security alerts",
+      "description": "Receive our important alerts by email",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has been moved.",
+      "backHome": "Back to home"
+    },
+    "500": {
+      "title": "Server error",
+      "description": "A technical error occurred. Please try again later.",
+      "retry": "Retry"
+    },
+    "offline": {
+      "title": "Connection lost",
+      "description": "Check your internet connection and try again.",
+      "retry": "Retry"
+    }
+  }
+}
