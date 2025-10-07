@@ -86,14 +86,14 @@ export function generateSchema(type: 'Organization' | 'Service' | 'FAQ', data: R
       return {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: (data as unknown as Array<{question: string; answer: string}>).map((item) => ({
+        mainEntity: Array.isArray(data) ? data.map((item: {question: string; answer: string}) => ({
           '@type': 'Question',
           name: item.question,
           acceptedAnswer: {
             '@type': 'Answer',
             text: item.answer,
           },
-        })),
+        })) : [],
       };
       
     default:
