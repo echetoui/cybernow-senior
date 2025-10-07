@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd cybernow-senior && npm run build",
-  "outputDirectory": "cybernow-senior/.next",
-  "installCommand": "cd cybernow-senior && npm install"
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install"
 }
