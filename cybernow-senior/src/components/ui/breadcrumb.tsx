@@ -59,7 +59,7 @@ export function Breadcrumb({ items, className }: BreadcrumbProps) {
  */
 export function useBreadcrumbs(pathname: string, customLabels?: Record<string, string>) {
   const labels = React.useMemo(() => {
-    const defaultLabels = {
+    const defaultLabels: Record<string, string> = {
       '': 'Accueil',
       'services': 'Services',
       'resources': 'Ressources', 
