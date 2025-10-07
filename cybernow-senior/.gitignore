@@ -1,0 +1,131 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# External directories to ignore
+../.Trash/
+../.aws/
+../.bun/
+../.cache/
+../.cdk/
+../.claude.json
+../.claude.json.backup
+../.claude/
+../.codeium/
+../.codex/
+../.config/
+../.continue/
+../.cups/
+../.cursor/
+../.docker/
+../.ftpquota
+../.gitconfig
+../.gk/
+../.gnupg/
+../.idlerc/
+../.kiro/
+../.kube/
+../.lesshst
+../.matplotlib/
+../.mongodb/
+../.n8n/
+../.npm/
+../.nvm/
+../.oracle_jre_usage/
+../.psql_history
+../.putty/
+../.redhat/
+../.serverless/
+../.serverlessrc
+../.streamlit/
+../.viminfo
+../.vs-kubernetes/
+../.wget-hsts
+../.windsurf/
+../.yarn/
+../.yarnrc
+../.zcompdump
+../.zprofile
+../.zprofile.pysave
+../.zsh_history
+../.zsh_sessions/
+../.zshrc
+../.zshrc.save
+../Applications/
+../Creative Cloud Files chevelu.farfadet0b@icloud.com 62c8357e04f89bf7bf5e5e69a8702cd86d2d1f4f57cf0ab3539b083f1f91344d/
+../Desktop/
+../Documents/
+../Downloads/
+../EyeWitness/
+../Library/
+../Movies/
+../Music/
+../Pictures/
+../Projects/
+../Public/
+../TM.py
+../Virtual Machines.localized/
+../bourse/
+../browser-use/
+../bun.lock
+../conformio-saas/
+../cybernow-ai-guardian-1/
+../cybernow-ai-guardian/
+../cybernow/
+../dossier sans titre 2/
+../dossier sans titre 3/
+../go/
+../maigret/
+../medamine/
+../mobile.py
+../mon-scraper/
+../outilsia/
+../package-lock.json
+../package.json
+../ressources.csv
+../servicenow-1/
+../servicenow/
+../threat-composer/
+../threat_model.py
+../tm/
+../v0-quebec-baby-name-site/
+../verifio/
+../verifioo/
