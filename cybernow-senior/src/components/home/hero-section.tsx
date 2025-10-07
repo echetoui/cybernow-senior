@@ -53,12 +53,12 @@ export function HeroSection() {
             {t('home.hero.subtitle')}
           </p>
 
-          {/* Primary Actions - Mobile-first layout */}
+          {/* Primary Actions - Horizontal layout */}
           <div className="mb-8 md:mb-12 px-4 sm:px-0">
             <CTAButtons 
               size="lg"
-              layout="vertical"
-              className="max-w-sm mx-auto sm:max-w-md"
+              layout="horizontal"
+              className="max-w-2xl mx-auto"
             />
           </div>
 

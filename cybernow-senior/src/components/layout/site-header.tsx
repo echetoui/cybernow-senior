@@ -43,7 +43,7 @@ export function SiteHeader() {
         role="banner"
       >
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex h-16 sm:h-20 items-center justify-between min-h-[64px] sm:min-h-[80px]">
+          <div className="flex h-14 sm:h-16 items-center justify-between min-h-[56px] sm:min-h-[64px]">
             {/* Logo - Mobile optimized */}
             <LogoLink 
               href="/" 
@@ -54,13 +54,13 @@ export function SiteHeader() {
             />
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center gap-6 flex-1 justify-center">
-              <nav id="navigation" className="flex items-center gap-4" aria-label="Navigation principale">
+            <div className="hidden xl:flex items-center gap-4 flex-1 justify-center">
+              <nav id="navigation" className="flex items-center gap-2" aria-label="Navigation principale">
                 {navigation.map((item) => (
                   <Link
                     key={item.key}
                     href={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-brand rounded px-3 py-2 whitespace-nowrap flex items-center text-sm font-medium"
+                    className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-brand rounded px-2 py-1 whitespace-nowrap flex items-center text-sm font-medium"
                   >
                     {t(`navigation.${item.key}`)}
                   </Link>
@@ -68,22 +68,22 @@ export function SiteHeader() {
               </nav>
               
               {/* Search Bar */}
-              <div id="search" className="ml-6">
+              <div id="search" className="ml-4">
                 <HeaderSearchBar onSearch={handleSearch} />
               </div>
             </div>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-1">
               <Button
                 asChild
                 variant="outline"
                 size="sm"
-                className="min-h-[44px] text-xs touch-manipulation"
+                className="min-h-[40px] text-xs touch-manipulation px-2"
               >
                 <a href={`tel:${t('common.phone')}`}>
                   <Phone className="h-3 w-3 mr-1" aria-hidden="true" />
-                  <span className="sr-only sm:not-sr-only">{t('buttons.callNow')}</span>
+                  <span className="hidden xl:inline">{t('buttons.callNow')}</span>
                 </a>
               </Button>
 
@@ -91,15 +91,15 @@ export function SiteHeader() {
                 asChild
                 variant="destructive"
                 size="sm"
-                className="min-h-[44px] text-xs touch-manipulation"
+                className="min-h-[40px] text-xs touch-manipulation px-2"
               >
                 <Link href="/contact">
                   <Shield className="h-3 w-3 mr-1" aria-hidden="true" />
-                  <span className="sr-only lg:not-sr-only">{t('buttons.reportScam')}</span>
+                  <span className="hidden xl:inline">{t('buttons.reportScam')}</span>
                 </Link>
               </Button>
 
-              <div className="flex items-center gap-1 ml-2 pl-2 border-l border-border">
+              <div className="flex items-center gap-1 ml-1 pl-1 border-l border-border">
                 <LanguageSwitcher />
                 <AccessibilityControls />
               </div>
@@ -108,17 +108,17 @@ export function SiteHeader() {
             {/* Mobile Menu Button - Touch optimized */}
             <Button
               variant="ghost"
-              size="lg"
-              className="xl:hidden min-h-[48px] min-w-[48px] touch-manipulation"
+              size="sm"
+              className="xl:hidden min-h-[40px] min-w-[40px] touch-manipulation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu de navigation"}
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-5 w-5" aria-hidden="true" />
               ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
+                <Menu className="h-5 w-5" aria-hidden="true" />
               )}
             </Button>
           </div>

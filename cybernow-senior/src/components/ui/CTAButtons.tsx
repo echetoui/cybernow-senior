@@ -28,7 +28,7 @@ export function CTAButtons({
   const phone = phoneNumber || t('common.phone');
 
   const containerClasses = layout === "horizontal" 
-    ? "flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
+    ? "flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-6"
     : "flex flex-col items-stretch gap-3";
 
   return (
