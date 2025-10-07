@@ -1,9 +1,10 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Phone, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { ColoredIcon } from '@/components/ui/ColoredIcon';
 
 export function FinalCtaSection() {
   const t = useTranslations();
@@ -34,7 +35,7 @@ export function FinalCtaSection() {
               className="min-h-14 px-8 text-xl-button bg-white text-primary hover:bg-white/90 focus-visible:outline-white"
             >
               <a href={`tel:${t('common.phone')}`}>
-                <Phone className="h-5 w-5 mr-3" aria-hidden="true" />
+                <ColoredIcon name="phone" size="sm" className="mr-3" />
                 {t('buttons.callNow')}
               </a>
             </Button>

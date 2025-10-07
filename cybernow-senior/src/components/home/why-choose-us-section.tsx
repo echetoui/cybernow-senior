@@ -1,20 +1,20 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { HeartHandshake, MapPin, Accessibility } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { ColoredIcon } from '@/components/ui/ColoredIcon';
 
 const features = [
   {
-    icon: HeartHandshake,
+    iconName: 'heart-handshake' as const,
     key: 'humanHelp',
   },
   {
-    icon: MapPin,
+    iconName: 'map-pin' as const,
     key: 'localService',
   },
   {
-    icon: Accessibility,
+    iconName: 'accessibility' as const,
     key: 'inclusive',
   },
 ];
@@ -38,7 +38,6 @@ export function WhyChooseUsSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {features.map((feature) => {
-              const Icon = feature.icon;
               return (
                 <Card 
                   key={feature.key}
@@ -46,10 +45,10 @@ export function WhyChooseUsSection() {
                 >
                   <CardContent className="p-8">
                     <div className="mb-6 flex justify-center">
-                      <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
-                        <Icon 
-                          className="h-8 w-8 text-primary" 
-                          aria-hidden="true"
+                      <div className="p-3 bg-white rounded-2xl shadow-lg group-hover:shadow-xl transition-all">
+                        <ColoredIcon 
+                          name={feature.iconName}
+                          size="lg"
                         />
                       </div>
                     </div>

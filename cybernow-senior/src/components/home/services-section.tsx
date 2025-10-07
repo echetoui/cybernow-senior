@@ -1,29 +1,30 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Shield, Lock, HelpCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ColoredIcon } from '@/components/ui/ColoredIcon';
 
 const services = [
   {
-    icon: Shield,
+    iconName: 'shield' as const,
     key: 'proactiveShield',
     href: '/services/proactive-shield',
   },
   {
-    icon: Lock,
+    iconName: 'shield' as const, // Utilise shield pour privacy aussi
     key: 'privacyConsent',
     href: '/services/privacy-consent',
   },
   {
-    icon: HelpCircle,
+    iconName: 'help-circle' as const,
     key: 'onlineHelp',
     href: '/services/online-help',
   },
   {
-    icon: AlertTriangle,
+    iconName: 'alert-triangle' as const,
     key: 'scamSupport',
     href: '/services/scam-support',
   },
@@ -53,7 +54,6 @@ export function ServicesSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {services.map((service) => {
-              const Icon = service.icon;
               return (
                 <Card 
                   key={service.key}
@@ -61,10 +61,10 @@ export function ServicesSection() {
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                        <Icon 
-                          className="h-6 w-6 text-primary" 
-                          aria-hidden="true"
+                      <div className="p-2 bg-white rounded-xl shadow-md group-hover:shadow-lg transition-all flex-shrink-0">
+                        <ColoredIcon 
+                          name={service.iconName}
+                          size="md"
                         />
                       </div>
                       

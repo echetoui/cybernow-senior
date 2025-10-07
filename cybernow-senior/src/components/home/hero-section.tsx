@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Phone, ArrowRight, Users, MessageSquare, Clock } from 'lucide-react';
+import { Phone, ArrowRight } from 'lucide-react';
+import { ColoredIcon } from '@/components/ui/ColoredIcon';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
@@ -12,18 +13,15 @@ export function HeroSection() {
   const badges = [
     {
       text: t('home.hero.badges.local'),
-      icon: Users,
-      colorClass: 'text-cybernow-deep'
+      iconName: 'users' as const
     },
     {
       text: t('home.hero.badges.noJargon'),
-      icon: MessageSquare,
-      colorClass: 'text-cybernow-cyan'
+      iconName: 'message-square' as const
     },
     {
       text: t('home.hero.badges.available'),
-      icon: Clock,
-      colorClass: 'text-cybernow-lime'
+      iconName: 'clock' as const
     },
   ];
 
@@ -85,15 +83,14 @@ export function HeroSection() {
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {badges.map((badge, index) => {
-              const Icon = badge.icon;
               return (
                 <div 
                   key={index}
-                  className="flex items-center gap-2 text-muted-foreground bg-white rounded-full px-4 py-2 shadow-sm"
+                  className="flex items-center gap-3 text-muted-foreground bg-white rounded-full px-5 py-3 shadow-md hover:shadow-lg transition-shadow"
                 >
-                  <Icon 
-                    className={`h-4 w-4 ${badge.colorClass}`}
-                    aria-hidden="true" 
+                  <ColoredIcon 
+                    name={badge.iconName}
+                    size="sm"
                   />
                   <span className="text-sm font-medium">{badge.text}</span>
                 </div>

@@ -8,6 +8,7 @@
 // Composants principaux
 export { Button, buttonVariants } from "./CybernowButton";
 export { Icon, iconVariants } from "./Icon";
+export { ColoredIcon } from "./ColoredIcon";
 
 // Composants existants (pour compatibilité)
 export { Button as OriginalButton } from "./button";
