@@ -1,0 +1,10 @@
+# Ignore files that might confuse framework detection
+.env*
+.next/
+node_modules/
+*.log
+.DS_Store
+README.md
+
+# Ignore parent directory files
+../*
