@@ -46,12 +46,12 @@ export function CTAButtons({
         </a>
       </Button>
 
-      {/* Bouton Être rappelé - Même vert que le premier */}
+      {/* Bouton Être rappelé - Fond bleu */}
       <Button
         data-slot="button"
         variant="secondary"
         size={size}
-        className="w-full sm:w-auto shadow-cybernow bg-cnw-secondary text-white hover:bg-cnw-secondary/90 min-h-[56px] text-lg sm:text-base touch-manipulation"
+        className="w-full sm:w-auto shadow-cybernow bg-cnw-primary text-white hover:bg-cnw-primary/90 min-h-[56px] text-lg sm:text-base touch-manipulation"
       >
         {t('buttons.getCallback')}
       </Button>
