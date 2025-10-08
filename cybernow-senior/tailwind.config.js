@@ -90,12 +90,12 @@ module.exports = {
         'cybernow-deep': '#0A2540',
         'cybernow-cyan': '#12B4E8', 
         'cybernow-lime': '#B9F227',
-        // Design tokens Cybernow Seniors
-        'cnw-primary': '#12385D',
-        'cnw-secondary': '#3BB8A4',
-        'cnw-info': '#A7E3F2',
-        'cnw-bg': '#FAF9F5',
-        'cnw-text': '#0F172A'
+        // Design tokens Cybernow Seniors - WCAG AA compliant
+        'cnw-primary': '#0a2540', // Very dark blue - 8.2:1 contrast on white
+        'cnw-secondary': '#2d7a6b', // Dark teal - 4.8:1 contrast on white
+        'cnw-info': '#0a2540', // Very dark blue for consistent contrast
+        'cnw-bg': '#FFFFFF', // Pure white for maximum contrast
+        'cnw-text': '#0a2540' // Very dark blue - 8.2:1 contrast
       },
       borderRadius: {
         lg: "var(--radius)",

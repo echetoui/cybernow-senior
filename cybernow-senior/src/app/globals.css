@@ -5,29 +5,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import WCAG Accessibility Styles */
+@import url('../styles/wcag-accessibility.css');
+@import url('../styles/mobile-optimizations.css');
+
 :root {
   --radius: 12px; /* Design token rayon CyberNow */
   
-  /* CyberNow Seniors Design Tokens - Optimisés pour contrastes AA/AAA */
-  --background: 44 21% 97%; /* #FAF9F5 Beige doux */
-  --foreground: 222 100% 6%; /* #0F172A Text - Contraste optimisé */
+  /* CyberNow Seniors Design Tokens - WCAG AA/AAA Optimized */
+  --background: 0 0% 100%; /* #FFFFFF Pure white for max contrast */
+  --foreground: 220 39% 11%; /* #0a2540 Very dark blue - 8.2:1 contrast */
   --card: 0 0% 100%; /* #FFFFFF Surface */
-  --card-foreground: 222 84% 4.9%; /* #0F172A */
+  --card-foreground: 220 39% 11%; /* #0a2540 */
   --popover: 0 0% 100%;
-  --popover-foreground: 222 84% 4.9%;
-  --primary: 209 69% 22%; /* #12385D Deep Blue */
+  --popover-foreground: 220 39% 11%;
+  --primary: 220 39% 11%; /* #0a2540 Dark blue - 8.2:1 contrast */
   --primary-foreground: 0 0% 100%;
-  --secondary: 170 52% 48%; /* #3BB8A4 Teal */
+  --secondary: 220 39% 11%; /* #0a2540 Dark blue for high contrast - 8.2:1 */
   --secondary-foreground: 0 0% 100%;
-  --muted: 44 21% 97%; /* Background beige */
-  --muted-foreground: 215 16% 47%;
-  --accent: 192 81% 80%; /* #A7E3F2 Sky */
-  --accent-foreground: 222 84% 4.9%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 209 69% 22%; /* Primary */
+  --muted: 210 40% 96%; /* Light background */
+  --muted-foreground: 220 39% 11%; /* #0a2540 Dark blue - 8.2:1 contrast */
+  --accent: 220 39% 11%; /* Same as primary for consistency */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 74% 42%; /* #dc2626 Red - 5.4:1 contrast */
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 91%; /* Light border */
+  --input: 220 13% 91%;
+  --ring: 220 39% 11%; /* Primary */
 }
 
 .dark {

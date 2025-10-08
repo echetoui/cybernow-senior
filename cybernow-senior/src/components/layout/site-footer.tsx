@@ -37,7 +37,7 @@ export function SiteFooter() {
               className="mb-4"
             />
             
-            <p className="text-slate-300 text-body leading-relaxed mb-4">
+            <p className="text-slate-200 text-body leading-relaxed mb-4">
               {t('about.mission.description')}
             </p>
 
@@ -46,7 +46,7 @@ export function SiteFooter() {
                 <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
                 <a 
                   href={`tel:${t('common.phone')}`}
-                  className="text-slate-300 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
+                  className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
                 >
                   {t('common.phone')}
                 </a>
@@ -56,7 +56,7 @@ export function SiteFooter() {
                 <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
                 <a 
                   href={`mailto:${t('common.email')}`}
-                  className="text-slate-300 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
+                  className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
                 >
                   {t('common.email')}
                 </a>
@@ -64,7 +64,7 @@ export function SiteFooter() {
               
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
-                <span className="text-slate-300">{t('common.address')}</span>
+                <span className="text-slate-200">{t('common.address')}</span>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ export function SiteFooter() {
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-slate-300 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
+                      className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
                     >
                       {t(`navigation.${link.key}`)}
                     </Link>
@@ -97,7 +97,7 @@ export function SiteFooter() {
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-slate-300 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
+                      className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
                     >
                       {t(`navigation.${link.key}`)}
                     </Link>
@@ -110,7 +110,7 @@ export function SiteFooter() {
           {/* Newsletter & Social */}
           <div>
             <h3 className="font-semibold text-lg mb-4">{t('footer.newsletter.title')}</h3>
-            <p className="text-slate-300 text-sm mb-4">
+            <p className="text-slate-200 text-sm mb-4">
               {t('footer.newsletter.description')}
             </p>
             
@@ -166,10 +166,10 @@ export function SiteFooter() {
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-300 text-sm">
             {t('footer.tagline')}
           </p>
-          <p className="text-slate-500 text-xs mt-2">
+          <p className="text-slate-400 text-xs mt-2">
             © 2024 CyberNow Seniors. Tous droits réservés.
           </p>
         </div>

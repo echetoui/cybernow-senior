@@ -46,17 +46,17 @@ const variantConfig = {
   default: {
     icon: 'text-primary',
     cybernow: 'text-primary',
-    seniors: 'text-secondary'
+    seniors: 'text-primary' // Changed to primary for WCAG compliance
   },
   white: {
     icon: 'text-white',
     cybernow: 'text-white',
-    seniors: 'text-white/90'
+    seniors: 'text-white'
   },
   dark: {
     icon: 'text-primary',
     cybernow: 'text-primary',
-    seniors: 'text-secondary'
+    seniors: 'text-primary' // Changed to primary for WCAG compliance
   }
 };
 

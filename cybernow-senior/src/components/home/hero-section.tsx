@@ -68,7 +68,7 @@ export function HeroSection() {
               return (
                 <div 
                   key={index}
-                  className="flex items-center justify-center gap-3 text-muted-foreground bg-white rounded-full px-4 py-3 sm:px-5 shadow-md hover:shadow-lg transition-shadow min-h-[44px] touch-manipulation"
+                  className="flex items-center justify-center gap-3 text-foreground bg-white rounded-full px-4 py-3 sm:px-5 shadow-md hover:shadow-lg transition-shadow min-h-[44px] touch-manipulation border border-border"
                 >
                   <ColoredIcon 
                     name={badge.iconName}
