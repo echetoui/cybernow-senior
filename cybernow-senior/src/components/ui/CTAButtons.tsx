@@ -36,9 +36,9 @@ export function CTAButtons({
       {/* Bouton Appeler maintenant - Mobile optimized */}
       <Button
         data-slot="button"
-        variant="primary"
+        variant="secondary"
         size={size}
-        className="w-full sm:w-auto shadow-cybernow min-h-[56px] text-lg sm:text-base touch-manipulation"
+        className="w-full sm:w-auto shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/80 min-h-[56px] text-lg sm:text-base touch-manipulation"
         asChild
       >
         <a href={`tel:${phone}`} className="flex items-center justify-center">

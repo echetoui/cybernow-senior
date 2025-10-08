@@ -55,22 +55,17 @@ export function SiteHeader() {
 
             {/* Desktop Navigation */}
             <div className="hidden xl:flex items-center gap-4 flex-1 justify-center">
-              <nav id="navigation" className="flex items-center gap-2" aria-label="Navigation principale">
+              <nav id="navigation" className="flex items-center gap-3" aria-label="Navigation principale">
                 {navigation.map((item) => (
                   <Link
                     key={item.key}
                     href={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-brand rounded px-2 py-1 whitespace-nowrap flex items-center text-sm font-medium"
+                    className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-brand rounded px-3 py-2 whitespace-nowrap flex items-center text-sm font-medium"
                   >
                     {t(`navigation.${item.key}`)}
                   </Link>
                 ))}
               </nav>
-              
-              {/* Search Bar */}
-              <div id="search" className="ml-4">
-                <HeaderSearchBar onSearch={handleSearch} />
-              </div>
             </div>
 
             {/* Desktop Actions */}
