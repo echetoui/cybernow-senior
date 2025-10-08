@@ -1,43 +1,100 @@
 import { useTranslations } from 'next-intl';
-import { Shield, Lock, HelpCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Shield, Users, Headphones, UserCheck, Phone, Mail, CheckCircle, Star } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { CTAButtons } from '@/components/ui/CTAButtons';
+import { ColoredIcon } from '@/components/ui/ColoredIcon';
 import { generateSchema } from '@/lib/utils';
 
-const services = [
+// Niveaux de service basés sur les personas des user studies
+const servicesTiers = [
   {
+    id: 'essentiel',
+    persona: 'Carmen - L\'Apprenante Sociale',
+    icon: Users,
+    price: '25',
+    popular: false,
+    features: [
+      'Support téléphonique patient et bienveillant',
+      'Guides simplifiés en gros caractères',
+      'Ateliers de groupe dans votre région',
+      'Aide étape par étape sans jugement',
+      'Vérification de vos questions de sécurité',
+      'Support email avec réponse garantie'
+    ],
+    description: 'Pour débuter en toute confiance avec la technologie'
+  },
+  {
+    id: 'confort',
+    persona: 'Gisèle - La Prudente Connectée',
     icon: Shield,
-    key: 'proactiveShield',
-    href: '/services/proactive-shield',
+    price: '50',
+    popular: true,
+    features: [
+      'Analyse proactive de vos appareils',
+      'Formation personnalisée à domicile possible',
+      'Support prioritaire (réponse < 2h)',
+      'Validation avant tout clic suspect',
+      'Protection bancaire renforcée',
+      'Suivi régulier de votre sécurité',
+      'Conseil pour vos achats en ligne',
+      'Support familial inclus'
+    ],
+    description: 'Protection complète avec accompagnement personnel'
   },
   {
-    icon: Lock,
-    key: 'privacyConsent',
-    href: '/services/privacy-consent',
+    id: 'expert',
+    persona: 'Robert & Jean-Paul - Les Autonomes',
+    icon: UserCheck,
+    price: '100',
+    popular: false,
+    features: [
+      'Audit complet multi-appareils',
+      'Conseiller dédié expert',
+      'Solutions avancées (VPN, gestionnaire mots de passe)',
+      'Monitoring 24/7 de vos comptes',
+      'Support trading et crypto-monnaies',
+      'Formation technique approfondie',
+      'Consultation stratégie familiale',
+      'Priorité absolue sur tous les canaux'
+    ],
+    description: 'Service premium pour utilisateurs avancés'
+  }
+];
+
+// Services complémentaires basés sur les besoins identifiés
+const additionalServices = [
+  {
+    icon: Phone,
+    title: 'Ligne directe seniors',
+    description: 'Numéro dédié sans menu automatisé - Réponse humaine garantie en moins de 2 sonneries',
+    highlight: '9h à 17h, 7 jours sur 7'
   },
   {
-    icon: HelpCircle,
-    key: 'onlineHelp',
-    href: '/services/online-help',
+    icon: Users,
+    title: 'Ateliers communautaires',
+    description: 'Sessions de groupe dans les résidences et centres communautaires',
+    highlight: 'Apprentissage en groupe'
   },
   {
-    icon: AlertTriangle,
-    key: 'scamSupport',
-    href: '/services/scam-support',
-  },
+    icon: Mail,
+    title: 'Vérification d\'emails suspects',
+    description: 'Transférez-nous vos emails douteux pour vérification immédiate',
+    highlight: 'Réponse en 30 minutes'
+  }
 ];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   
   const title = locale === 'fr' 
-    ? 'Services | Solutions de cybersécurité pour aînés'
-    : 'Services | Cybersecurity solutions for seniors';
+    ? 'Services de Protection Numérique | Cybernow Seniors'
+    : 'Digital Protection Services | Cybernow Seniors';
     
   const description = locale === 'fr'
-    ? 'Découvrez nos services de protection numérique adaptés aux aînés : surveillance proactive, gestion de la vie privée, aide aux démarches et support en cas d\'arnaque.'
-    : 'Discover our digital protection services adapted for seniors: proactive monitoring, privacy management, online assistance and scam support.';
+    ? 'Services de cybersécurité adaptés aux aînés : 3 niveaux de protection selon vos besoins. Support humain, formations et aide personnalisée.'
+    : 'Cybersecurity services adapted for seniors: 3 protection levels according to your needs. Human support, training and personalized help.';
 
   return {
     title,
@@ -65,104 +122,227 @@ export default function ServicesPage() {
 
       <div className="py-12 lg:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             {/* Page Header */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                {t('services.title')}
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+                Services de Protection Numérique
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                {t('services.subtitle')}
+              <p className="text-xl text-foreground max-w-4xl mx-auto leading-relaxed">
+                Des solutions de cybersécurité pensées spécialement pour les aînés. 
+                Choisissez le niveau de protection qui correspond à vos besoins et votre expertise.
               </p>
+              
+              {/* Trust indicators */}
+              <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-foreground">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-secondary" />
+                  <span>Service 100% québécois</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-secondary" />
+                  <span>Support humain garanti</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-secondary" />
+                  <span>Sans engagement de durée</span>
+                </div>
+              </div>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {services.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <Card 
-                    key={service.key}
-                    className="border-2 hover:border-primary/20 hover:shadow-lg transition-all group h-full"
-                  >
-                    <CardHeader>
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
-                          <Icon 
-                            className="h-8 w-8 text-primary" 
-                            aria-hidden="true"
-                          />
+            {/* Service Tiers */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+                Nos Forfaits de Protection
+              </h2>
+              <p className="text-center text-foreground mb-12 max-w-3xl mx-auto">
+                Basés sur nos études avec plus de 250 aînés québécois, nos services s'adaptent à votre niveau de confort avec la technologie.
+              </p>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {servicesTiers.map((tier) => {
+                  const Icon = tier.icon;
+                  return (
+                    <Card 
+                      key={tier.id}
+                      className={`relative border-2 transition-all h-full flex flex-col ${
+                        tier.popular 
+                          ? 'border-secondary shadow-lg scale-105' 
+                          : 'border-border hover:border-primary/20 hover:shadow-lg'
+                      }`}
+                    >
+                      {tier.popular && (
+                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                          <div className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                            <Star className="h-4 w-4" />
+                            Le plus populaire
+                          </div>
                         </div>
-                        <CardTitle className="text-2xl">
-                          {t(`services.${service.key}.title`)}
+                      )}
+                      
+                      <CardHeader className="text-center">
+                        <div className="flex justify-center mb-4">
+                          <div className={`p-4 rounded-2xl ${
+                            tier.popular ? 'bg-secondary/10' : 'bg-primary/10'
+                          }`}>
+                            <Icon 
+                              className={`h-12 w-12 ${
+                                tier.popular ? 'text-secondary' : 'text-primary'
+                              }`} 
+                              aria-hidden="true"
+                            />
+                          </div>
+                        </div>
+                        
+                        <CardTitle className="text-2xl mb-2">
+                          Forfait {tier.id.charAt(0).toUpperCase() + tier.id.slice(1)}
                         </CardTitle>
-                      </div>
-                    </CardHeader>
-                    
-                    <CardContent className="space-y-6">
-                      <p className="text-muted-foreground text-lg leading-relaxed">
-                        {t(`services.${service.key}.description`)}
-                      </p>
+                        
+                        <div className="text-sm text-muted-foreground mb-4">
+                          {tier.persona}
+                        </div>
+                        
+                        <div className="mb-4">
+                          <span className="text-4xl font-bold text-primary">{tier.price}$</span>
+                          <span className="text-muted-foreground">/mois</span>
+                        </div>
+                        
+                        <p className="text-muted-foreground text-base">
+                          {tier.description}
+                        </p>
+                      </CardHeader>
+                      
+                      <CardContent className="flex-1 flex flex-col">
+                        <div className="flex-1">
+                          <h4 className="font-semibold mb-4 text-foreground">Inclus dans ce forfait :</h4>
+                          <ul className="space-y-3">
+                            {tier.features.map((feature, index) => (
+                              <li key={index} className="flex items-start gap-3">
+                                <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                                <span className="text-foreground">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div className="mt-8">
+                          <Button
+                            asChild
+                            className={`w-full min-h-12 ${
+                              tier.popular 
+                                ? 'bg-secondary hover:bg-secondary/90 text-white' 
+                                : 'bg-primary hover:bg-primary/90 text-white'
+                            }`}
+                          >
+                            <Link href="/contact">
+                              Choisir ce forfait
+                            </Link>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
 
-                      {/* Features List */}
+            {/* Additional Services */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+                Services Spécialisés Inclus
+              </h2>
+              <p className="text-center text-foreground mb-12 max-w-3xl mx-auto">
+                Tous nos forfaits incluent ces services pensés spécialement pour les aînés.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {additionalServices.map((service, index) => {
+                  const Icon = service.icon;
+                  return (
+                    <Card key={index} className="border-2 border-border hover:border-primary/20 hover:shadow-lg transition-all">
+                      <CardHeader className="text-center">
+                        <div className="flex justify-center mb-4">
+                          <div className="p-4 bg-info/10 rounded-2xl">
+                            <Icon className="h-8 w-8 text-info" aria-hidden="true" />
+                          </div>
+                        </div>
+                        <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
+                      </CardHeader>
+                      
+                      <CardContent className="text-center">
+                        <p className="text-foreground mb-4">{service.description}</p>
+                        <div className="bg-secondary/10 rounded-lg p-3">
+                          <span className="text-secondary font-semibold">{service.highlight}</span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Testimonials Section */}
+            <div className="mb-16 bg-slate-50 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-center mb-8 text-primary">
+                Ce que disent nos clients
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card className="border-none shadow-md">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                        <span className="text-secondary font-bold text-lg">G</span>
+                      </div>
                       <div>
-                        <h4 className="font-semibold mb-3">Fonctionnalités incluses :</h4>
-                        <ul className="space-y-2">
-                          {Array.from({ length: 4 }, (_, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" aria-hidden="true" />
-                              <span className="text-sm text-muted-foreground">
-                                {t(`services.${service.key}.features.${i}`)}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
+                        <h4 className="font-semibold text-foreground">Gisèle T., 68 ans</h4>
+                        <p className="text-sm text-muted-foreground">Sainte-Foy, Québec</p>
                       </div>
-
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="w-full min-h-12 border-primary text-primary hover:bg-gradient-cta hover:text-white"
-                      >
-                        <Link href={service.href}>
-                          {t('common.learnMore')}
-                          <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                    </div>
+                    <p className="text-foreground italic">
+                      "Enfin un service qui me parle dans mes mots ! Je n'ai plus peur de faire mes achats en ligne. 
+                      L'équipe est très patiente et me rappelle toujours pour vérifier que tout va bien."
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="border-none shadow-md">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                        <span className="text-secondary font-bold text-lg">R</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground">Robert G., 72 ans</h4>
+                        <p className="text-sm text-muted-foreground">Trois-Rivières</p>
+                      </div>
+                    </div>
+                    <p className="text-foreground italic">
+                      "J'étais sceptique au début, mais l'audit gratuit m'a convaincu. 
+                      Maintenant mes investissements sont mieux protégés et ma femme aussi a appris à se protéger."
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
             {/* Call to Action */}
-            <div className="text-center bg-slate-50 rounded-2xl p-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                {t('home.cta.title')}
+            <div className="text-center bg-primary/5 rounded-2xl p-8 border border-primary/20">
+              <h2 className="text-3xl font-bold mb-4 text-primary">
+                Prêt à protéger votre vie numérique ?
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                {t('home.cta.subtitle')}
+              <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
+                Appelez-nous pour une consultation gratuite. Un conseiller spécialisé seniors 
+                répondra à toutes vos questions, sans jargon technique.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="min-h-12 px-8 bg-gradient-cta hover:bg-gradient-cta/90"
-                >
-                  <a href={`tel:${t('common.phone')}`}>
-                    {t('buttons.callNow')}
-                  </a>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="min-h-12 px-8 border-primary text-primary hover:bg-gradient-cta hover:text-white"
-                >
-                  <Link href="/contact">
-                    {t('buttons.contactUs')}
-                  </Link>
-                </Button>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <CTAButtons size="lg" layout="horizontal" className="max-w-2xl mx-auto" />
+              </div>
+              
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>Consultation gratuite • Sans engagement • Réponse immédiate</span>
               </div>
             </div>
           </div>
