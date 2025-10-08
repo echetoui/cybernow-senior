@@ -33,12 +33,12 @@ export function CTAButtons({
 
   return (
     <div className={`${containerClasses} ${className}`}>
-      {/* Bouton Appeler maintenant - Mobile optimized */}
+      {/* Bouton Appeler maintenant - Vert comme le second bouton */}
       <Button
         data-slot="button"
         variant="secondary"
         size={size}
-        className="w-full sm:w-auto shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/80 min-h-[56px] text-lg sm:text-base touch-manipulation"
+        className="w-full sm:w-auto shadow-cybernow bg-cnw-secondary text-white hover:bg-cnw-secondary/90 min-h-[56px] text-lg sm:text-base touch-manipulation"
         asChild
       >
         <a href={`tel:${phone}`} className="flex items-center justify-center">
@@ -46,12 +46,12 @@ export function CTAButtons({
         </a>
       </Button>
 
-      {/* Bouton Être rappelé - Mobile optimized */}
+      {/* Bouton Être rappelé - Même vert que le premier */}
       <Button
         data-slot="button"
         variant="secondary"
         size={size}
-        className="w-full sm:w-auto shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/80 min-h-[56px] text-lg sm:text-base touch-manipulation"
+        className="w-full sm:w-auto shadow-cybernow bg-cnw-secondary text-white hover:bg-cnw-secondary/90 min-h-[56px] text-lg sm:text-base touch-manipulation"
       >
         {t('buttons.getCallback')}
       </Button>
