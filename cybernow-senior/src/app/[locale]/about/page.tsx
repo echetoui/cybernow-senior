@@ -1,8 +1,5 @@
-import { useTranslations } from 'next-intl';
-import { Heart, Users, Award, Phone, MessageCircle, Shield, MapPin, CheckCircle, Star, Clock, UserCheck } from 'lucide-react';
-import Link from 'next/link';
+import { Heart, Users, Award, Phone, Shield, MapPin, CheckCircle, Star, Clock, UserCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { CTAButtons } from '@/components/ui/CTAButtons';
 
 // Équipe locale basée sur les besoins de proximité des user studies
@@ -110,7 +107,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function AboutPage() {
-  const t = useTranslations();
 
   return (
     <div className="py-12 lg:py-16">
@@ -122,7 +118,7 @@ export default function AboutPage() {
               Une Équipe Québécoise à Votre Service
             </h1>
             <p className="text-xl text-foreground max-w-4xl mx-auto leading-relaxed">
-              Cybernow Seniors, c'est une équipe de passionnés dédiée à la protection numérique des aînés. 
+              Cybernow Seniors, c&apos;est une équipe de passionnés dédiée à la protection numérique des aînés. 
               Nous sommes vos voisins, nous parlons votre langue, et nous comprenons vos préoccupations.
             </p>
             
@@ -153,7 +149,7 @@ export default function AboutPage() {
                 <p className="text-lg leading-relaxed text-foreground max-w-4xl mx-auto">
                   <strong>Rendre la technologie accessible et sécuritaire pour tous les aînés du Québec.</strong>
                   <br /><br />
-                  Nous croyons que personne ne devrait avoir peur d'utiliser internet ou se sentir exclu du monde numérique. 
+                  Nous croyons que personne ne devrait avoir peur d&apos;utiliser internet ou se sentir exclu du monde numérique. 
                   Notre approche est simple : écouter, comprendre, expliquer et protéger, toujours avec patience et respect.
                 </p>
               </CardContent>
@@ -192,7 +188,7 @@ export default function AboutPage() {
               Rencontrez Votre Équipe Locale
             </h2>
             <p className="text-center text-foreground mb-12 max-w-3xl mx-auto">
-              Des professionnels d'expérience qui vivent dans votre région et comprennent vos besoins spécifiques.
+              Des professionnels d&apos;expérience qui vivent dans votre région et comprennent vos besoins spécifiques.
             </p>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

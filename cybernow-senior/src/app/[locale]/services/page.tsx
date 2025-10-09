@@ -1,10 +1,8 @@
-import { useTranslations } from 'next-intl';
-import { Shield, Users, Headphones, UserCheck, Phone, Mail, CheckCircle, Star } from 'lucide-react';
+import { Shield, Users, UserCheck, Phone, Mail, CheckCircle, Star } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CTAButtons } from '@/components/ui/CTAButtons';
-import { ColoredIcon } from '@/components/ui/ColoredIcon';
 import { generateSchema } from '@/lib/utils';
 
 // Niveaux de service basés sur les personas des user studies
@@ -103,7 +101,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function ServicesPage() {
-  const t = useTranslations();
 
   const servicesSchema = generateSchema('Service', {
     name: 'Services de cybersécurité pour aînés',
@@ -156,7 +153,7 @@ export default function ServicesPage() {
                 Nos Forfaits de Protection
               </h2>
               <p className="text-center text-foreground mb-12 max-w-3xl mx-auto">
-                Basés sur nos études avec plus de 250 aînés québécois, nos services s'adaptent à votre niveau de confort avec la technologie.
+                Basés sur nos études avec plus de 250 aînés québécois, nos services s&apos;adaptent à votre niveau de confort avec la technologie.
               </p>
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -300,8 +297,8 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <p className="text-foreground italic">
-                      "Enfin un service qui me parle dans mes mots ! Je n'ai plus peur de faire mes achats en ligne. 
-                      L'équipe est très patiente et me rappelle toujours pour vérifier que tout va bien."
+                      &quot;Enfin un service qui me parle dans mes mots ! Je n&apos;ai plus peur de faire mes achats en ligne. 
+                      L&apos;équipe est très patiente et me rappelle toujours pour vérifier que tout va bien.&quot;
                     </p>
                   </CardContent>
                 </Card>
@@ -318,8 +315,8 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <p className="text-foreground italic">
-                      "J'étais sceptique au début, mais l'audit gratuit m'a convaincu. 
-                      Maintenant mes investissements sont mieux protégés et ma femme aussi a appris à se protéger."
+                      &quot;J&apos;étais sceptique au début, mais l&apos;audit gratuit m&apos;a convaincu. 
+                      Maintenant mes investissements sont mieux protégés et ma femme aussi a appris à se protéger.&quot;
                     </p>
                   </CardContent>
                 </Card>

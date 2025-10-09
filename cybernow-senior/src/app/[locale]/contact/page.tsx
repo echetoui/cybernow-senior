@@ -71,7 +71,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function ContactPage() {
-  const t = useTranslations();
 
   return (
     <div className="py-12 lg:py-16">
@@ -112,13 +111,13 @@ export default function ContactPage() {
                   🚨 Situation Urgente ? Appelez Immédiatement
                 </h2>
                 <p className="mb-6 text-red-700 text-lg">
-                  Si vous pensez être victime d'une arnaque EN CE MOMENT ou si quelqu'un vous demande 
-                  de l'argent par téléphone, email ou internet :
+                  Si vous pensez être victime d&apos;une arnaque EN CE MOMENT ou si quelqu&apos;un vous demande 
+                  de l&apos;argent par téléphone, email ou internet :
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <h3 className="font-semibold mb-3 text-red-800">Appelez-nous D'ABORD :</h3>
+                    <h3 className="font-semibold mb-3 text-red-800">Appelez-nous D&apos;ABORD :</h3>
                     <Button
                       asChild
                       size="lg"
@@ -158,7 +157,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-center text-foreground mb-12 max-w-3xl mx-auto">
               Basé sur nos études avec 250+ aînés québécois, voici les moyens de contact 
-              dans l'ordre de préférence de notre clientèle :
+              dans l&apos;ordre de préférence de notre clientèle :
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -226,7 +225,7 @@ export default function ContactPage() {
             <Card className="bg-gradient-to-br from-primary/5 to-transparent border-2 border-primary/20">
               <CardContent className="p-8">
                 <h2 className="text-3xl font-bold text-center mb-6 text-primary">
-                  Nos Heures d'Ouverture Adaptées à Vous
+                  Nos Heures d&apos;Ouverture Adaptées à Vous
                 </h2>
                 <p className="text-center text-foreground mb-8 max-w-3xl mx-auto">
                   Nous avons adapté nos horaires selon les préférences exprimées par nos clients seniors.
@@ -367,10 +366,10 @@ export default function ContactPage() {
           {/* Final CTA */}
           <div className="mt-16 text-center bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5 rounded-2xl p-8 border border-primary/20">
             <h2 className="text-3xl font-bold mb-4 text-primary">
-              Une Question ? N'Hésitez Pas !
+              Une Question ? N&apos;Hésitez Pas !
             </h2>
             <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
-              Aucune question n'est "stupide". Notre équipe est là pour vous rassurer et vous guider, 
+              Aucune question n&apos;est &quot;stupide&quot;. Notre équipe est là pour vous rassurer et vous guider, 
               quel que soit votre niveau avec la technologie.
             </p>
             

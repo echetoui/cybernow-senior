@@ -8,17 +8,12 @@ import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { AccessibilityControls } from '@/components/ui/accessibility-controls';
 import { LogoLink } from '@/components/ui/logo';
-import { HeaderSearchBar } from '@/components/ui/search-bar';
 // import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleSearch = (query: string) => {
-    // Navigation vers la page de recherche avec query
-    window.location.href = `/search?q=${encodeURIComponent(query)}`;
-  };
 
   const navigation = [
     { href: '/', key: 'home' },

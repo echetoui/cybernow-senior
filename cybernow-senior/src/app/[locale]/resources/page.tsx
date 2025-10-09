@@ -102,7 +102,7 @@ const learningTestimonials = [
   {
     name: 'Carmen B., 74 ans',
     location: 'Verdun',
-    quote: 'Les ateliers de groupe m\'ont donné confiance. Maintenant j\'aide mes voisines !',
+    quote: 'Les ateliers de groupe m&apos;ont donné confiance. Maintenant j&apos;aide mes voisines !',
     type: 'Ateliers'
   },
   {
@@ -137,7 +137,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function ResourcesPage() {
-  const t = useTranslations();
 
   return (
     <div className="py-12 lg:py-16">
@@ -149,7 +148,7 @@ export default function ResourcesPage() {
               Apprenez à Votre Rythme
             </h1>
             <p className="text-xl text-foreground max-w-4xl mx-auto leading-relaxed">
-              Des ressources d'apprentissage pensées pour les aînés. Guides simples, vidéos claires, 
+              Des ressources d&apos;apprentissage pensées pour les aînés. Guides simples, vidéos claires, 
               ateliers de groupe et support humain - tout pour vous sentir en sécurité avec la technologie.
             </p>
             
@@ -173,10 +172,10 @@ export default function ResourcesPage() {
           {/* Resource Types Overview */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-4 text-primary">
-              4 Façons d'Apprendre Selon Vos Préférences
+              4 Façons d&apos;Apprendre Selon Vos Préférences
             </h2>
             <p className="text-center text-foreground mb-12 max-w-3xl mx-auto">
-              Nos études montrent que chaque senior a sa façon préférée d'apprendre. 
+              Nos études montrent que chaque senior a sa façon préférée d&apos;apprendre. 
               Choisissez ce qui vous convient le mieux !
             </p>
             
@@ -204,7 +203,7 @@ export default function ResourcesPage() {
           {/* Learning Categories */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">
-              Ressources Par Niveau d'Expérience
+              Ressources Par Niveau d&apos;Expérience
             </h2>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -318,7 +317,7 @@ export default function ResourcesPage() {
                     </div>
                     
                     <p className="text-foreground italic mb-4">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </p>
                     
                     <div className="flex items-center gap-3">
@@ -364,7 +363,7 @@ export default function ResourcesPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-secondary mt-0.5" />
-                        <span>Aucune question "stupide"</span>
+                        <span>Aucune question &quot;stupide&quot;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-secondary mt-0.5" />
@@ -405,7 +404,7 @@ export default function ResourcesPage() {
               Prêt à Commencer Votre Apprentissage ?
             </h2>
             <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
-              Appelez-nous pour discuter de vos objectifs d'apprentissage. 
+              Appelez-nous pour discuter de vos objectifs d&apos;apprentissage. 
               Nous vous orienterons vers les meilleures ressources pour vous.
             </p>
             
