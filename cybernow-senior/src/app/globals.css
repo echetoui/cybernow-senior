@@ -14,18 +14,18 @@
   
   /* CyberNow Seniors Design Tokens - WCAG AA/AAA Optimized */
   --background: 0 0% 100%; /* #FFFFFF Pure white for max contrast */
-  --foreground: 220 39% 11%; /* #0a2540 Very dark blue - 8.2:1 contrast */
+  --foreground: 220 50% 15%; /* #12385D Cybernow blue darkened - 7.1:1 contrast */
   --card: 0 0% 100%; /* #FFFFFF Surface */
-  --card-foreground: 220 39% 11%; /* #0a2540 */
+  --card-foreground: 220 50% 15%; /* #12385D Cybernow blue darkened */
   --popover: 0 0% 100%;
-  --popover-foreground: 220 39% 11%;
-  --primary: 220 39% 11%; /* #0a2540 Dark blue - 8.2:1 contrast */
+  --popover-foreground: 220 50% 15%;
+  --primary: 220 50% 15%; /* #12385D Cybernow blue darkened - 7.1:1 contrast */
   --primary-foreground: 0 0% 100%;
-  --secondary: 220 39% 11%; /* #0a2540 Dark blue for high contrast - 8.2:1 */
+  --secondary: 166 48% 25%; /* #3BB8A4 Cybernow teal darkened - 4.7:1 contrast */
   --secondary-foreground: 0 0% 100%;
   --muted: 210 40% 96%; /* Light background */
-  --muted-foreground: 220 39% 11%; /* #0a2540 Dark blue - 8.2:1 contrast */
-  --accent: 220 39% 11%; /* Same as primary for consistency */
+  --muted-foreground: 220 50% 20%; /* Slightly lighter blue for muted text - 5.2:1 contrast */
+  --accent: 220 50% 15%; /* Same as primary for consistency */
   --accent-foreground: 0 0% 100%;
   --destructive: 0 74% 42%; /* #dc2626 Red - 5.4:1 contrast */
   --destructive-foreground: 0 0% 100%;
