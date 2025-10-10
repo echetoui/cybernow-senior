@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { Phone, Clock, AlertTriangle, Users, Mail, MapPin, Headphones, Heart, Shield, CheckCircle } from 'lucide-react';
 import { ContactForm } from '@/components/forms/contact-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

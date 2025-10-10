@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { BookOpen, Video, Users, Download, Phone, CheckCircle, Star, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -303,7 +302,7 @@ export default function ResourcesPage() {
           {/* Learning Testimonials */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-primary">
-              L'Apprentissage Qui Transforme
+              L&apos;Apprentissage Qui Transforme
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -351,7 +350,7 @@ export default function ResourcesPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold mb-4 text-secondary">✨ Principes d'apprentissage</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-secondary">✨ Principes d&apos;apprentissage</h3>
                     <ul className="space-y-3 text-foreground">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-secondary mt-0.5" />
@@ -385,7 +384,7 @@ export default function ResourcesPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-secondary mt-0.5" />
-                        <span>Communauté d'entraide</span>
+                        <span>Communauté d&apos;entraide</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-secondary mt-0.5" />
@@ -414,7 +413,7 @@ export default function ResourcesPage() {
             
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <Clock className="h-4 w-4" />
-              <span>Première session d'orientation gratuite • Support continu inclus</span>
+              <span>Première session d&apos;orientation gratuite • Support continu inclus</span>
             </div>
           </div>
         </div>
