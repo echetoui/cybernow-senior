@@ -55,7 +55,7 @@ export function SiteHeader() {
                   <Link
                     key={item.key}
                     href={item.href}
-                    className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-3 py-2 whitespace-nowrap flex items-center text-sm font-medium"
+                    className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-3 py-2 whitespace-nowrap flex items-center text-seniors-base font-medium"
                   >
                     {t(`navigation.${item.key}`)}
                   </Link>
@@ -124,7 +124,7 @@ export function SiteHeader() {
                   <Link
                     key={item.key}
                     href={item.href}
-                    className="block py-4 px-4 text-lg text-secondary hover:text-foreground hover:bg-muted/50 transition-colors focus-visible:outline-primary rounded-lg min-h-[56px] flex items-center touch-manipulation"
+                    className="block py-4 px-4 text-seniors-base text-secondary hover:text-foreground hover:bg-muted/50 transition-colors focus-visible:outline-primary rounded-lg min-h-[56px] flex items-center touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t(`navigation.${item.key}`)}
