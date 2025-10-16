@@ -26,7 +26,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-secondary text-white" role="contentinfo">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <LogoLink 
@@ -37,7 +37,7 @@ export function SiteFooter() {
               className="mb-4"
             />
             
-            <p className="text-white/80 text-body leading-relaxed mb-4">
+            <p className="text-white/80 text-seniors-sm leading-relaxed mb-4">
               {t('about.mission.description')}
             </p>
 
@@ -69,16 +69,19 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Ressources & Liens */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.quickLinks')}</h3>
-            <nav aria-label="Liens rapides">
+            <h3 className="font-semibold text-seniors-base mb-4">Ressources & Liens</h3>
+            
+            {/* Navigation principale */}
+            <nav aria-label="Liens rapides" className="mb-6">
+              <h4 className="font-medium text-base mb-2 text-success-green">Navigation</h4>
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
+                      className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block text-base"
                     >
                       {t(`navigation.${link.key}`)}
                     </Link>
@@ -86,18 +89,16 @@ export function SiteFooter() {
                 ))}
               </ul>
             </nav>
-          </div>
 
-          {/* Legal Links */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.legal')}</h3>
+            {/* Liens légaux */}
             <nav aria-label="Mentions légales">
+              <h4 className="font-medium text-base mb-2 text-success-green">Informations légales</h4>
               <ul className="space-y-2">
                 {legalLinks.map((link) => (
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
+                      className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block text-base"
                     >
                       {t(`navigation.${link.key}`)}
                     </Link>
@@ -109,8 +110,8 @@ export function SiteFooter() {
 
           {/* Newsletter & Social */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.newsletter.title')}</h3>
-            <p className="text-white/80 text-sm mb-4">
+            <h3 className="font-semibold text-seniors-base mb-4">{t('footer.newsletter.title')}</h3>
+            <p className="text-white/80 text-seniors-sm mb-4">
               {t('footer.newsletter.description')}
             </p>
             
@@ -129,8 +130,8 @@ export function SiteFooter() {
               />
               <Button 
                 type="submit"
-                variant="secondary"
-                className="w-full min-h-11"
+                className="w-full min-h-11 bg-success-green hover:bg-success-green/90 text-black font-medium"
+                aria-label="Sécurisé : s'inscrire à la newsletter"
               >
                 {t('footer.newsletter.subscribe')}
               </Button>
