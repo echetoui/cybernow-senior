@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Phone, Menu, X, Shield } from 'lucide-react';
+import { Phone, Menu, X, Shield, Lock, ShieldCheck, Home, BookOpen, AlertTriangle, Users } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
@@ -16,12 +16,12 @@ export function SiteHeader() {
 
 
   const navigation = [
-    { href: '/', key: 'home' },
-    { href: '/services', key: 'services' },
-    { href: '/resources', key: 'resources' },
-    { href: '/alerts', key: 'alerts' },
-    { href: '/about', key: 'about' },
-    { href: '/contact', key: 'contact' },
+    { href: '/', key: 'home', icon: Home },
+    { href: '/services', key: 'services', icon: ShieldCheck },
+    { href: '/resources', key: 'resources', icon: BookOpen },
+    { href: '/alerts', key: 'alerts', icon: AlertTriangle },
+    { href: '/about', key: 'about', icon: Users },
+    { href: '/contact', key: 'contact', icon: Lock },
   ];
 
   return (
@@ -39,27 +39,48 @@ export function SiteHeader() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex h-14 sm:h-16 items-center justify-between min-h-[56px] sm:min-h-[64px]">
-            {/* Logo - Mobile optimized */}
-            <LogoLink 
-              href="/" 
-              size="sm"
-              variant="default"
-              ariaLabel="Accueil CyberNow Seniors"
-              className="flex-shrink-0 self-center min-h-[44px] min-w-[44px] touch-manipulation"
-            />
+            {/* Logo avec indicateur de sécurité */}
+            <div className="flex items-center gap-3">
+              <LogoLink 
+                href="/" 
+                size="sm"
+                variant="default"
+                ariaLabel="Accueil CyberNow Seniors"
+                className="flex-shrink-0 self-center min-h-[44px] min-w-[44px] touch-manipulation"
+              />
+              
+              {/* Indicateur de sécurité */}
+              <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-success-green/10 border border-success-green/20 rounded-full">
+                <ShieldCheck 
+                  className="h-4 w-4 text-success-green" 
+                  aria-hidden="true"
+                />
+                <span className="text-sm font-medium text-success-green">
+                  Site sécurisé
+                </span>
+              </div>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden xl:flex items-center gap-4 flex-1 justify-center">
               <nav id="navigation" className="flex items-center gap-3" aria-label="Navigation principale">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.key}
-                    href={item.href}
-                    className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-3 py-2 whitespace-nowrap flex items-center text-seniors-base font-medium"
-                  >
-                    {t(`navigation.${item.key}`)}
-                  </Link>
-                ))}
+                {navigation.map((item) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <Link
+                      key={item.key}
+                      href={item.href}
+                      className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-3 py-2 whitespace-nowrap flex items-center gap-2 text-seniors-base font-medium"
+                      aria-label={`Sécurisé : ${t(`navigation.${item.key}`)}`}
+                    >
+                      <IconComponent 
+                        className="h-5 w-5 text-trust-blue" 
+                        aria-hidden="true"
+                      />
+                      {t(`navigation.${item.key}`)}
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
 
@@ -120,16 +141,24 @@ export function SiteHeader() {
               className="xl:hidden border-t border-border bg-background shadow-lg"
             >
               <nav className="px-4 py-6 space-y-1" aria-label="Navigation mobile">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.key}
-                    href={item.href}
-                    className="block py-4 px-4 text-seniors-base text-secondary hover:text-foreground hover:bg-muted/50 transition-colors focus-visible:outline-primary rounded-lg min-h-[56px] flex items-center touch-manipulation"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {t(`navigation.${item.key}`)}
-                  </Link>
-                ))}
+                {navigation.map((item) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <Link
+                      key={item.key}
+                      href={item.href}
+                      className="block py-4 px-4 text-seniors-base text-secondary hover:text-foreground hover:bg-muted/50 transition-colors focus-visible:outline-primary rounded-lg min-h-[56px] flex items-center gap-3 touch-manipulation"
+                      onClick={() => setIsMenuOpen(false)}
+                      aria-label={`Sécurisé : ${t(`navigation.${item.key}`)}`}
+                    >
+                      <IconComponent 
+                        className="h-6 w-6 text-trust-blue flex-shrink-0" 
+                        aria-hidden="true"
+                      />
+                      {t(`navigation.${item.key}`)}
+                    </Link>
+                  );
+                })}
                 
                 <div className="pt-6 space-y-4 border-t border-border">
                   {/* Primary CTA - Call */}
