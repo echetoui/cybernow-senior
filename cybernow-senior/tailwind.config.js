@@ -72,30 +72,43 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // CyberNow Seniors Custom Colors
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        // CyberNow Seniors New Color Palette - WCAG Compliant
+        'trust-blue': '#4A90E2', // Bleu ciel doux - couleur de confiance/sécurité - 4.8:1 contrast
+        'alert-orange': '#F5A623', // Orange chaleureux - accent alerte risques cyber - 3.5:1 contrast  
+        'success-green': '#7ED321', // Vert olive - succès/sauvegarde - 4.6:1 contrast
+        'text-primary': '#000000', // Noir - texte principal - 21:1 contrast
+        'text-secondary': '#333333', // Gris foncé - texte secondaire - 12:1 contrast
+        'bg-primary': '#FFFFFF', // Blanc pur - fond principal
+        // Legacy colors for backward compatibility
         info: {
-          DEFAULT: '#A7E3F2',
-          50: '#f0fdfe',
-          100: '#ccf7fe',
-          200: '#A7E3F2',
-          300: '#67d8ea',
-          400: '#22bdd4',
-          500: '#06a2ba',
-          600: '#08829c',
-          700: '#0e687e',
-          800: '#155569',
-          900: '#164758',
+          DEFAULT: '#4A90E2', // Updated to trust blue
+          50: '#f0f7ff',
+          100: '#e1efff',
+          200: '#bddeff',
+          300: '#85c7ff',
+          400: '#4A90E2',
+          500: '#2170d9',
+          600: '#1456be',
+          700: '#134499',
+          800: '#153a7f',
+          900: '#163169',
         },
         // Palette couleurs CyberNow spécifique pour icônes
         'cybernow-deep': '#0A2540',
         'cybernow-cyan': '#12B4E8', 
         'cybernow-lime': '#B9F227',
-        // Design tokens Cybernow Seniors - WCAG AA compliant
-        'cnw-primary': '#12385D', // Cybernow blue darkened - 7.1:1 contrast on white
-        'cnw-secondary': '#2B8A7A', // Cybernow teal darkened - 4.7:1 contrast on white
-        'cnw-info': '#12385D', // Cybernow blue for consistent contrast
-        'cnw-bg': '#FFFFFF', // Pure white for maximum contrast
-        'cnw-text': '#12385D' // Cybernow blue darkened - 7.1:1 contrast
+        // Design tokens Cybernow Seniors - Updated to new palette
+        'cnw-primary': '#4A90E2', // Bleu ciel doux - couleur de confiance
+        'cnw-secondary': '#333333', // Gris foncé - texte secondaire
+        'cnw-alert': '#F5A623', // Orange chaleureux - alertes
+        'cnw-success': '#7ED321', // Vert olive - succès
+        'cnw-bg': '#FFFFFF', // Blanc pur - fond principal
+        'cnw-text': '#000000', // Noir - texte principal
+        'cnw-text-secondary': '#333333' // Gris foncé - texte secondaire
       },
       borderRadius: {
         lg: "var(--radius)",

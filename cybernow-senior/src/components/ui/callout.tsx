@@ -16,12 +16,22 @@ const variantStyles = {
   info: 'bg-blue-50 border-blue-200 text-blue-900',
 };
 
+const variantAriaLabels = {
+  default: '',
+  warning: 'Attention : information importante',
+  danger: 'Alerte : avertissement critique',
+  success: 'Sécurisé : information confirmée',
+  info: 'Sécurisé : conseil de confiance',
+};
+
 export function Callout({ 
   children, 
   variant = 'default', 
   icon: Icon,
   className 
 }: CalloutProps) {
+  const ariaLabel = variantAriaLabels[variant];
+  
   return (
     <div 
       className={cn(
@@ -30,12 +40,13 @@ export function Callout({
         className
       )}
       role={variant === 'danger' ? 'alert' : variant === 'warning' ? 'note' : undefined}
+      aria-label={ariaLabel || undefined}
     >
       <div className="flex gap-3">
         {Icon && (
           <Icon 
             className="h-5 w-5 mt-0.5 flex-shrink-0" 
-            aria-hidden="true"
+            aria-label={ariaLabel ? `${ariaLabel} - icône` : undefined}
           />
         )}
         <div className="flex-1 text-body leading-relaxed">

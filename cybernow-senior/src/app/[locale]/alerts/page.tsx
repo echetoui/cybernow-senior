@@ -14,6 +14,13 @@ const riskLevelColors = {
   critical: 'bg-red-100 text-red-800 border-red-200',
 };
 
+const riskLevelAriaLabels = {
+  low: 'Sécurisé : risque faible',
+  medium: 'Attention : risque modéré',
+  high: 'Alerte : risque élevé',
+  critical: 'Danger : risque critique',
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   
@@ -73,7 +80,11 @@ export default function AlertsPage() {
                         </div>
                       </div>
 
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium border ${riskLevelColors[alert.riskLevel]}`}>
+                      <div 
+                        className={`px-3 py-1 rounded-full text-xs font-medium border ${riskLevelColors[alert.riskLevel]}`}
+                        aria-label={riskLevelAriaLabels[alert.riskLevel]}
+                        role="status"
+                      >
                         {t(`alerts.riskLevels.${alert.riskLevel}`)}
                       </div>
                     </div>
@@ -98,7 +109,11 @@ export default function AlertsPage() {
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">
+                    <div 
+                      className="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0"
+                      aria-label="Alerte : étape critique de sécurité"
+                      role="img"
+                    >
                       1
                     </div>
                     <div>
@@ -110,7 +125,11 @@ export default function AlertsPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">
+                    <div 
+                      className="w-6 h-6 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0"
+                      aria-label="Attention : étape de vérification"
+                      role="img"
+                    >
                       2
                     </div>
                     <div>
@@ -122,7 +141,11 @@ export default function AlertsPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">
+                    <div 
+                      className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0"
+                      aria-label="Sécurisé : étape de signalement"
+                      role="img"
+                    >
                       3
                     </div>
                     <div>
@@ -136,9 +159,9 @@ export default function AlertsPage() {
               </Callout>
 
               {/* Report Scam CTA */}
-              <Card className="bg-red-50 border-red-200">
+              <Card className="bg-red-50 border-red-200" aria-label="Alerte : signalement d'arnaque urgent">
                 <CardContent className="p-6 text-center">
-                  <AlertTriangle className="h-12 w-12 text-red-600 mx-auto mb-4" aria-hidden="true" />
+                  <AlertTriangle className="h-12 w-12 text-red-600 mx-auto mb-4" aria-label="Alerte : icône d'avertissement" />
                   <h3 className="font-semibold text-lg mb-2">
                     {t('alerts.reportScam')}
                   </h3>
@@ -150,6 +173,7 @@ export default function AlertsPage() {
                       asChild
                       variant="destructive"
                       className="w-full"
+                      aria-label="Alerte : appeler immédiatement pour signaler"
                     >
                       <a href={`tel:${t('common.phone')}`}>
                         <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
@@ -173,7 +197,7 @@ export default function AlertsPage() {
               {/* Resources Link */}
               <Card>
                 <CardContent className="p-6 text-center">
-                  <Eye className="h-8 w-8 text-primary mx-auto mb-3" aria-hidden="true" />
+                  <Eye className="h-8 w-8 text-primary mx-auto mb-3" aria-label="Sécurisé : icône de prévention" />
                   <h3 className="font-medium mb-2">
                     Guides de prévention
                   </h3>

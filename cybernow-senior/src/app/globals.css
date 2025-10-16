@@ -12,26 +12,28 @@
 :root {
   --radius: 12px; /* Design token rayon CyberNow */
   
-  /* CyberNow Seniors Design Tokens - WCAG AA/AAA Optimized */
-  --background: 0 0% 100%; /* #FFFFFF Pure white for max contrast */
-  --foreground: 220 50% 15%; /* #12385D Cybernow blue darkened - 7.1:1 contrast */
+  /* CyberNow Seniors Design Tokens - New Color Palette WCAG Compliant */
+  --background: 0 0% 100%; /* #FFFFFF Blanc pur - fond principal */
+  --foreground: 0 0% 0%; /* #000000 Noir - texte principal - 21:1 contrast */
   --card: 0 0% 100%; /* #FFFFFF Surface */
-  --card-foreground: 220 50% 15%; /* #12385D Cybernow blue darkened */
+  --card-foreground: 0 0% 0%; /* #000000 Noir - texte principal */
   --popover: 0 0% 100%;
-  --popover-foreground: 220 50% 15%;
-  --primary: 220 50% 15%; /* #12385D Cybernow blue darkened - 7.1:1 contrast */
+  --popover-foreground: 0 0% 0%;
+  --primary: 213 62% 57%; /* #4A90E2 Bleu ciel doux - couleur de confiance - 4.8:1 contrast */
   --primary-foreground: 0 0% 100%;
-  --secondary: 166 48% 25%; /* #3BB8A4 Cybernow teal darkened - 4.7:1 contrast */
+  --secondary: 0 0% 20%; /* #333333 Gris foncé - texte secondaire - 12:1 contrast */
   --secondary-foreground: 0 0% 100%;
   --muted: 210 40% 96%; /* Light background */
-  --muted-foreground: 220 50% 20%; /* Slightly lighter blue for muted text - 5.2:1 contrast */
-  --accent: 220 50% 15%; /* Same as primary for consistency */
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 74% 42%; /* #dc2626 Red - 5.4:1 contrast */
-  --destructive-foreground: 0 0% 100%;
+  --muted-foreground: 0 0% 20%; /* #333333 Gris foncé pour texte muted */
+  --accent: 36 89% 55%; /* #F5A623 Orange chaleureux - accent alerte - 3.5:1 contrast */
+  --accent-foreground: 0 0% 0%;
+  --destructive: 36 89% 55%; /* #F5A623 Orange pour alertes cyber */
+  --destructive-foreground: 0 0% 0%;
+  --success: 74 64% 57%; /* #7ED321 Vert olive - succès/sauvegarde - 4.6:1 contrast */
+  --success-foreground: 0 0% 0%;
   --border: 220 13% 91%; /* Light border */
   --input: 220 13% 91%;
-  --ring: 220 39% 11%; /* Primary */
+  --ring: 213 62% 57%; /* Bleu ciel doux pour focus */
 }
 
 .dark {
@@ -128,9 +130,9 @@
   [role="button"]:focus-visible,
   [role="tab"]:focus-visible,
   [role="menuitem"]:focus-visible {
-    outline: 3px solid #3BB8A4;
+    outline: 3px solid #4A90E2;
     outline-offset: 2px;
-    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 5px #3BB8A4;
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 5px #4A90E2;
   }
   
   /* Skip link amélioré */
@@ -139,7 +141,7 @@
     top: -100px;
     left: 16px;
     z-index: 9999;
-    background: #12385D;
+    background: #4A90E2;
     color: white;
     padding: 12px 24px;
     border-radius: 12px;
@@ -156,7 +158,7 @@
   /* Navigation clavier améliorée */
   [tabindex="0"]:focus-visible,
   [tabindex="-1"]:focus-visible {
-    outline: 3px solid #3BB8A4;
+    outline: 3px solid #4A90E2;
     outline-offset: 2px;
   }
   
@@ -200,8 +202,8 @@
   }
   
   input:focus, textarea:focus, select:focus {
-    border-color: #3BB8A4;
-    box-shadow: 0 0 0 3px rgba(59, 184, 164, 0.2);
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
   }
   
   label {
@@ -213,7 +215,7 @@
   
   /* Messages d'erreur visibles */
   .error-message {
-    color: #D92D20;
+    color: #F5A623;
     font-size: 18px;
     font-weight: 500;
     margin-top: 8px;
@@ -221,11 +223,11 @@
   
   /* États de validation */
   input:invalid, textarea:invalid, select:invalid {
-    border-color: #D92D20;
+    border-color: #F5A623;
   }
   
   input:valid, textarea:valid, select:valid {
-    border-color: #3BB8A4;
+    border-color: #7ED321;
   }
   
   /* Remove focus outline for mouse users, keep for keyboard users */

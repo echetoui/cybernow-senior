@@ -24,7 +24,7 @@ export function SiteFooter() {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white" role="contentinfo">
+    <footer className="bg-secondary text-white" role="contentinfo">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
@@ -37,34 +37,34 @@ export function SiteFooter() {
               className="mb-4"
             />
             
-            <p className="text-slate-200 text-body leading-relaxed mb-4">
+            <p className="text-white/80 text-body leading-relaxed mb-4">
               {t('about.mission.description')}
             </p>
 
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
+                <Phone className="h-4 w-4 text-trust-blue" aria-label="Sécurisé : icône de téléphone de confiance" />
                 <a 
                   href={`tel:${t('common.phone')}`}
-                  className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
+                  className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
                 >
                   {t('common.phone')}
                 </a>
               </div>
               
               <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
+                <Mail className="h-4 w-4 text-trust-blue" aria-label="Sécurisé : icône d'email de confiance" />
                 <a 
                   href={`mailto:${t('common.email')}`}
-                  className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
+                  className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1"
                 >
                   {t('common.email')}
                 </a>
               </div>
               
               <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
-                <span className="text-slate-200">{t('common.address')}</span>
+                <MapPin className="h-4 w-4 text-trust-blue" aria-label="Sécurisé : icône d'adresse de confiance" />
+                <span className="text-white/80">{t('common.address')}</span>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ export function SiteFooter() {
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
+                      className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
                     >
                       {t(`navigation.${link.key}`)}
                     </Link>
@@ -97,7 +97,7 @@ export function SiteFooter() {
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      className="text-slate-200 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
+                      className="text-white/80 hover:text-white transition-colors focus-visible:outline-white rounded px-1 py-1 block"
                     >
                       {t(`navigation.${link.key}`)}
                     </Link>
@@ -110,7 +110,7 @@ export function SiteFooter() {
           {/* Newsletter & Social */}
           <div>
             <h3 className="font-semibold text-lg mb-4">{t('footer.newsletter.title')}</h3>
-            <p className="text-slate-200 text-sm mb-4">
+            <p className="text-white/80 text-sm mb-4">
               {t('footer.newsletter.description')}
             </p>
             
@@ -124,7 +124,7 @@ export function SiteFooter() {
               <Input
                 type="email"
                 placeholder={t('footer.newsletter.placeholder')}
-                className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-400 focus:border-accent"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-trust-blue"
                 aria-label={t('footer.newsletter.placeholder')}
               />
               <Button 
@@ -142,21 +142,21 @@ export function SiteFooter() {
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors focus-visible:outline-white"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors focus-visible:outline-white"
                 >
                   <Facebook className="h-5 w-5" aria-hidden="true" />
                 </a>
                 <a
                   href="#"
                   aria-label="Twitter"
-                  className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors focus-visible:outline-white"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors focus-visible:outline-white"
                 >
                   <Twitter className="h-5 w-5" aria-hidden="true" />
                 </a>
                 <a
                   href="#"
                   aria-label="LinkedIn"
-                  className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors focus-visible:outline-white"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors focus-visible:outline-white"
                 >
                   <Linkedin className="h-5 w-5" aria-hidden="true" />
                 </a>
@@ -165,11 +165,11 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-12 pt-8 text-center">
-          <p className="text-slate-300 text-sm">
+        <div className="border-t border-white/20 mt-12 pt-8 text-center">
+          <p className="text-white/90 text-sm">
             {t('footer.tagline')}
           </p>
-          <p className="text-slate-400 text-xs mt-2">
+          <p className="text-white/60 text-xs mt-2">
             © 2024 CyberNow Seniors. Tous droits réservés.
           </p>
         </div>
