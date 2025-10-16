@@ -50,31 +50,31 @@ export function SiteHeader() {
               />
               
               {/* Indicateur de sécurité */}
-              <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-success-green/10 border border-success-green/20 rounded-full">
+              <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-success-green/10 border border-success-green/20 rounded-full">
                 <ShieldCheck 
-                  className="h-4 w-4 text-success-green" 
+                  className="h-3 w-3 text-success-green" 
                   aria-hidden="true"
                 />
-                <span className="text-sm font-medium text-success-green">
-                  Site sécurisé
+                <span className="text-xs font-medium text-success-green">
+                  Sécurisé
                 </span>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center gap-4 flex-1 justify-center">
-              <nav id="navigation" className="flex items-center gap-3" aria-label="Navigation principale">
+            <div className="hidden lg:flex items-center gap-2 flex-1 justify-center">
+              <nav id="navigation" className="flex items-center gap-2" aria-label="Navigation principale">
                 {navigation.map((item) => {
                   const IconComponent = item.icon;
                   return (
                     <Link
                       key={item.key}
                       href={item.href}
-                      className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-3 py-2 whitespace-nowrap flex items-center gap-2 text-seniors-base font-medium"
+                      className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-2 py-1 whitespace-nowrap flex items-center gap-1.5 text-base font-medium"
                       aria-label={`Sécurisé : ${t(`navigation.${item.key}`)}`}
                     >
                       <IconComponent 
-                        className="h-5 w-5 text-trust-blue" 
+                        className="h-4 w-4 text-trust-blue" 
                         aria-hidden="true"
                       />
                       {t(`navigation.${item.key}`)}
@@ -94,7 +94,7 @@ export function SiteHeader() {
               >
                 <a href={`tel:${t('common.phone')}`}>
                   <Phone className="h-3 w-3 mr-1" aria-hidden="true" />
-                  <span className="hidden xl:inline">{t('buttons.callNow')}</span>
+                  <span className="hidden lg:inline">{t('buttons.callNow')}</span>
                 </a>
               </Button>
 
@@ -106,7 +106,7 @@ export function SiteHeader() {
               >
                 <Link href="/contact">
                   <Shield className="h-3 w-3 mr-1" aria-hidden="true" />
-                  <span className="hidden xl:inline">{t('buttons.reportScam')}</span>
+                  <span className="hidden lg:inline">{t('buttons.reportScam')}</span>
                 </Link>
               </Button>
 
@@ -120,7 +120,7 @@ export function SiteHeader() {
             <Button
               variant="ghost"
               size="sm"
-              className="xl:hidden min-h-[40px] min-w-[40px] touch-manipulation"
+              className="lg:hidden min-h-[40px] min-w-[40px] touch-manipulation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
@@ -138,7 +138,7 @@ export function SiteHeader() {
           {isMenuOpen && (
             <div 
               id="mobile-menu"
-              className="xl:hidden border-t border-border bg-background shadow-lg"
+              className="lg:hidden border-t border-border bg-background shadow-lg"
             >
               <nav className="px-4 py-6 space-y-1" aria-label="Navigation mobile">
                 {navigation.map((item) => {
