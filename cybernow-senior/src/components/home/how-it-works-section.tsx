@@ -12,13 +12,13 @@ const steps = [
   },
   {
     number: 2,
-    iconName: 'shield' as const,
+    iconName: 'help-circle' as const,
     key: 'diagnostic',
     color: 'text-sage-green'
   },
   {
     number: 3,
-    iconName: 'check-circle' as const,
+    iconName: 'shield' as const,
     key: 'protection',
     color: 'text-success-green'
   },
