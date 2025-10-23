@@ -33,12 +33,12 @@ export function CTAButtons({
 
   return (
     <div className={`${containerClasses} ${className}`}>
-      {/* Bouton Appeler maintenant - Vert avec contraste élevé */}
+      {/* Bouton Appeler maintenant - Gris foncé avec blanc - contraste 12:1 */}
       <Button
         data-slot="button"
         variant="secondary"
         size={size}
-        className="w-full sm:w-auto shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/90 min-h-[56px] text-lg sm:text-base touch-manipulation font-semibold"
+        className="w-full sm:w-auto shadow-cybernow bg-[#333333] text-white hover:bg-[#1a1a1a] min-h-[56px] text-lg sm:text-base touch-manipulation font-semibold"
         asChild
       >
         <a href={`tel:${phone}`} className="flex items-center justify-center">
@@ -46,12 +46,12 @@ export function CTAButtons({
         </a>
       </Button>
 
-      {/* Bouton Être rappelé - Fond bleu avec contraste élevé */}
+      {/* Bouton Être rappelé - Bleu foncé avec blanc - contraste 7:1 */}
       <Button
         data-slot="button"
         variant="primary"
         size={size}
-        className="w-full sm:w-auto shadow-cybernow bg-primary text-primary-foreground hover:bg-primary/90 min-h-[56px] text-lg sm:text-base touch-manipulation font-semibold"
+        className="w-full sm:w-auto shadow-cybernow bg-[#2563eb] text-white hover:bg-[#1d4ed8] min-h-[56px] text-lg sm:text-base touch-manipulation font-semibold"
       >
         {t('buttons.getCallback')}
       </Button>
@@ -82,13 +82,13 @@ export function CallButton({
       variant="primary"
       size={size}
       iconPosition="left"
-      className={`shadow-cybernow bg-cnw-gradient text-white hover:bg-cnw-gradient-hover ${className}`}
+      className={`shadow-cybernow bg-[#2563eb] text-white hover:bg-[#1d4ed8] ${className}`}
       asChild
     >
       <a href={`tel:${phone}`}>
-        <ColoredIcon 
-          name="phone" 
-          size="sm" 
+        <ColoredIcon
+          name="phone"
+          size="sm"
           className="shrink-0"
         />
         {children || t('buttons.callNow')}
@@ -120,7 +120,7 @@ export function CallbackButton({
       size={size}
       iconPosition="right"
       onClick={onClick}
-      className={`shadow-cybernow bg-secondary text-secondary-foreground hover:bg-secondary/80 has-[>svg]:px-3 ${className}`}
+      className={`shadow-cybernow bg-[#333333] text-white hover:bg-[#1a1a1a] has-[>svg]:px-3 ${className}`}
     >
       {children || t('buttons.getCallback')}
       <MessageCircle className="shrink-0" size={16} />
