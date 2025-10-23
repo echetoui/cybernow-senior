@@ -24,8 +24,8 @@ export function HeroSection() {
   ];
 
   return (
-    <section 
-      className="bg-gradient-to-br from-slate-50 to-white py-12 md:py-16 lg:py-24"
+    <section
+      className="bg-gradient-to-br from-soft-beige via-white to-slate-50 py-12 md:py-16 lg:py-24"
       aria-labelledby="hero-title"
     >
       <div className="container mx-auto px-4 sm:px-6">

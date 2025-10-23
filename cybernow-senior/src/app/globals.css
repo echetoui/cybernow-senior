@@ -8,6 +8,7 @@
 /* Import WCAG Accessibility Styles */
 @import url('../styles/wcag-accessibility.css');
 @import url('../styles/mobile-optimizations.css');
+@import url('../styles/micro-interactions.css');
 
 :root {
   --radius: 12px; /* Design token rayon CyberNow */

@@ -1,7 +1,10 @@
 // import { useTranslations } from 'next-intl';
 import { HeroSection } from '@/components/home/hero-section';
+import { HowItWorksSection } from '@/components/home/how-it-works-section';
 import { WhyChooseUsSection } from '@/components/home/why-choose-us-section';
+import { TrustBadgesSection } from '@/components/home/trust-badges-section';
 import { ServicesSection } from '@/components/home/services-section';
+import { TestimonialsSection } from '@/components/home/testimonials-section';
 import { FinalCtaSection } from '@/components/home/final-cta-section';
 import { generateSchema } from '@/lib/utils';
 
@@ -41,11 +44,16 @@ export default function HomePage() {
           }),
         }}
       />
-      
-      <HeroSection />
-      <WhyChooseUsSection />
-      <ServicesSection />
-      <FinalCtaSection />
+
+      <main role="main" id="main-content">
+        <HeroSection />
+        <HowItWorksSection />
+        <TrustBadgesSection />
+        <WhyChooseUsSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <FinalCtaSection />
+      </main>
     </>
   );
 }

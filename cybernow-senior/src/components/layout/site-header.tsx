@@ -33,84 +33,102 @@ export function SiteHeader() {
         {t('common.skipToContent')}
       </a>
       
-      <header 
-        className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      <header
+        className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm"
         role="banner"
       >
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex h-14 sm:h-16 items-center justify-between min-h-[56px] sm:min-h-[64px]">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="flex h-16 items-center justify-between gap-4">
             {/* Logo avec indicateur de sécurité */}
-            <div className="flex items-center gap-3">
-              <LogoLink 
-                href="/" 
+            <div className="flex items-center gap-2">
+              <LogoLink
+                href="/"
                 size="sm"
                 variant="default"
                 ariaLabel="Accueil CyberNow Seniors"
-                className="flex-shrink-0 self-center min-h-[44px] min-w-[44px] touch-manipulation"
+                className="flex-shrink-0 min-h-[44px] min-w-[44px] touch-manipulation"
               />
-              
+
               {/* Indicateur de sécurité */}
               <div className="hidden md:flex items-center gap-1 px-2 py-1 bg-success-green/10 border border-success-green/20 rounded-full">
-                <ShieldCheck 
-                  className="h-3 w-3 text-success-green" 
+                <ShieldCheck
+                  className="h-3 w-3 text-success-green"
                   aria-hidden="true"
                 />
-                <span className="text-xs font-medium text-success-green">
+                <span className="text-xs font-medium text-success-green whitespace-nowrap">
                   Sécurisé
                 </span>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-2 flex-1 justify-center">
-              <nav id="navigation" className="flex items-center gap-2" aria-label="Navigation principale">
-                {navigation.map((item) => {
-                  const IconComponent = item.icon;
-                  return (
-                    <Link
-                      key={item.key}
-                      href={item.href}
-                      className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-2 py-1 whitespace-nowrap flex items-center gap-1.5 text-base font-medium"
-                      aria-label={`Sécurisé : ${t(`navigation.${item.key}`)}`}
-                    >
-                      <IconComponent 
-                        className="h-4 w-4 text-trust-blue" 
-                        aria-hidden="true"
-                      />
-                      {t(`navigation.${item.key}`)}
-                    </Link>
-                  );
-                })}
-              </nav>
-            </div>
+            <nav id="navigation" className="hidden lg:flex items-center gap-1 flex-1 justify-center" aria-label="Navigation principale">
+              {navigation.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className="text-secondary hover:text-foreground transition-colors focus-visible:outline-primary rounded px-2 py-1.5 whitespace-nowrap flex items-center gap-1 text-sm font-medium"
+                    aria-label={`Sécurisé : ${t(`navigation.${item.key}`)}`}
+                  >
+                    <IconComponent
+                      className="h-4 w-4 text-trust-blue"
+                      aria-hidden="true"
+                    />
+                    <span className="hidden lg:inline">{t(`navigation.${item.key}`)}</span>
+                  </Link>
+                );
+              })}
+            </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-2">
               <Button
                 asChild
                 variant="outline"
                 size="sm"
-                className="min-h-[40px] text-xs touch-manipulation px-2"
+                className="min-h-[40px] text-sm touch-manipulation px-3 whitespace-nowrap"
               >
                 <a href={`tel:${t('common.phone')}`}>
-                  <Phone className="h-3 w-3 mr-1" aria-hidden="true" />
-                  <span className="hidden lg:inline">{t('buttons.callNow')}</span>
+                  <Phone className="h-4 w-4 mr-1.5" aria-hidden="true" />
+                  {t('buttons.callNow')}
                 </a>
               </Button>
 
               <Button
                 asChild
-                variant="destructive"
+                variant="default"
                 size="sm"
-                className="min-h-[40px] text-xs touch-manipulation px-2"
+                className="min-h-[40px] text-sm touch-manipulation px-3 bg-gradient-warm hover:bg-gradient-warm-hover text-white whitespace-nowrap shadow-lg"
               >
                 <Link href="/contact">
-                  <Shield className="h-3 w-3 mr-1" aria-hidden="true" />
-                  <span className="hidden lg:inline">{t('buttons.reportScam')}</span>
+                  <Shield className="h-4 w-4 mr-1.5" aria-hidden="true" />
+                  {t('buttons.reportScam')}
                 </Link>
               </Button>
 
-              <div className="flex items-center gap-1 ml-1 pl-1 border-l border-border">
+              <div className="flex items-center gap-2 ml-2 pl-2 border-l border-border">
+                <LanguageSwitcher />
+                <AccessibilityControls />
+              </div>
+            </div>
+
+            {/* Tablet Actions (md to lg) */}
+            <div className="hidden md:flex lg:hidden items-center gap-2">
+              <Button
+                asChild
+                variant="default"
+                size="sm"
+                className="min-h-[40px] text-sm touch-manipulation px-3 bg-gradient-warm hover:bg-gradient-warm-hover text-white whitespace-nowrap shadow-lg"
+              >
+                <Link href="/contact">
+                  <Shield className="h-4 w-4 mr-1.5" aria-hidden="true" />
+                  {t('buttons.reportScam')}
+                </Link>
+              </Button>
+
+              <div className="flex items-center gap-2">
                 <LanguageSwitcher />
                 <AccessibilityControls />
               </div>
@@ -120,7 +138,7 @@ export function SiteHeader() {
             <Button
               variant="ghost"
               size="sm"
-              className="lg:hidden min-h-[40px] min-w-[40px] touch-manipulation"
+              className="md:hidden min-h-[44px] min-w-[44px] touch-manipulation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"

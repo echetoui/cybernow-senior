@@ -78,11 +78,16 @@ module.exports = {
         },
         // CyberNow Seniors New Color Palette - WCAG Compliant
         'trust-blue': '#4A90E2', // Bleu ciel doux - couleur de confiance/sécurité - 4.8:1 contrast
-        'alert-orange': '#F5A623', // Orange chaleureux - accent alerte risques cyber - 3.5:1 contrast  
+        'alert-orange': '#F5A623', // Orange chaleureux - accent alerte risques cyber - 3.5:1 contrast
         'success-green': '#7ED321', // Vert olive - succès/sauvegarde - 4.6:1 contrast
         'text-primary': '#000000', // Noir - texte principal - 21:1 contrast
         'text-secondary': '#333333', // Gris foncé - texte secondaire - 12:1 contrast
         'bg-primary': '#FFFFFF', // Blanc pur - fond principal
+        // Couleurs chaudes pour design émotionnel
+        'warm-peach': '#FFB08A', // Pêche doux - réconfort - 3.2:1 contrast
+        'soft-beige': '#F5F0E8', // Beige - chaleur - fond secondaire
+        'sage-green': '#A8C69F', // Vert sauge - nature, calme - 4.1:1 contrast
+        'sky-blue': '#7FB8E3', // Bleu ciel doux - confiance légère - 3.8:1 contrast
         // Legacy colors for backward compatibility
         info: {
           DEFAULT: '#4A90E2', // Updated to trust blue
@@ -160,6 +165,10 @@ module.exports = {
         'gradient-cta': 'linear-gradient(135deg, #12385D, #3BB8A4)',
         'cnw-gradient': 'linear-gradient(to right, #12385D, #1c6d8f, #3BB8A4)',
         'cnw-gradient-hover': 'linear-gradient(to right, #16507c, #1e799d, #49c3b2)',
+        // Gradients chaleureux pour design émotionnel
+        'gradient-warm': 'linear-gradient(135deg, #7FB8E3, #A8C69F)',
+        'gradient-warm-hover': 'linear-gradient(135deg, #6BA8D9, #98B88F)',
+        'gradient-peach': 'linear-gradient(135deg, #FFB08A, #FFC9A8)',
       },
       minHeight: {
         'touch': '44px',

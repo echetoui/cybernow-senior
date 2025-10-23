@@ -27,18 +27,18 @@
     "privacy": "Politique de confidentialité"
   },
   "buttons": {
-    "callNow": "Appelez-nous maintenant",
-    "getCallback": "Demander un rappel",
-    "reportScam": "Signaler cette arnaque",
-    "contactUs": "Contactez-nous",
+    "callNow": "Parler à un conseiller",
+    "getCallback": "Être rappelé gratuitement",
+    "reportScam": "Demander de l'aide",
+    "contactUs": "Nous contacter",
     "getAllServices": "Découvrir nos services",
     "viewAllAlerts": "Consulter toutes les alertes",
     "viewAllResources": "Télécharger nos guides",
     "downloadGuide": "Télécharger le guide",
     "readArticle": "Lire l'article",
-    "learnMore": "En apprendre plus",
-    "getStarted": "Commencer maintenant",
-    "scheduleCall": "Programmer un appel"
+    "learnMore": "En savoir plus",
+    "getStarted": "Obtenir un diagnostic gratuit",
+    "scheduleCall": "Planifier un appel"
   },
   "language": {
     "fr": "FR",
@@ -83,25 +83,101 @@
       "title": "Nos services",
       "subtitle": "Des solutions simples pour votre sécurité numérique",
       "proactiveShield": {
-        "title": "Bouclier proactif",
-        "description": "Surveillance et blocage des menaces."
+        "title": "Protection automatique de vos appareils",
+        "description": "Nous surveillons et bloquons les menaces pour vous, automatiquement."
       },
       "privacyConsent": {
-        "title": "Vie privée & consentements",
-        "description": "On vous aide à gérer ce qui est partagé."
+        "title": "Gérer ce que vous partagez en ligne",
+        "description": "Nous vous aidons à contrôler vos informations personnelles sur internet."
       },
       "onlineHelp": {
-        "title": "Aide aux démarches",
-        "description": "Banque, comptes en ligne, mots de passe."
+        "title": "Accompagnement pour vos démarches en ligne",
+        "description": "Nous vous assistons avec la banque, les mots de passe et vos comptes."
       },
       "scamSupport": {
-        "title": "Soutien en cas d'arnaque",
-        "description": "On analyse et on vous protège."
+        "title": "Aide en cas de doute ou d'arnaque",
+        "description": "Nous analysons votre situation et vous guidons pas à pas."
       }
     },
     "cta": {
-      "title": "Besoin d'aide dès maintenant ?",
-      "subtitle": "Notre équipe est là pour vous accompagner"
+      "title": "Une question ? Nous sommes là pour vous.",
+      "subtitle": "Discutez avec un conseiller bienveillant et patient"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "subtitle": "3 étapes simples pour votre tranquillité numérique",
+      "steps": {
+        "call": {
+          "title": "1. Appelez-nous",
+          "description": "Un conseiller patient vous écoute et comprend votre situation, sans jugement."
+        },
+        "diagnostic": {
+          "title": "2. Diagnostic gratuit",
+          "description": "Nous analysons ensemble vos besoins et vous expliquons tout clairement."
+        },
+        "protection": {
+          "title": "3. Protection assurée",
+          "description": "Nous sécurisons vos appareils et restons disponibles pour vous accompagner."
+        }
+      },
+      "reassurance": "Aucune question n'est bête. Nous prenons le temps qu'il faut."
+    },
+    "testimonials": {
+      "title": "Ils nous font confiance",
+      "subtitle": "Plus de 500 familles québécoises protégées et rassurées",
+      "marie": {
+        "name": "Marie Lavoie",
+        "quote": "Grâce à Cybernow, je me sens en sécurité sur internet. Mon conseiller prend vraiment le temps de tout m'expliquer."
+      },
+      "jean": {
+        "name": "Jean Tremblay",
+        "quote": "J'avais peur de la technologie. Maintenant, je peux utiliser ma tablette sans stress. Merci pour votre patience !"
+      },
+      "louise": {
+        "name": "Louise Gagnon",
+        "quote": "Service exceptionnel ! Ils m'ont aidée après une tentative d'arnaque. Je recommande à tous mes amis."
+      },
+      "trust": "Recommandé par +500 familles québécoises"
+    }
+  },
+  "team": {
+    "title": "Notre équipe",
+    "subtitle": "Des professionnels passionnés à votre service",
+    "jean": {
+      "name": "Jean Tremblay",
+      "role": "Conseiller senior en cybersécurité",
+      "bio": "Avec 18 ans d'expérience en sécurité informatique, Jean se consacre maintenant à protéger les aînés du Québec. Sa patience et sa pédagogie en font un conseiller apprécié de tous.",
+      "experience": "18 ans d'expérience",
+      "specialty1": "Protection contre les arnaques",
+      "specialty2": "Mots de passe sécurisés",
+      "specialty3": "Banque en ligne"
+    },
+    "marie": {
+      "name": "Marie Gagnon",
+      "role": "Spécialiste en accompagnement numérique",
+      "bio": "Ancienne enseignante reconvertie en conseillère numérique, Marie excelle dans l'art d'expliquer simplement les concepts complexes. Elle accompagne les seniors avec douceur et empathie.",
+      "experience": "12 ans d'expérience",
+      "specialty1": "Démarches administratives",
+      "specialty2": "Gestion des emails",
+      "specialty3": "Réseaux sociaux sécurisés"
+    },
+    "pierre": {
+      "name": "Pierre Lavoie",
+      "role": "Expert en vie privée numérique",
+      "bio": "Pierre est passionné par la protection des données personnelles. Il aide les aînés à reprendre le contrôle de leurs informations en ligne et à comprendre leurs droits numériques.",
+      "experience": "15 ans d'expérience",
+      "specialty1": "Confidentialité en ligne",
+      "specialty2": "Contrôle parental inversé",
+      "specialty3": "RGPD et droits numériques"
+    },
+    "sophie": {
+      "name": "Sophie Roy",
+      "role": "Coordinatrice support et formation",
+      "bio": "Sophie coordonne notre équipe et s'assure que chaque senior reçoive un accompagnement personnalisé. Son approche chaleureuse met tout le monde à l'aise dès le premier contact.",
+      "experience": "10 ans d'expérience",
+      "specialty1": "Formation personnalisée",
+      "specialty2": "Suivi continu",
+      "specialty3": "Gestion de crise"
     }
   },
   "services": {

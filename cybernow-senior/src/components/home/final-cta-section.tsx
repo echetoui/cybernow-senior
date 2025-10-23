@@ -7,8 +7,8 @@ export function FinalCtaSection() {
   const t = useTranslations();
 
   return (
-    <section 
-      className="py-16 lg:py-20 bg-gradient-cta text-white"
+    <section
+      className="py-16 lg:py-20 bg-gradient-warm text-white relative overflow-hidden"
       aria-labelledby="cta-title"
     >
       <div className="container mx-auto px-4">
