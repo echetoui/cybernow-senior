@@ -102,7 +102,7 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* Étoiles (5/5) */}
-                    <div className="flex justify-center gap-1 mt-4" aria-label="Évaluation 5 étoiles sur 5">
+                    <div className="flex justify-center gap-1 mt-4" role="img" aria-label="Évaluation 5 étoiles sur 5">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <svg
                           key={star}
