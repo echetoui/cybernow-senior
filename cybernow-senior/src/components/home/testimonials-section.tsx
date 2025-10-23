@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -66,24 +67,12 @@ export function TestimonialsSection() {
                     <div className="mb-4 flex justify-center">
                       {testimonial.photoPath ? (
                         <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg ring-4 ring-white">
-                          <img
+                          <Image
                             src={testimonial.photoPath}
                             alt={`Photo de ${t(`home.testimonials.${testimonial.key}.name`)}`}
+                            width={80}
+                            height={80}
                             className="w-full h-full object-cover"
-                            onError={(e) => {
-                              // Fallback to initials if image fails to load
-                              e.currentTarget.style.display = 'none';
-                              const parent = e.currentTarget.parentElement;
-                              if (parent) {
-                                parent.innerHTML = `
-                                  <div class="w-full h-full bg-gradient-warm flex items-center justify-center">
-                                    <span class="text-white text-2xl font-bold">
-                                      ${t(`home.testimonials.${testimonial.key}.name`).charAt(0)}
-                                    </span>
-                                  </div>
-                                `;
-                              }
-                            }}
                           />
                         </div>
                       ) : (
@@ -98,7 +87,7 @@ export function TestimonialsSection() {
                     {/* Citation */}
                     <blockquote className="mb-6">
                       <p className="text-base text-foreground leading-relaxed italic">
-                        "{t(`home.testimonials.${testimonial.key}.quote`)}"
+                        &quot;{t(`home.testimonials.${testimonial.key}.quote`)}&quot;
                       </p>
                     </blockquote>
 

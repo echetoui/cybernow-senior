@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Phone, ShieldCheck, CheckCircle } from 'lucide-react';
 import { ColoredIcon } from '@/components/ui/ColoredIcon';
 
 const steps = [

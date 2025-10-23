@@ -2,9 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Phone, Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { LogoLink } from '@/components/ui/logo';
 
 export function SiteFooter() {

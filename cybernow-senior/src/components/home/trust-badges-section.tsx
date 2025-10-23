@@ -1,8 +1,5 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-
 // Logos de partenaires/certifications (placeholders - à remplacer par vraies images)
 const trustBadges = [
   {
@@ -40,7 +37,7 @@ const statistics = [
   },
   {
     number: '15 ans',
-    label: 'D\'expérience moyenne',
+    label: 'D&apos;expérience moyenne',
     icon: '🛡️',
   },
   {
@@ -56,8 +53,6 @@ const statistics = [
 ];
 
 export function TrustBadgesSection() {
-  const t = useTranslations();
-
   return (
     <section className="py-16 md:py-20 bg-white border-y border-border">
       <div className="container mx-auto px-4">
@@ -113,10 +108,10 @@ export function TrustBadgesSection() {
           <div className="mt-16 max-w-3xl mx-auto">
             <blockquote className="relative">
               <div className="absolute -top-4 -left-4 text-6xl text-sage-green/20">
-                "
+                &quot;
               </div>
               <p className="text-xl md:text-2xl text-center text-secondary font-medium italic px-8">
-                CyberNow Seniors nous a permis d'offrir un service essentiel à nos membres.
+                CyberNow Seniors nous a permis d&apos;offrir un service essentiel à nos membres.
                 Leur approche bienveillante fait toute la différence.
               </p>
               <footer className="mt-6 text-center">

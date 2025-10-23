@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { TeamMemberCard } from '@/components/team/team-member-card';
 import { CTAButtons } from '@/components/ui/CTAButtons';
 

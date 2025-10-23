@@ -90,8 +90,6 @@ export function EmergencyButton({
 
 // Composant pour afficher conditionnellement selon l'heure
 export function SmartEmergencyButton() {
-  const t = useTranslations();
-
   // Détecte si c'est en dehors des heures d'ouverture
   const isAfterHours = () => {
     const hour = new Date().getHours();
@@ -105,7 +103,7 @@ export function SmartEmergencyButton() {
       {isAfterHours() && (
         <div className="fixed bottom-28 right-6 z-39 bg-white border-2 border-alert-orange rounded-xl p-4 shadow-2xl max-w-xs">
           <p className="text-sm font-semibold text-secondary mb-2">
-            ⏰ Hors heures d'ouverture
+            ⏰ Hors heures d&apos;ouverture
           </p>
           <p className="text-xs text-muted-foreground">
             Laissez un message ou appelez pour une urgence. Nous vous rappellerons dès 8h.

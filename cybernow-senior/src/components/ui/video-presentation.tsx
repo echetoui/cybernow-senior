@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import { Button } from './button';
+import Image from 'next/image';
 
 interface VideoPresentationProps {
   videoUrl: string;
@@ -43,10 +44,11 @@ export function VideoPresentation({
         // Thumbnail avec bouton play
         <div className="relative group cursor-pointer" onClick={() => setIsPlaying(true)}>
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-            <img
+            <Image
               src={thumbnail}
               alt={title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
             {/* Overlay sombre */}
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />

@@ -104,7 +104,7 @@ export function EnhancedContactForm() {
         urgency: 'medium',
       });
       setCurrentStep(1);
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -231,14 +231,14 @@ export function EnhancedContactForm() {
 
               <div>
                 <Label className="text-lg font-semibold mb-3 block">
-                  Niveau d'urgence
+                  Niveau d&apos;urgence
                 </Label>
                 <div className="grid grid-cols-3 gap-3">
                   {['low', 'medium', 'high'].map((level) => (
                     <button
                       key={level}
                       type="button"
-                      onClick={() => setFormData(prev => ({ ...prev, urgency: level as any }))}
+                      onClick={() => setFormData(prev => ({ ...prev, urgency: level as 'low' | 'medium' | 'high' }))}
                       className={`p-4 rounded-xl border-2 transition-all ${
                         formData.urgency === level
                           ? 'border-primary bg-primary/10'
@@ -336,9 +336,9 @@ export function EnhancedContactForm() {
             <div className="bg-destructive/10 border border-destructive rounded-xl p-4 flex items-start gap-3">
               <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-destructive">Erreur d'envoi</p>
+                <p className="font-semibold text-destructive">Erreur d&apos;envoi</p>
                 <p className="text-sm text-muted-foreground">
-                  Une erreur s'est produite. Appelez-nous directement au {t('common.phone')}
+                  Une erreur s&apos;est produite. Appelez-nous directement au {t('common.phone')}
                 </p>
               </div>
             </div>
