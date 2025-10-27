@@ -299,12 +299,13 @@ export default function ResourcesPage() {
             </Card>
           </div>
 
-          {/* Learning Testimonials */}
+          {/* Learning Testimonials - Commented out: fake testimonials not credible */}
+          {/*
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-primary">
               L&apos;Apprentissage Qui Transforme
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {learningTestimonials.map((testimonial, index) => (
                 <Card key={index} className="border-none shadow-md">
@@ -314,11 +315,11 @@ export default function ResourcesPage() {
                         <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    
+
                     <p className="text-foreground italic mb-4">
                       &quot;{testimonial.quote}&quot;
                     </p>
-                    
+
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center">
                         <span className="text-secondary font-bold">
@@ -330,7 +331,7 @@ export default function ResourcesPage() {
                         <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                       </div>
                     </div>
-                    
+
                     <div className="mt-3 text-xs text-secondary font-semibold">
                       {testimonial.type}
                     </div>
@@ -339,6 +340,7 @@ export default function ResourcesPage() {
               ))}
             </div>
           </div>
+          */}
 
           {/* Learning Principles */}
           <div className="mb-16">

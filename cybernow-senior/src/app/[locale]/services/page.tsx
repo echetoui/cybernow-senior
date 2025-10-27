@@ -199,9 +199,14 @@ export default function ServicesPage() {
                           {tier.persona}
                         </div>
                         
+                        {/* Pricing temporarily commented - not yet launched
                         <div className="mb-4">
                           <span className="text-4xl font-bold text-primary">{tier.price}$</span>
                           <span className="text-muted-foreground">/mois</span>
+                        </div>
+                        */}
+                        <div className="mb-4">
+                          <span className="text-2xl font-bold text-primary">Prix sur demande</span>
                         </div>
                         
                         <p className="text-muted-foreground text-base">
@@ -278,12 +283,13 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            {/* Testimonials Section */}
+            {/* Testimonials Section - Commented out: fake testimonials not credible */}
+            {/*
             <div className="mb-16 bg-slate-50 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-center mb-8 text-primary">
                 Ce que disent nos clients
               </h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="border-none shadow-md">
                   <CardContent className="p-6">
@@ -297,12 +303,12 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <p className="text-foreground italic">
-                      &quot;Enfin un service qui me parle dans mes mots ! Je n&apos;ai plus peur de faire mes achats en ligne. 
+                      &quot;Enfin un service qui me parle dans mes mots ! Je n&apos;ai plus peur de faire mes achats en ligne.
                       L&apos;équipe est très patiente et me rappelle toujours pour vérifier que tout va bien.&quot;
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="border-none shadow-md">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
@@ -315,13 +321,14 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <p className="text-foreground italic">
-                      &quot;J&apos;étais sceptique au début, mais l&apos;audit gratuit m&apos;a convaincu. 
+                      &quot;J&apos;étais sceptique au début, mais l&apos;audit gratuit m&apos;a convaincu.
                       Maintenant mes investissements sont mieux protégés et ma femme aussi a appris à se protéger.&quot;
                     </p>
                   </CardContent>
                 </Card>
               </div>
             </div>
+            */}
 
             {/* Call to Action */}
             <div className="text-center bg-primary/5 rounded-2xl p-8 border border-primary/20">
