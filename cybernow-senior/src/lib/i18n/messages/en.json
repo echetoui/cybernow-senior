@@ -357,6 +357,96 @@
       "subscribe": "Subscribe"
     }
   },
+  "servicesPage": {
+    "meta": {
+      "title": "Digital Protection Services | Cybernow Seniors",
+      "description": "Cybersecurity services adapted for seniors: 3 protection levels according to your needs. Human support, training and personalized help."
+    },
+    "header": {
+      "title": "Digital Protection Services",
+      "subtitle": "Cybersecurity solutions designed specifically for seniors. Choose the level of protection that matches your needs and expertise.",
+      "badges": {
+        "quebec": "100% Quebec service",
+        "human": "Human support guaranteed",
+        "noCommitment": "No long-term commitment"
+      }
+    },
+    "tiers": {
+      "title": "Our Protection Plans",
+      "subtitle": "Based on our studies with over 250 Quebec seniors, our services adapt to your comfort level with technology.",
+      "priceOnDemand": "Price on demand",
+      "popular": "Most popular",
+      "chooseButton": "Choose this plan",
+      "essential": {
+        "name": "Essential Plan",
+        "persona": "Carmen - The Social Learner",
+        "description": "To get started with technology confidently",
+        "features": [
+          "Patient and caring phone support",
+          "Simplified guides in large print",
+          "Group workshops in your area",
+          "Step-by-step help without judgment",
+          "Security question verification",
+          "Email support with guaranteed response"
+        ]
+      },
+      "comfort": {
+        "name": "Comfort Plan",
+        "persona": "Gisèle - The Cautious Connected",
+        "description": "Complete protection with personal accompaniment",
+        "features": [
+          "Proactive analysis of your devices",
+          "Personalized in-home training possible",
+          "Priority support (response < 2h)",
+          "Validation before any suspicious click",
+          "Enhanced banking protection",
+          "Regular security follow-up",
+          "Advice for your online purchases",
+          "Family support included"
+        ]
+      },
+      "expert": {
+        "name": "Expert Plan",
+        "persona": "Robert & Jean-Paul - The Autonomous",
+        "description": "Premium service for advanced users",
+        "features": [
+          "Complete multi-device audit",
+          "Dedicated expert advisor",
+          "Advanced solutions (VPN, password manager)",
+          "24/7 account monitoring",
+          "Trading and cryptocurrency support",
+          "In-depth technical training",
+          "Family strategy consultation",
+          "Absolute priority on all channels"
+        ]
+      },
+      "included": "Included in this plan:"
+    },
+    "additional": {
+      "title": "Specialized Services Included",
+      "subtitle": "All our plans include these services designed especially for seniors.",
+      "directLine": {
+        "title": "Seniors direct line",
+        "description": "Dedicated number without automated menu - Human response guaranteed in less than 2 rings",
+        "highlight": "9am to 5pm, 7 days a week"
+      },
+      "workshops": {
+        "title": "Community workshops",
+        "description": "Group sessions in residences and community centers",
+        "highlight": "Group learning"
+      },
+      "verification": {
+        "title": "Suspicious email verification",
+        "description": "Forward us your suspicious emails for immediate verification",
+        "highlight": "Response in 30 minutes"
+      }
+    },
+    "cta": {
+      "title": "Ready to protect your digital life?",
+      "subtitle": "Call us for a free consultation. A senior-specialized advisor will answer all your questions, without technical jargon.",
+      "footer": "Free consultation • No commitment • Immediate response"
+    }
+  },
   "errors": {
     "404": {
       "title": "Page not found",

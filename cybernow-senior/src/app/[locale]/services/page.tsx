@@ -4,8 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CTAButtons } from '@/components/ui/CTAButtons';
 import { generateSchema } from '@/lib/utils';
+import { getTranslations } from 'next-intl/server';
 
 // Niveaux de service basés sur les personas des user studies
+// TODO: Implement translations using servicesPage.tiers keys from fr.json/en.json
 const servicesTiers = [
   {
     id: 'essentiel',
@@ -85,18 +87,11 @@ const additionalServices = [
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  
-  const title = locale === 'fr' 
-    ? 'Services de Protection Numérique | Cybernow Seniors'
-    : 'Digital Protection Services | Cybernow Seniors';
-    
-  const description = locale === 'fr'
-    ? 'Services de cybersécurité adaptés aux aînés : 3 niveaux de protection selon vos besoins. Support humain, formations et aide personnalisée.'
-    : 'Cybersecurity services adapted for seniors: 3 protection levels according to your needs. Human support, training and personalized help.';
+  const t = await getTranslations({ locale, namespace: 'servicesPage.meta' });
 
   return {
-    title,
-    description,
+    title: t('title'),
+    description: t('description'),
   };
 }
 

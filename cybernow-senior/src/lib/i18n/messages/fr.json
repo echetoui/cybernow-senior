@@ -438,6 +438,96 @@
       "subscribe": "S'abonner"
     }
   },
+  "servicesPage": {
+    "meta": {
+      "title": "Services de Protection Numérique | Cybernow Seniors",
+      "description": "Services de cybersécurité adaptés aux aînés : 3 niveaux de protection selon vos besoins. Support humain, formations et aide personnalisée."
+    },
+    "header": {
+      "title": "Services de Protection Numérique",
+      "subtitle": "Des solutions de cybersécurité pensées spécialement pour les aînés. Choisissez le niveau de protection qui correspond à vos besoins et votre expertise.",
+      "badges": {
+        "quebec": "Service 100% québécois",
+        "human": "Support humain garanti",
+        "noCommitment": "Sans engagement de durée"
+      }
+    },
+    "tiers": {
+      "title": "Nos Forfaits de Protection",
+      "subtitle": "Basés sur nos études avec plus de 250 aînés québécois, nos services s'adaptent à votre niveau de confort avec la technologie.",
+      "priceOnDemand": "Prix sur demande",
+      "popular": "Le plus populaire",
+      "chooseButton": "Choisir ce forfait",
+      "essential": {
+        "name": "Forfait Essentiel",
+        "persona": "Carmen - L'Apprenante Sociale",
+        "description": "Pour débuter en toute confiance avec la technologie",
+        "features": [
+          "Support téléphonique patient et bienveillant",
+          "Guides simplifiés en gros caractères",
+          "Ateliers de groupe dans votre région",
+          "Aide étape par étape sans jugement",
+          "Vérification de vos questions de sécurité",
+          "Support email avec réponse garantie"
+        ]
+      },
+      "comfort": {
+        "name": "Forfait Confort",
+        "persona": "Gisèle - La Prudente Connectée",
+        "description": "Protection complète avec accompagnement personnel",
+        "features": [
+          "Analyse proactive de vos appareils",
+          "Formation personnalisée à domicile possible",
+          "Support prioritaire (réponse < 2h)",
+          "Validation avant tout clic suspect",
+          "Protection bancaire renforcée",
+          "Suivi régulier de votre sécurité",
+          "Conseil pour vos achats en ligne",
+          "Support familial inclus"
+        ]
+      },
+      "expert": {
+        "name": "Forfait Expert",
+        "persona": "Robert & Jean-Paul - Les Autonomes",
+        "description": "Service premium pour utilisateurs avancés",
+        "features": [
+          "Audit complet multi-appareils",
+          "Conseiller dédié expert",
+          "Solutions avancées (VPN, gestionnaire mots de passe)",
+          "Monitoring 24/7 de vos comptes",
+          "Support trading et crypto-monnaies",
+          "Formation technique approfondie",
+          "Consultation stratégie familiale",
+          "Priorité absolue sur tous les canaux"
+        ]
+      },
+      "included": "Inclus dans ce forfait :"
+    },
+    "additional": {
+      "title": "Services Spécialisés Inclus",
+      "subtitle": "Tous nos forfaits incluent ces services pensés spécialement pour les aînés.",
+      "directLine": {
+        "title": "Ligne directe seniors",
+        "description": "Numéro dédié sans menu automatisé - Réponse humaine garantie en moins de 2 sonneries",
+        "highlight": "9h à 17h, 7 jours sur 7"
+      },
+      "workshops": {
+        "title": "Ateliers communautaires",
+        "description": "Sessions de groupe dans les résidences et centres communautaires",
+        "highlight": "Apprentissage en groupe"
+      },
+      "verification": {
+        "title": "Vérification d'emails suspects",
+        "description": "Transférez-nous vos emails douteux pour vérification immédiate",
+        "highlight": "Réponse en 30 minutes"
+      }
+    },
+    "cta": {
+      "title": "Prêt à protéger votre vie numérique ?",
+      "subtitle": "Appelez-nous pour une consultation gratuite. Un conseiller spécialisé seniors répondra à toutes vos questions, sans jargon technique.",
+      "footer": "Consultation gratuite • Sans engagement • Réponse immédiate"
+    }
+  },
   "errors": {
     "404": {
       "title": "Page non trouvée",
