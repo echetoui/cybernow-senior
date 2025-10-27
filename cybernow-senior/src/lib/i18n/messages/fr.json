@@ -124,7 +124,7 @@
     },
     "testimonials": {
       "title": "Pourquoi nous choisir",
-      "subtitle": "Notre engagement envers les aînés du Québec",
+      "subtitle": "L'expertise Cybernow adaptée aux aînés",
       "marie": {
         "name": "Notre promesse",
         "quote": "Un service humain et patient, sans jugement. Nous prenons le temps qu'il faut pour vous accompagner dans votre sécurité numérique."
@@ -134,47 +134,47 @@
         "quote": "Des explications claires en français, adaptées à votre rythme. Pas de jargon technique, juste des solutions simples et efficaces."
       },
       "louise": {
-        "name": "Notre disponibilité",
-        "quote": "Un premier diagnostic gratuit et sans engagement. Nous sommes là pour vous conseiller, pas pour vous vendre."
+        "name": "Notre expertise",
+        "quote": "L'expérience en cybersécurité de Cybernow, avec une approche spécialement conçue pour les aînés du Québec."
       },
-      "trust": "Service local québécois - Nouvelle entreprise dédiée aux seniors"
+      "trust": "Division spécialisée de Cybernow - Entreprise québécoise de cybersécurité"
     }
   },
   "team": {
     "title": "Notre équipe",
-    "subtitle": "Des professionnels passionnés qui lancent ce nouveau service",
+    "subtitle": "Des experts Cybernow dédiés aux aînés",
     "jean": {
       "name": "Jean Tremblay",
-      "role": "Fondateur et conseiller en cybersécurité",
-      "bio": "Passionné par la protection des aînés en ligne, Jean a créé CyberNow Seniors pour offrir un accompagnement humain et accessible. Fort de son expérience en sécurité informatique, il se consacre maintenant exclusivement aux besoins des seniors.",
-      "experience": "Expert en sécurité numérique",
+      "role": "Responsable division Seniors - Cybernow",
+      "bio": "Expert en cybersécurité chez Cybernow, Jean dirige cette nouvelle division spécialisée pour les aînés. Il combine l'expertise technique de Cybernow avec une approche humaine et patiente, adaptée aux besoins spécifiques des seniors.",
+      "experience": "Expert Cybernow en sécurité numérique",
       "specialty1": "Protection contre les arnaques",
       "specialty2": "Mots de passe sécurisés",
       "specialty3": "Banque en ligne"
     },
     "marie": {
       "name": "Marie Gagnon",
-      "role": "Spécialiste en accompagnement numérique",
-      "bio": "Ancienne enseignante reconvertie dans le numérique, Marie excelle dans l'art d'expliquer simplement les concepts complexes. Elle rejoint l'équipe avec sa pédagogie et son empathie naturelle.",
-      "experience": "Pédagogue expérimentée",
+      "role": "Conseillère spécialisée seniors - Cybernow",
+      "bio": "Ancienne enseignante reconvertie en experte numérique chez Cybernow, Marie excelle dans l'art d'expliquer simplement les concepts complexes. Sa pédagogie et son empathie en font la conseillère idéale pour accompagner les aînés.",
+      "experience": "Experte Cybernow en pédagogie numérique",
       "specialty1": "Démarches administratives",
       "specialty2": "Gestion des emails",
       "specialty3": "Réseaux sociaux sécurisés"
     },
     "pierre": {
       "name": "Pierre Lavoie",
-      "role": "Conseiller en vie privée numérique",
-      "bio": "Pierre est passionné par la protection des données personnelles. Il aide les aînés à reprendre le contrôle de leurs informations en ligne et à comprendre leurs droits numériques dans un langage accessible.",
-      "experience": "Spécialiste de la confidentialité",
+      "role": "Conseiller confidentialité seniors - Cybernow",
+      "bio": "Expert en protection des données chez Cybernow, Pierre est passionné par la vie privée numérique. Il aide les aînés à reprendre le contrôle de leurs informations en ligne et à comprendre leurs droits dans un langage accessible.",
+      "experience": "Expert Cybernow en confidentialité",
       "specialty1": "Confidentialité en ligne",
       "specialty2": "Gestion des paramètres",
       "specialty3": "Protection des données"
     },
     "sophie": {
       "name": "Sophie Roy",
-      "role": "Coordinatrice et support client",
-      "bio": "Sophie coordonne notre nouvelle équipe et s'assure que chaque senior reçoive un accompagnement personnalisé. Son approche chaleureuse et son écoute attentive mettent tout le monde à l'aise dès le premier contact.",
-      "experience": "Experte en relation client",
+      "role": "Coordinatrice support seniors - Cybernow",
+      "bio": "Responsable de l'expérience client chez Cybernow, Sophie coordonne l'équipe Seniors et s'assure que chaque aîné reçoive un accompagnement personnalisé. Son approche chaleureuse et son écoute attentive mettent tout le monde à l'aise.",
+      "experience": "Experte Cybernow en relation client",
       "specialty1": "Accueil et orientation",
       "specialty2": "Suivi personnalisé",
       "specialty3": "Coordination d'équipe"

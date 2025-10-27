@@ -31,9 +31,9 @@ const trustBadges = [
 
 const statistics = [
   {
-    number: 'Nouveau',
-    label: 'Service en lancement',
-    icon: '🚀',
+    number: 'Établie',
+    label: 'Division de Cybernow',
+    icon: '🏢',
   },
   {
     number: '100%',
@@ -46,8 +46,8 @@ const statistics = [
     icon: '💬',
   },
   {
-    number: 'Local',
-    label: 'Équipe québécoise',
+    number: 'Québec',
+    label: 'Entreprise locale',
     icon: '🍁',
   },
 ];
@@ -110,11 +110,11 @@ export function TrustBadgesSection() {
               <div className="text-center">
                 <div className="text-4xl mb-4">🤝</div>
                 <h3 className="text-2xl font-bold text-primary mb-4">
-                  Notre engagement envers vous
+                  L&apos;expertise Cybernow au service des aînés
                 </h3>
                 <p className="text-lg text-secondary leading-relaxed">
-                  Nous sommes une nouvelle entreprise québécoise dédiée exclusivement aux aînés.
-                  Pas de fausses promesses : juste un accompagnement humain, patient et transparent.
+                  Cybernow Seniors est une division spécialisée de Cybernow, entreprise québécoise de cybersécurité.
+                  Nous apportons notre expertise technique avec une approche humaine, patiente et adaptée aux besoins des aînés.
                   Votre première consultation est gratuite et sans engagement.
                 </p>
               </div>
