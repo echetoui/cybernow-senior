@@ -4,7 +4,7 @@ import { HowItWorksSection } from '@/components/home/how-it-works-section';
 import { WhyChooseUsSection } from '@/components/home/why-choose-us-section';
 import { TrustBadgesSection } from '@/components/home/trust-badges-section';
 import { ServicesSection } from '@/components/home/services-section';
-import { TestimonialsSection } from '@/components/home/testimonials-section';
+// import { TestimonialsSection } from '@/components/home/testimonials-section'; // Removed: fake testimonials
 import { FinalCtaSection } from '@/components/home/final-cta-section';
 import { generateSchema } from '@/lib/utils';
 
@@ -51,7 +51,7 @@ export default function HomePage() {
         <TrustBadgesSection />
         <WhyChooseUsSection />
         <ServicesSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> Removed: fake testimonials not credible */}
         <FinalCtaSection />
       </main>
     </>
