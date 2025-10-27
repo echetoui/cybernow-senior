@@ -31,24 +31,24 @@ const trustBadges = [
 
 const statistics = [
   {
-    number: '500+',
-    label: 'Familles protégées',
-    icon: '👨‍👩‍👧‍👦',
+    number: 'Nouveau',
+    label: 'Service en lancement',
+    icon: '🚀',
   },
   {
-    number: '15 ans',
-    label: 'D&apos;expérience moyenne',
-    icon: '🛡️',
+    number: '100%',
+    label: 'Engagement qualité',
+    icon: '✅',
   },
   {
-    number: '98%',
-    label: 'Satisfaction client',
-    icon: '⭐',
+    number: 'Gratuit',
+    label: 'Première consultation',
+    icon: '💬',
   },
   {
-    number: '24/7',
-    label: 'Support disponible',
-    icon: '📞',
+    number: 'Local',
+    label: 'Équipe québécoise',
+    icon: '🍁',
   },
 ];
 
@@ -104,23 +104,21 @@ export function TrustBadgesSection() {
             ))}
           </div>
 
-          {/* Citation testimoniale */}
+          {/* Message de confiance */}
           <div className="mt-16 max-w-3xl mx-auto">
-            <blockquote className="relative">
-              <div className="absolute -top-4 -left-4 text-6xl text-sage-green/20">
-                &quot;
-              </div>
-              <p className="text-xl md:text-2xl text-center text-secondary font-medium italic px-8">
-                CyberNow Seniors nous a permis d&apos;offrir un service essentiel à nos membres.
-                Leur approche bienveillante fait toute la différence.
-              </p>
-              <footer className="mt-6 text-center">
-                <p className="font-semibold text-primary">Marie-Claude Bertrand</p>
-                <p className="text-sm text-muted-foreground">
-                  Directrice, Réseau FADOQ Montréal
+            <div className="relative bg-gradient-to-br from-soft-beige to-white rounded-2xl p-8 shadow-lg border-2 border-sage-green/20">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🤝</div>
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  Notre engagement envers vous
+                </h3>
+                <p className="text-lg text-secondary leading-relaxed">
+                  Nous sommes une nouvelle entreprise québécoise dédiée exclusivement aux aînés.
+                  Pas de fausses promesses : juste un accompagnement humain, patient et transparent.
+                  Votre première consultation est gratuite et sans engagement.
                 </p>
-              </footer>
-            </blockquote>
+              </div>
+            </div>
           </div>
         </div>
       </div>

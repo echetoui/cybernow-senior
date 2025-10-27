@@ -123,31 +123,31 @@
       "reassurance": "Aucune question n'est bête. Nous prenons le temps qu'il faut."
     },
     "testimonials": {
-      "title": "Ils nous font confiance",
-      "subtitle": "Plus de 500 familles québécoises protégées et rassurées",
+      "title": "Pourquoi nous choisir",
+      "subtitle": "Notre engagement envers les aînés du Québec",
       "marie": {
-        "name": "Marie Lavoie",
-        "quote": "Grâce à Cybernow, je me sens en sécurité sur internet. Mon conseiller prend vraiment le temps de tout m'expliquer."
+        "name": "Notre promesse",
+        "quote": "Un service humain et patient, sans jugement. Nous prenons le temps qu'il faut pour vous accompagner dans votre sécurité numérique."
       },
       "jean": {
-        "name": "Jean Tremblay",
-        "quote": "J'avais peur de la technologie. Maintenant, je peux utiliser ma tablette sans stress. Merci pour votre patience !"
+        "name": "Notre approche",
+        "quote": "Des explications claires en français, adaptées à votre rythme. Pas de jargon technique, juste des solutions simples et efficaces."
       },
       "louise": {
-        "name": "Louise Gagnon",
-        "quote": "Service exceptionnel ! Ils m'ont aidée après une tentative d'arnaque. Je recommande à tous mes amis."
+        "name": "Notre disponibilité",
+        "quote": "Un premier diagnostic gratuit et sans engagement. Nous sommes là pour vous conseiller, pas pour vous vendre."
       },
-      "trust": "Recommandé par +500 familles québécoises"
+      "trust": "Service local québécois - Nouvelle entreprise dédiée aux seniors"
     }
   },
   "team": {
     "title": "Notre équipe",
-    "subtitle": "Des professionnels passionnés à votre service",
+    "subtitle": "Des professionnels passionnés qui lancent ce nouveau service",
     "jean": {
       "name": "Jean Tremblay",
-      "role": "Conseiller senior en cybersécurité",
-      "bio": "Avec 18 ans d'expérience en sécurité informatique, Jean se consacre maintenant à protéger les aînés du Québec. Sa patience et sa pédagogie en font un conseiller apprécié de tous.",
-      "experience": "18 ans d'expérience",
+      "role": "Fondateur et conseiller en cybersécurité",
+      "bio": "Passionné par la protection des aînés en ligne, Jean a créé CyberNow Seniors pour offrir un accompagnement humain et accessible. Fort de son expérience en sécurité informatique, il se consacre maintenant exclusivement aux besoins des seniors.",
+      "experience": "Expert en sécurité numérique",
       "specialty1": "Protection contre les arnaques",
       "specialty2": "Mots de passe sécurisés",
       "specialty3": "Banque en ligne"
@@ -155,52 +155,52 @@
     "marie": {
       "name": "Marie Gagnon",
       "role": "Spécialiste en accompagnement numérique",
-      "bio": "Ancienne enseignante reconvertie en conseillère numérique, Marie excelle dans l'art d'expliquer simplement les concepts complexes. Elle accompagne les seniors avec douceur et empathie.",
-      "experience": "12 ans d'expérience",
+      "bio": "Ancienne enseignante reconvertie dans le numérique, Marie excelle dans l'art d'expliquer simplement les concepts complexes. Elle rejoint l'équipe avec sa pédagogie et son empathie naturelle.",
+      "experience": "Pédagogue expérimentée",
       "specialty1": "Démarches administratives",
       "specialty2": "Gestion des emails",
       "specialty3": "Réseaux sociaux sécurisés"
     },
     "pierre": {
       "name": "Pierre Lavoie",
-      "role": "Expert en vie privée numérique",
-      "bio": "Pierre est passionné par la protection des données personnelles. Il aide les aînés à reprendre le contrôle de leurs informations en ligne et à comprendre leurs droits numériques.",
-      "experience": "15 ans d'expérience",
+      "role": "Conseiller en vie privée numérique",
+      "bio": "Pierre est passionné par la protection des données personnelles. Il aide les aînés à reprendre le contrôle de leurs informations en ligne et à comprendre leurs droits numériques dans un langage accessible.",
+      "experience": "Spécialiste de la confidentialité",
       "specialty1": "Confidentialité en ligne",
-      "specialty2": "Contrôle parental inversé",
-      "specialty3": "RGPD et droits numériques"
+      "specialty2": "Gestion des paramètres",
+      "specialty3": "Protection des données"
     },
     "sophie": {
       "name": "Sophie Roy",
-      "role": "Coordinatrice support et formation",
-      "bio": "Sophie coordonne notre équipe et s'assure que chaque senior reçoive un accompagnement personnalisé. Son approche chaleureuse met tout le monde à l'aise dès le premier contact.",
-      "experience": "10 ans d'expérience",
-      "specialty1": "Formation personnalisée",
-      "specialty2": "Suivi continu",
-      "specialty3": "Gestion de crise"
+      "role": "Coordinatrice et support client",
+      "bio": "Sophie coordonne notre nouvelle équipe et s'assure que chaque senior reçoive un accompagnement personnalisé. Son approche chaleureuse et son écoute attentive mettent tout le monde à l'aise dès le premier contact.",
+      "experience": "Experte en relation client",
+      "specialty1": "Accueil et orientation",
+      "specialty2": "Suivi personnalisé",
+      "specialty3": "Coordination d'équipe"
     }
   },
   "services": {
     "title": "Nos services",
     "subtitle": "Des solutions adaptées à vos besoins numériques",
     "proactiveShield": {
-      "title": "Bouclier proactif",
-      "shortDescription": "Surveillance et blocage des menaces.",
-      "description": "Notre service de protection proactive surveille en permanence votre environnement numérique. Nous bloquons les menaces avant qu'elles n'atteignent vos appareils et vous alertons en cas de tentative d'intrusion.",
+      "title": "Protection numérique",
+      "shortDescription": "Sécurisation de vos appareils et conseils préventifs.",
+      "description": "Nous sécurisons vos appareils avec des logiciels de protection fiables et vous apprenons à reconnaître les menaces. Notre accompagnement vous permet de naviguer en toute confiance.",
       "features": [
-        "Surveillance 24h/24 et 7j/7",
-        "Blocage automatique des menaces",
-        "Alertes en temps réel",
-        "Rapport mensuel de sécurité"
+        "Installation d'antivirus recommandés",
+        "Configuration sécurisée de vos appareils",
+        "Formation aux bonnes pratiques",
+        "Support par téléphone aux heures d'ouverture"
       ],
       "faq": [
         {
-          "question": "Comment fonctionne la surveillance ?",
-          "answer": "Notre système analyse en continu les connexions de vos appareils pour détecter toute activité suspecte."
+          "question": "Quels logiciels installez-vous ?",
+          "answer": "Nous recommandons et installons des antivirus gratuits et reconnus comme Windows Defender, ou des solutions payantes selon vos besoins."
         },
         {
-          "question": "Puis-je voir les menaces bloquées ?",
-          "answer": "Oui, vous recevez un rapport détaillé chaque mois avec toutes les tentatives d'intrusion bloquées."
+          "question": "Puis-je vous appeler en cas de problème ?",
+          "answer": "Oui, vous pouvez nous contacter aux heures d'ouverture. Nous prendrons le temps de vous guider étape par étape."
         }
       ]
     },
