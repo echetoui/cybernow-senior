@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
+
 // Logos de partenaires/certifications (placeholders - à remplacer par vraies images)
 const trustBadges = [
   {
@@ -29,30 +31,32 @@ const trustBadges = [
   },
 ];
 
-const statistics = [
-  {
-    number: 'Établie',
-    label: 'Division de Cybernow',
-    icon: '🏢',
-  },
-  {
-    number: '100%',
-    label: 'Engagement qualité',
-    icon: '✅',
-  },
-  {
-    number: 'Gratuit',
-    label: 'Première consultation',
-    icon: '💬',
-  },
-  {
-    number: 'Québec',
-    label: 'Entreprise locale',
-    icon: '🍁',
-  },
-];
-
 export function TrustBadgesSection() {
+  const t = useTranslations('home.trustBadges');
+
+  const statistics = [
+    {
+      number: 'Établie',
+      labelKey: 'stats.established.label',
+      icon: '🏢',
+    },
+    {
+      number: '100%',
+      labelKey: 'stats.quality.label',
+      icon: '✅',
+    },
+    {
+      number: 'Gratuit',
+      labelKey: 'stats.consultation.label',
+      icon: '💬',
+    },
+    {
+      number: 'Québec',
+      labelKey: 'stats.local.label',
+      icon: '🍁',
+    },
+  ];
+
   return (
     <section className="py-16 md:py-20 bg-white border-y border-border">
       <div className="container mx-auto px-4">
@@ -60,10 +64,10 @@ export function TrustBadgesSection() {
           {/* Titre */}
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
-              Ils nous font confiance
+              {t('title')}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Reconnus et recommandés par les organismes québécois pour aînés
+              {t('subtitle')}
             </p>
           </div>
 
@@ -98,7 +102,7 @@ export function TrustBadgesSection() {
                   {stat.number}
                 </p>
                 <p className="text-sm text-muted-foreground font-medium">
-                  {stat.label}
+                  {t(stat.labelKey)}
                 </p>
               </div>
             ))}
@@ -110,12 +114,10 @@ export function TrustBadgesSection() {
               <div className="text-center">
                 <div className="text-4xl mb-4">🤝</div>
                 <h3 className="text-2xl font-bold text-primary mb-4">
-                  L&apos;expertise Cybernow au service des aînés
+                  {t('message.title')}
                 </h3>
                 <p className="text-lg text-secondary leading-relaxed">
-                  Cybernow Seniors est une division spécialisée de Cybernow, entreprise québécoise de cybersécurité.
-                  Nous apportons notre expertise technique avec une approche humaine, patiente et adaptée aux besoins des aînés.
-                  Votre première consultation est gratuite et sans engagement.
+                  {t('message.description')}
                 </p>
               </div>
             </div>

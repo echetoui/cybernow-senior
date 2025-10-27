@@ -138,6 +138,28 @@
         "quote": "L'expérience en cybersécurité de Cybernow, avec une approche spécialement conçue pour les aînés du Québec."
       },
       "trust": "Division spécialisée de Cybernow - Entreprise québécoise de cybersécurité"
+    },
+    "trustBadges": {
+      "title": "Ils nous font confiance",
+      "subtitle": "Reconnus et recommandés par les organismes québécois pour aînés",
+      "stats": {
+        "established": {
+          "label": "Division de Cybernow"
+        },
+        "quality": {
+          "label": "Engagement qualité"
+        },
+        "consultation": {
+          "label": "Première consultation"
+        },
+        "local": {
+          "label": "Entreprise locale"
+        }
+      },
+      "message": {
+        "title": "L'expertise Cybernow au service des aînés",
+        "description": "Cybernow Seniors est une division spécialisée de Cybernow, entreprise québécoise de cybersécurité. Nous apportons notre expertise technique avec une approche humaine, patiente et adaptée aux besoins des aînés. Votre première consultation est gratuite et sans engagement."
+      }
     }
   },
   "team": {

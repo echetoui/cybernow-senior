@@ -97,6 +97,28 @@
     "cta": {
       "title": "Need help right now?",
       "subtitle": "Our team is here to assist you"
+    },
+    "trustBadges": {
+      "title": "They trust us",
+      "subtitle": "Recognized and recommended by Quebec organizations for seniors",
+      "stats": {
+        "established": {
+          "label": "Cybernow Division"
+        },
+        "quality": {
+          "label": "Quality commitment"
+        },
+        "consultation": {
+          "label": "First consultation"
+        },
+        "local": {
+          "label": "Local business"
+        }
+      },
+      "message": {
+        "title": "Cybernow expertise serving seniors",
+        "description": "Cybernow Seniors is a specialized division of Cybernow, a Quebec cybersecurity company. We bring our technical expertise with a human, patient approach adapted to seniors' needs. Your first consultation is free and without commitment."
+      }
     }
   },
   "services": {
