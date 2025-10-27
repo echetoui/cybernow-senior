@@ -98,6 +98,25 @@
       "title": "Need help right now?",
       "subtitle": "Our team is here to assist you"
     },
+    "howItWorks": {
+      "title": "How does it work?",
+      "subtitle": "3 simple steps for your digital peace of mind",
+      "steps": {
+        "call": {
+          "title": "1. Call us",
+          "description": "A patient advisor listens and understands your situation, without judgment."
+        },
+        "diagnostic": {
+          "title": "2. Free assessment",
+          "description": "We analyze your needs together and explain everything clearly."
+        },
+        "protection": {
+          "title": "3. Protected guaranteed",
+          "description": "We secure your devices and remain available to support you."
+        }
+      },
+      "reassurance": "No question is silly. We take all the time you need."
+    },
     "trustBadges": {
       "title": "They trust us",
       "subtitle": "Recognized and recommended by Quebec organizations for seniors",
