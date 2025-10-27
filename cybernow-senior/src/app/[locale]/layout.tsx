@@ -104,8 +104,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
-        'fr-CA': `${baseUrl}/fr`,
-        'en-CA': `${baseUrl}/en`,
+        'fr': `${baseUrl}/fr`,
+        'en': `${baseUrl}/en`,
+        'x-default': `${baseUrl}/fr`, // Default to French for Quebec
       },
     },
     

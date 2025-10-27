@@ -103,6 +103,7 @@ export function SiteFooter() {
                 className="p-3 bg-white/10 rounded-lg hover:bg-success-green/20 transition-colors focus-visible:outline-white min-w-[44px] min-h-[44px] flex items-center justify-center"
               >
                 <Facebook className="h-6 w-6" aria-hidden="true" />
+                <span className="sr-only">Facebook</span>
               </a>
               <a
                 href="#"
@@ -110,6 +111,7 @@ export function SiteFooter() {
                 className="p-3 bg-white/10 rounded-lg hover:bg-success-green/20 transition-colors focus-visible:outline-white min-w-[44px] min-h-[44px] flex items-center justify-center"
               >
                 <Twitter className="h-6 w-6" aria-hidden="true" />
+                <span className="sr-only">Twitter</span>
               </a>
               <a
                 href="#"
@@ -117,6 +119,7 @@ export function SiteFooter() {
                 className="p-3 bg-white/10 rounded-lg hover:bg-success-green/20 transition-colors focus-visible:outline-white min-w-[44px] min-h-[44px] flex items-center justify-center"
               >
                 <Linkedin className="h-6 w-6" aria-hidden="true" />
+                <span className="sr-only">LinkedIn</span>
               </a>
             </div>
 
