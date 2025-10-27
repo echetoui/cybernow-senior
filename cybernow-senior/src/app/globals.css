@@ -82,6 +82,9 @@
     font-size: 18px;
     line-height: 1.6;
     font-weight: 400;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -234,5 +237,14 @@
   /* Remove focus outline for mouse users, keep for keyboard users */
   .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
+  }
+
+  /* Fix header alignment - ensure no unwanted spacing */
+  header, .navbar, .header-container {
+    margin-left: 0 !important;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 }

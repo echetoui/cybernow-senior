@@ -37,10 +37,10 @@ export function SiteHeader() {
         className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm"
         role="banner"
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="flex h-16 items-center justify-between gap-4">
+        <div className="w-full">
+          <div className="flex h-16 items-center justify-between gap-4 pl-4 pr-4 md:pl-6 md:pr-6 lg:pl-8 lg:pr-8">
             {/* Logo avec indicateur de sécurité */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 -ml-2">
               <LogoLink
                 href="/"
                 size="sm"
