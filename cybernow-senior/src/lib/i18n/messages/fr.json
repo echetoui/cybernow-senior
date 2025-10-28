@@ -108,15 +108,15 @@
       "subtitle": "3 étapes simples pour votre tranquillité numérique",
       "steps": {
         "call": {
-          "title": "1. Appelez-nous",
+          "title": "Appelez-nous",
           "description": "Un conseiller patient vous écoute et comprend votre situation, sans jugement."
         },
         "diagnostic": {
-          "title": "2. Diagnostic gratuit",
+          "title": "Diagnostic gratuit",
           "description": "Nous analysons ensemble vos besoins et vous expliquons tout clairement."
         },
         "protection": {
-          "title": "3. Protection assurée",
+          "title": "Protection assurée",
           "description": "Nous sécurisons vos appareils et restons disponibles pour vous accompagner."
         }
       },
