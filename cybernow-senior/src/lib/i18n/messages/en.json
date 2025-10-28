@@ -27,13 +27,18 @@
     "privacy": "Privacy Policy"
   },
   "buttons": {
-    "callNow": "Call now",
-    "getCallback": "Get a callback",
-    "reportScam": "Report a scam",
+    "callNow": "Talk to an advisor",
+    "getCallback": "Get a free callback",
+    "reportScam": "Request help",
     "contactUs": "Contact us",
-    "getAllServices": "View all our services",
+    "getAllServices": "Discover our services",
     "viewAllAlerts": "View all alerts",
-    "viewAllResources": "View all resources"
+    "viewAllResources": "Download our guides",
+    "downloadGuide": "Download the guide",
+    "readArticle": "Read the article",
+    "learnMore": "Learn more",
+    "getStarted": "Get a free assessment",
+    "scheduleCall": "Schedule a call"
   },
   "language": {
     "fr": "FR",
@@ -56,7 +61,7 @@
       "badges": {
         "local": "Local in Quebec",
         "noJargon": "No jargon",
-        "available": "7 days a week"
+        "available": "Daily assistance"
       }
     },
     "whyChooseUs": {
@@ -78,25 +83,25 @@
       "title": "Our services",
       "subtitle": "Simple solutions for your digital security",
       "proactiveShield": {
-        "title": "Proactive shield",
-        "description": "Monitoring and blocking threats."
+        "title": "Automatic device protection",
+        "description": "We monitor and block threats for you, automatically."
       },
       "privacyConsent": {
         "title": "Privacy & consents",
         "description": "We help you manage what is shared."
       },
       "onlineHelp": {
-        "title": "Online assistance",
-        "description": "Banking, online accounts, passwords."
+        "title": "Support for your online procedures",
+        "description": "We assist you with banking, passwords and your accounts."
       },
       "scamSupport": {
-        "title": "Scam support",
-        "description": "We analyze and protect you."
+        "title": "Help in case of doubt or scam",
+        "description": "We analyze your situation and guide you step by step."
       }
     },
     "cta": {
-      "title": "Need help right now?",
-      "subtitle": "Our team is here to assist you"
+      "title": "Have a question? We're here for you.",
+      "subtitle": "Talk to a caring and patient advisor"
     },
     "howItWorks": {
       "title": "How does it work?",
@@ -116,6 +121,23 @@
         }
       },
       "reassurance": "No question is silly. We take all the time you need."
+    },
+    "testimonials": {
+      "title": "Why choose us",
+      "subtitle": "Cybernow expertise adapted to seniors",
+      "marie": {
+        "name": "Our promise",
+        "quote": "A human and patient service, without judgment. We take all the time needed to support you in your digital security."
+      },
+      "jean": {
+        "name": "Our approach",
+        "quote": "Clear explanations in English, adapted to your pace. No technical jargon, just simple and effective solutions."
+      },
+      "louise": {
+        "name": "Our expertise",
+        "quote": "Cybernow's cybersecurity experience, with an approach specially designed for Quebec seniors."
+      },
+      "trust": "Specialized division of Cybernow - Quebec cybersecurity company"
     },
     "trustBadges": {
       "title": "They trust us",
@@ -144,30 +166,30 @@
     "title": "Our services",
     "subtitle": "Solutions adapted to your digital needs",
     "proactiveShield": {
-      "title": "Proactive shield",
-      "shortDescription": "Monitoring and blocking threats.",
-      "description": "Our proactive protection service continuously monitors your digital environment. We block threats before they reach your devices and alert you to intrusion attempts.",
+      "title": "Digital protection",
+      "shortDescription": "Securing your devices and preventive advice.",
+      "description": "We secure your devices with reliable protection software and teach you to recognize threats. Our support allows you to browse with confidence.",
       "features": [
-        "24/7 monitoring",
-        "Automatic threat blocking",
-        "Real-time alerts",
-        "Monthly security report"
+        "Recommended antivirus installation",
+        "Secure device configuration",
+        "Best practices training",
+        "Phone support during business hours"
       ],
       "faq": [
         {
-          "question": "How does monitoring work?",
-          "answer": "Our system continuously analyzes your device connections to detect any suspicious activity."
+          "question": "What software do you install?",
+          "answer": "We recommend and install free and recognized antiviruses like Windows Defender, or paid solutions according to your needs."
         },
         {
-          "question": "Can I see blocked threats?",
-          "answer": "Yes, you receive a detailed monthly report with all blocked intrusion attempts."
+          "question": "Can I call you if I have a problem?",
+          "answer": "Yes, you can contact us during business hours. We will take the time to guide you step by step."
         }
       ]
     },
     "privacyConsent": {
       "title": "Privacy & consents",
-      "shortDescription": "We help you manage what is shared.",
-      "description": "We assist you in managing your personal data online. Learn to control what you share and with whom.",
+      "shortDescription": "We help you manage what you share.",
+      "description": "We support you in managing your personal data online. Learn to control what you share and with whom.",
       "features": [
         "Privacy settings audit",
         "Secure account configuration",
@@ -186,9 +208,9 @@
       ]
     },
     "onlineHelp": {
-      "title": "Online assistance",
+      "title": "Help with procedures",
       "shortDescription": "Banking, online accounts, passwords.",
-      "description": "We assist you in all your daily digital tasks. From online banking to creating secure accounts.",
+      "description": "We assist you with all your daily digital procedures. From online banking to creating secure accounts.",
       "features": [
         "Online banking assistance",
         "Secure account creation",
@@ -198,7 +220,7 @@
       "faq": [
         {
           "question": "Can I trust you with my passwords?",
-          "answer": "We never store your passwords. We teach you to use a secure manager."
+          "answer": "We never keep your passwords. We teach you to use a secure manager."
         },
         {
           "question": "Do you help with all banks?",
@@ -207,13 +229,13 @@
       ]
     },
     "scamSupport": {
-      "title": "Scam support",
+      "title": "Support in case of scam",
       "shortDescription": "We analyze and protect you.",
       "description": "If you have been a victim or suspect a scam, we analyze the situation and guide you through the protection steps.",
       "features": [
         "Rapid situation analysis",
         "Personalized action plan",
-        "Procedure assistance",
+        "Support with procedures",
         "Preventing recurrence"
       ],
       "faq": [
@@ -222,10 +244,50 @@
           "answer": "Contact us immediately. We will guide you to secure your accounts urgently."
         },
         {
-          "question": "Can we recover lost money?",
-          "answer": "We assist you in procedures with your bank and competent authorities."
+          "question": "Can we recover the lost money?",
+          "answer": "We support you with procedures with your bank and the relevant authorities."
         }
       ]
+    }
+  },
+  "team": {
+    "title": "Our team",
+    "subtitle": "Cybernow experts dedicated to seniors",
+    "jean": {
+      "name": "Jean Tremblay",
+      "role": "Seniors Division Manager - Cybernow",
+      "bio": "Cybersecurity expert at Cybernow, Jean leads this new specialized division for seniors. He combines Cybernow's technical expertise with a human and patient approach, adapted to seniors' specific needs.",
+      "experience": "Cybernow expert in digital security",
+      "specialty1": "Protection against scams",
+      "specialty2": "Secure passwords",
+      "specialty3": "Online banking"
+    },
+    "marie": {
+      "name": "Marie Gagnon",
+      "role": "Senior Specialized Advisor - Cybernow",
+      "bio": "Former teacher turned digital expert at Cybernow, Marie excels at explaining complex concepts simply. Her teaching skills and empathy make her the ideal advisor to support seniors.",
+      "experience": "Cybernow expert in digital pedagogy",
+      "specialty1": "Administrative procedures",
+      "specialty2": "Email management",
+      "specialty3": "Secure social media"
+    },
+    "pierre": {
+      "name": "Pierre Lavoie",
+      "role": "Senior Privacy Advisor - Cybernow",
+      "bio": "Data protection expert at Cybernow, Pierre is passionate about digital privacy. He helps seniors regain control of their online information and understand their rights in accessible language.",
+      "experience": "Cybernow expert in privacy",
+      "specialty1": "Online privacy",
+      "specialty2": "Settings management",
+      "specialty3": "Data protection"
+    },
+    "sophie": {
+      "name": "Sophie Roy",
+      "role": "Senior Support Coordinator - Cybernow",
+      "bio": "Customer experience manager at Cybernow, Sophie coordinates the Seniors team and ensures every senior receives personalized support. Her warm approach and attentive listening put everyone at ease.",
+      "experience": "Cybernow expert in customer relations",
+      "specialty1": "Welcome and guidance",
+      "specialty2": "Personalized follow-up",
+      "specialty3": "Team coordination"
     }
   },
   "alerts": {
