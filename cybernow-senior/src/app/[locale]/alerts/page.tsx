@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { AlertTriangle, Calendar, Tag, Shield, Phone, Eye, MessageSquare } from 'lucide-react';
+import { AlertTriangle, Calendar, Tag, Shield, Phone, Eye, MessageSquare, Lightbulb, AlertCircle, CheckCircle, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -66,13 +66,13 @@ export default function AlertsPage() {
                         <CardTitle className="text-xl mb-2">
                           {alert.title.fr}
                         </CardTitle>
-                        
+
                         <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                           <div className="flex items-center gap-1">
                             <Calendar className="h-4 w-4" aria-hidden="true" />
                             <span>{t('alerts.date', { date: formatDate(alert.publishedAt) })}</span>
                           </div>
-                          
+
                           <div className="flex items-center gap-1">
                             <Tag className="h-4 w-4" aria-hidden="true" />
                             <span>{t('alerts.category', { category: alert.category.fr })}</span>
@@ -80,7 +80,7 @@ export default function AlertsPage() {
                         </div>
                       </div>
 
-                      <div 
+                      <div
                         className={`px-3 py-1 rounded-full text-xs font-medium border ${riskLevelColors[alert.riskLevel]}`}
                         aria-label={riskLevelAriaLabels[alert.riskLevel]}
                         role="status"
@@ -89,11 +89,94 @@ export default function AlertsPage() {
                       </div>
                     </div>
                   </CardHeader>
-                  
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">
+
+                  <CardContent className="space-y-6">
+                    {/* Description */}
+                    <p className="text-muted-foreground leading-relaxed text-base">
                       {alert.description.fr}
                     </p>
+
+                    {/* Examples Section */}
+                    {alert.details?.fr.examples && alert.details.fr.examples.length > 0 && (
+                      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-3">
+                          <Lightbulb className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-blue-900 mb-3">
+                              Exemples de messages frauduleux
+                            </h3>
+                            <ul className="space-y-2">
+                              {alert.details.fr.examples.map((example, idx) => (
+                                <li key={idx} className="text-sm text-blue-800 italic">
+                                  &quot;{example}&quot;
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Warning Signs Section */}
+                    {alert.details?.fr.warningSignes && alert.details.fr.warningSignes.length > 0 && (
+                      <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-3">
+                          <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-amber-900 mb-3">
+                              Signes d&apos;alerte à surveiller
+                            </h3>
+                            <ul className="space-y-2">
+                              {alert.details.fr.warningSignes.map((sign, idx) => (
+                                <li key={idx} className="text-sm text-amber-800 flex items-start gap-2">
+                                  <span className="text-amber-600 font-bold flex-shrink-0">⚠</span>
+                                  <span>{sign}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* What To Do Section */}
+                    {alert.details?.fr.whatToDo && alert.details.fr.whatToDo.length > 0 && (
+                      <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-green-900 mb-3">
+                              Que faire si vous recevez ce message?
+                            </h3>
+                            <ol className="space-y-2">
+                              {alert.details.fr.whatToDo.map((step, idx) => (
+                                <li key={idx} className="text-sm text-green-800 flex items-start gap-2">
+                                  <span className="text-green-600 font-bold flex-shrink-0">{idx + 1}.</span>
+                                  <span>{step}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Real Example Section */}
+                    {alert.details?.fr.realExample && (
+                      <div className="bg-gray-50 border-l-4 border-gray-400 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-3">
+                          <MessageCircle className="h-5 w-5 text-gray-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-gray-900 mb-3">
+                              Exemple réel reçu par nos clients
+                            </h3>
+                            <div className="bg-white p-4 rounded-lg border border-gray-200 text-sm text-gray-700 italic">
+                              {alert.details.fr.realExample}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}
