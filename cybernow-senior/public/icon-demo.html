@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icône Digital Care - Démo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 40px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #004C97;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .demo-card {
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .bg-light {
+      background: #f8f9fa;
+    }
+
+    .bg-dark {
+      background: #1a1a1a;
+      color: white;
+    }
+
+    .bg-blue {
+      background: #004C97;
+      color: white;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      color: white;
+    }
+
+    .icon-wrapper {
+      margin: 20px 0;
+      display: inline-block;
+    }
+
+    .icon-large {
+      width: 80px;
+      height: 80px;
+    }
+
+    .icon-medium {
+      width: 50px;
+      height: 50px;
+    }
+
+    .icon-small {
+      width: 40px;
+      height: 40px;
+    }
+
+    h3 {
+      margin-top: 15px;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.9em;
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    .specs {
+      background: #f0f7ff;
+      border-left: 4px solid #004C97;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+
+    .specs h2 {
+      color: #004C97;
+      margin-bottom: 15px;
+    }
+
+    .specs ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .specs li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .specs li:last-child {
+      border-bottom: none;
+    }
+
+    .specs strong {
+      color: #004C97;
+      margin-right: 10px;
+    }
+
+    .size-demo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .code-block {
+      background: #1a1a1a;
+      color: #00ff00;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Icône Digital Care - Protection Bienveillante</h1>
+
+    <div class="specs">
+      <h2>Spécifications</h2>
+      <ul>
+        <li><strong>Nom:</strong> icon-digital-care.svg</li>
+        <li><strong>Dimensions:</strong> 40x40px (ViewBox: 0 0 40 40)</li>
+        <li><strong>Couleur:</strong> #004C97 (Bleu foncé)</li>
+        <li><strong>Style:</strong> Lignes fines, arrondies, minimaliste</li>
+        <li><strong>Format:</strong> SVG vectoriel, fond transparent</li>
+        <li><strong>Éléments:</strong> Deux mains protectrices + cœur + détails digitaux</li>
+        <li><strong>Accessibilité:</strong> Optimisée pour fond clair et foncé</li>
+      </ul>
+    </div>
+
+    <h2 style="margin-top: 40px; color: #004C97;">Prévisualisation sur différents fonds</h2>
+
+    <div class="demo-grid">
+      <div class="demo-card bg-light">
+        <h3>Fond Clair</h3>
+        <div class="icon-wrapper">
+          <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-large">
+        </div>
+        <p>Lisibilité optimale sur fond blanc/clair</p>
+      </div>
+
+      <div class="demo-card bg-dark">
+        <h3>Fond Sombre</h3>
+        <div class="icon-wrapper">
+          <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-large" style="filter: brightness(0) invert(1);">
+        </div>
+        <p>Version inversée pour fond sombre</p>
+      </div>
+
+      <div class="demo-card bg-blue">
+        <h3>Fond Bleu</h3>
+        <div class="icon-wrapper">
+          <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-large" style="filter: brightness(0) invert(1);">
+        </div>
+        <p>Sur fond de marque</p>
+      </div>
+
+      <div class="demo-card bg-gradient">
+        <h3>Fond Gradient</h3>
+        <div class="icon-wrapper">
+          <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-large" style="filter: brightness(0) invert(1);">
+        </div>
+        <p>Sur gradient moderne</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 40px; color: #004C97;">Différentes Tailles</h2>
+
+    <div class="size-demo">
+      <div style="text-align: center;">
+        <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-small">
+        <p style="margin-top: 5px; font-size: 0.8em;">40px (Standard)</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-medium">
+        <p style="margin-top: 5px; font-size: 0.8em;">50px</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="icon-digital-care.svg" alt="Digital Care Icon" class="icon-large">
+        <p style="margin-top: 5px; font-size: 0.8em;">80px</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="icon-digital-care.svg" alt="Digital Care Icon" style="width: 120px; height: 120px;">
+        <p style="margin-top: 5px; font-size: 0.8em;">120px</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 40px; color: #004C97;">Utilisation dans le Code</h2>
+
+    <div class="code-block">
+&lt;!-- Méthode 1: Image simple --&gt;<br>
+&lt;img src="/icon-digital-care.svg" alt="Protection numérique bienveillante" width="40" height="40"&gt;<br><br>
+
+&lt;!-- Méthode 2: Inline SVG (recommandé pour le contrôle CSS) --&gt;<br>
+&lt;svg width="40" height="40" ...&gt;...&lt;/svg&gt;<br><br>
+
+&lt;!-- Méthode 3: Background CSS --&gt;<br>
+.icon-care {<br>
+&nbsp;&nbsp;background-image: url('/icon-digital-care.svg');<br>
+&nbsp;&nbsp;width: 40px;<br>
+&nbsp;&nbsp;height: 40px;<br>
+}<br>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: #fef3c7; border-radius: 10px; border-left: 4px solid #f59e0b;">
+      <h3 style="color: #92400e; margin-bottom: 10px;">💡 Symbolisme</h3>
+      <p style="color: #78350f; opacity: 1;">
+        <strong>Les deux mains</strong> représentent l'accompagnement humain et la protection.<br>
+        <strong>Le cœur</strong> symbolise la bienveillance, l'empathie et le soin.<br>
+        <strong>Les détails digitaux</strong> (pixels et connexions) évoquent la protection numérique.<br><br>
+        Cette icône communique parfaitement l'approche de CyberNow Seniors : une protection technique avec une dimension humaine et empathique.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

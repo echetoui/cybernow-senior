@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparaison des Variantes - Digital Care Icons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #004C97;
+      margin-bottom: 20px;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6b7280;
+      font-size: 1.2em;
+      margin-bottom: 50px;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .variant-card {
+      border: 2px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 30px;
+      background: #fafafa;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .variant-card:hover {
+      border-color: #004C97;
+      box-shadow: 0 10px 30px rgba(0,76,151,0.1);
+      transform: translateY(-5px);
+    }
+
+    .variant-card.recommended {
+      border-color: #10b981;
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    }
+
+    .variant-card.recommended::before {
+      content: "⭐ RECOMMANDÉE";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #10b981;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.7em;
+      font-weight: bold;
+    }
+
+    .variant-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .variant-header h2 {
+      color: #004C97;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .variant-header .tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      margin-top: 5px;
+    }
+
+    .icon-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+      background: white;
+      border-radius: 15px;
+      margin: 20px 0;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .icon-showcase img {
+      width: 100px;
+      height: 100px;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-showcase:hover img {
+      transform: scale(1.1);
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .features-list li:last-child {
+      border-bottom: none;
+    }
+
+    .features-list li::before {
+      content: "✓";
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .pros-cons {
+      margin-top: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .pros-cons h4 {
+      margin-bottom: 10px;
+      color: #374151;
+    }
+
+    .pros {
+      color: #059669;
+      margin-bottom: 15px;
+    }
+
+    .cons {
+      color: #dc2626;
+    }
+
+    .backgrounds-test {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .bg-test {
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg-test img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .bg-white { background: #ffffff; }
+    .bg-light { background: #f3f4f6; }
+    .bg-blue { background: #004C97; }
+    .bg-dark { background: #1f2937; }
+
+    .action-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1em;
+    }
+
+    .btn-primary {
+      background: #004C97;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #003d7a;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,76,151,0.3);
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .btn-secondary:hover {
+      background: #d1d5db;
+    }
+
+    .final-note {
+      margin-top: 50px;
+      padding: 30px;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-radius: 15px;
+      border-left: 5px solid #f59e0b;
+    }
+
+    .final-note h3 {
+      color: #92400e;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .final-note p {
+      color: #78350f;
+      line-height: 1.8;
+      font-size: 1.05em;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .backgrounds-test {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Comparaison des Variantes</h1>
+    <p class="subtitle">Trois approches visuelles pour votre icône de protection digitale bienveillante</p>
+
+    <div class="comparison-grid">
+      <!-- Version 1 -->
+      <div class="variant-card recommended">
+        <div class="variant-header">
+          <h2>Version 1</h2>
+          <span class="tag">Classique & Équilibrée</span>
+        </div>
+
+        <div class="icon-showcase">
+          <img src="icon-digital-care.svg" alt="Version 1">
+        </div>
+
+        <h3 style="margin: 20px 0 15px; color: #374151;">Caractéristiques</h3>
+        <ul class="features-list">
+          <li>Deux mains symétriques</li>
+          <li>Cœur central bien visible</li>
+          <li>Détails digitaux subtils (pixels)</li>
+          <li>Équilibre parfait protection/empathie</li>
+          <li>Lignes fines et arrondies</li>
+        </ul>
+
+        <div class="pros-cons">
+          <h4 class="pros">✓ Points forts</h4>
+          <p style="font-size: 0.9em; color: #059669;">
+            • Symbolisme clair et immédiat<br>
+            • Parfait équilibre visuel<br>
+            • Lisible à toutes les tailles<br>
+            • Design intemporel
+          </p>
+
+          <h4 class="cons" style="margin-top: 15px;">⚠ Points d'attention</h4>
+          <p style="font-size: 0.9em; color: #dc2626;">
+            • Peut sembler classique pour certains
+          </p>
+        </div>
+
+        <h4 style="margin: 20px 0 10px; color: #374151;">Test sur différents fonds</h4>
+        <div class="backgrounds-test">
+          <div class="bg-test bg-white">
+            <img src="icon-digital-care.svg" alt="">
+          </div>
+          <div class="bg-test bg-light">
+            <img src="icon-digital-care.svg" alt="">
+          </div>
+          <div class="bg-test bg-blue">
+            <img src="icon-digital-care.svg" alt="" style="filter: brightness(0) invert(1);">
+          </div>
+          <div class="bg-test bg-dark">
+            <img src="icon-digital-care.svg" alt="" style="filter: brightness(0) invert(1);">
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-primary" onclick="selectVersion(1)">Choisir</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('icon-digital-care.svg')">Télécharger</button>
+        </div>
+      </div>
+
+      <!-- Version 2 -->
+      <div class="variant-card">
+        <div class="variant-header">
+          <h2>Version 2</h2>
+          <span class="tag">Digital & Moderne</span>
+        </div>
+
+        <div class="icon-showcase">
+          <img src="icon-digital-care-v2.svg" alt="Version 2">
+        </div>
+
+        <h3 style="margin: 20px 0 15px; color: #374151;">Caractéristiques</h3>
+        <ul class="features-list">
+          <li>Mains plus larges et protectrices</li>
+          <li>Motif de circuit dans le cœur</li>
+          <li>Accents digitaux plus prononcés</li>
+          <li>Style tech-friendly</li>
+          <li>Connexions visibles (croix)</li>
+        </ul>
+
+        <div class="pros-cons">
+          <h4 class="pros">✓ Points forts</h4>
+          <p style="font-size: 0.9em; color: #059669;">
+            • Aspect "digital" très clair<br>
+            • Détails intéressants<br>
+            • Moderne et tech<br>
+            • Motif de circuit élégant
+          </p>
+
+          <h4 class="cons" style="margin-top: 15px;">⚠ Points d'attention</h4>
+          <p style="font-size: 0.9em; color: #dc2626;">
+            • Peut sembler trop technique<br>
+            • Détails moins visibles en petit
+          </p>
+        </div>
+
+        <h4 style="margin: 20px 0 10px; color: #374151;">Test sur différents fonds</h4>
+        <div class="backgrounds-test">
+          <div class="bg-test bg-white">
+            <img src="icon-digital-care-v2.svg" alt="">
+          </div>
+          <div class="bg-test bg-light">
+            <img src="icon-digital-care-v2.svg" alt="">
+          </div>
+          <div class="bg-test bg-blue">
+            <img src="icon-digital-care-v2.svg" alt="" style="filter: brightness(0) invert(1);">
+          </div>
+          <div class="bg-test bg-dark">
+            <img src="icon-digital-care-v2.svg" alt="" style="filter: brightness(0) invert(1);">
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-primary" onclick="selectVersion(2)">Choisir</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('icon-digital-care-v2.svg')">Télécharger</button>
+        </div>
+      </div>
+
+      <!-- Version 3 -->
+      <div class="variant-card">
+        <div class="variant-header">
+          <h2>Version 3</h2>
+          <span class="tag">Minimaliste & Épuré</span>
+        </div>
+
+        <div class="icon-showcase">
+          <img src="icon-digital-care-v3.svg" alt="Version 3">
+        </div>
+
+        <h3 style="margin: 20px 0 15px; color: #374151;">Caractéristiques</h3>
+        <ul class="features-list">
+          <li>Design ultra-minimaliste</li>
+          <li>Lignes plus épaisses (2px)</li>
+          <li>Croix de santé au centre</li>
+          <li>Style géométrique moderne</li>
+          <li>Maximum de lisibilité</li>
+        </ul>
+
+        <div class="pros-cons">
+          <h4 class="pros">✓ Points forts</h4>
+          <p style="font-size: 0.9em; color: #059669;">
+            • Très épuré et moderne<br>
+            • Excellent contraste<br>
+            • Croix = soin/santé<br>
+            • Lisibilité maximale
+          </p>
+
+          <h4 class="cons" style="margin-top: 15px;">⚠ Points d'attention</h4>
+          <p style="font-size: 0.9em; color: #dc2626;">
+            • Peut sembler trop simple<br>
+            • Moins de détails
+          </p>
+        </div>
+
+        <h4 style="margin: 20px 0 10px; color: #374151;">Test sur différents fonds</h4>
+        <div class="backgrounds-test">
+          <div class="bg-test bg-white">
+            <img src="icon-digital-care-v3.svg" alt="">
+          </div>
+          <div class="bg-test bg-light">
+            <img src="icon-digital-care-v3.svg" alt="">
+          </div>
+          <div class="bg-test bg-blue">
+            <img src="icon-digital-care-v3.svg" alt="" style="filter: brightness(0) invert(1);">
+          </div>
+          <div class="bg-test bg-dark">
+            <img src="icon-digital-care-v3.svg" alt="" style="filter: brightness(0) invert(1);">
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-primary" onclick="selectVersion(3)">Choisir</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('icon-digital-care-v3.svg')">Télécharger</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-note">
+      <h3>💡 Recommandation</h3>
+      <p>
+        <strong>La Version 1 est recommandée</strong> car elle offre le meilleur équilibre entre :
+      </p>
+      <ul style="margin-top: 15px; padding-left: 20px; color: #78350f;">
+        <li style="margin: 8px 0;"><strong>Symbolisme clair</strong> : Les mains et le cœur sont immédiatement reconnaissables</li>
+        <li style="margin: 8px 0;"><strong>Approche senior-friendly</strong> : Design chaleureux et accessible sans être infantilisant</li>
+        <li style="margin: 8px 0;"><strong>Aspect digital subtil</strong> : Les petits pixels évoquent la technologie sans dominer</li>
+        <li style="margin: 8px 0;"><strong>Versatilité</strong> : Fonctionne parfaitement sur tous les fonds et à toutes les tailles</li>
+        <li style="margin: 8px 0;"><strong>Professionnalisme</strong> : Design moderne et professionnel tout en restant humain</li>
+      </ul>
+      <p style="margin-top: 15px;">
+        Cette icône communique parfaitement la mission de CyberNow Seniors : protection technique + accompagnement humain.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function selectVersion(version) {
+      alert(`Version ${version} sélectionnée ! ✓\n\nFichier : icon-digital-care${version > 1 ? '-v' + version : ''}.svg`);
+    }
+
+    function downloadSVG(filename) {
+      const link = document.createElement('a');
+      link.href = filename;
+      link.download = filename;
+      link.click();
+    }
+  </script>
+</body>
+</html>
