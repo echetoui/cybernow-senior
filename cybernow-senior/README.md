@@ -74,7 +74,7 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_PLAUSIBLE_DOMAIN=cybernowseniors.ca
 
 # Email Service (production)
-CONTACT_EMAIL=contact@cybernowseniors.ca
+CONTACT_EMAIL=info@cybernow.io
 RESEND_API_KEY=re_xxxxxxxxxx
 
 # SEO
@@ -205,8 +205,8 @@ MIT License - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ## 🆘 Support
 
-- **Email** : contact@cybernowseniors.ca
-- **Téléphone** : +1-514-555-0123
+- **Email** : info@cybernow.io
+- **Téléphone** : +1-581-705-0399
 - **Issues** : [GitHub Issues](https://github.com/votre-username/cybernow-seniors/issues)
 
 ## 🙏 Remerciements

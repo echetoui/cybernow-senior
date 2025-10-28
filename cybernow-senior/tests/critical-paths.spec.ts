@@ -22,7 +22,7 @@ test.describe('Critical User Paths', () => {
     
     // Test contact form
     await page.getByLabel(/nom complet/i).fill('Test User');
-    await page.getByLabel(/numéro de téléphone/i).fill('514-555-0123');
+    await page.getByLabel(/numéro de téléphone/i).fill('581-705-0399');
     await page.getByLabel(/votre message/i).fill('Test message for automated testing');
     
     // Submit form (but don't actually send in test)

@@ -292,7 +292,7 @@ export default function ResourcesPage() {
                 
                 <div className="text-center mt-8">
                   <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
-                    <a href="tel:1-800-CYBERNOW">Réserver ma place</a>
+                    <a href="tel:+1-581-705-0399">Réserver ma place</a>
                   </Button>
                 </div>
               </CardContent>

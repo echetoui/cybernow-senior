@@ -122,9 +122,9 @@ export default function ContactPage() {
                       size="lg"
                       className="w-full min-h-16 text-xl bg-red-600 hover:bg-red-700 text-white"
                     >
-                      <a href="tel:1-800-CYBERNOW">
+                      <a href="tel:+1-581-705-0399">
                         <Phone className="h-6 w-6 mr-3" />
-                        1-800-CYBERNOW
+                        581-705-0399
                       </a>
                     </Button>
                   </div>
@@ -205,9 +205,9 @@ export default function ContactPage() {
                         }`}
                       >
                         {method.title.includes('Téléphone') ? (
-                          <a href="tel:1-800-CYBERNOW">{method.action}</a>
+                          <a href="tel:+1-581-705-0399">{method.action}</a>
                         ) : method.title.includes('personne') ? (
-                          <a href="tel:1-800-CYBERNOW">Appelez pour rendez-vous</a>
+                          <a href="tel:+1-581-705-0399">Appelez pour rendez-vous</a>
                         ) : (
                           <a href="#contact-form">{method.action}</a>
                         )}
@@ -297,9 +297,9 @@ export default function ContactPage() {
                     size="lg"
                     className="w-full min-h-16 text-xl bg-secondary hover:bg-secondary/90 text-white"
                   >
-                    <a href="tel:1-800-CYBERNOW">
+                    <a href="tel:+1-581-705-0399">
                       <Phone className="h-6 w-6 mr-3" />
-                      1-800-CYBERNOW
+                      581-705-0399
                     </a>
                   </Button>
 
@@ -329,11 +329,11 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-secondary mt-1" />
                     <div>
                       <h4 className="font-semibold text-foreground">Courriel</h4>
-                      <a 
-                        href="mailto:seniors@cybernow.ca"
+                      <a
+                        href="mailto:info@cybernow.io"
                         className="text-primary hover:text-primary/80 transition-colors"
                       >
-                        seniors@cybernow.ca
+                        info@cybernow.io
                       </a>
                       <p className="text-sm text-muted-foreground">Réponse garantie avec suivi téléphonique</p>
                     </div>

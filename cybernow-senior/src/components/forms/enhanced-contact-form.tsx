@@ -184,7 +184,7 @@ export function EnhancedContactForm() {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => handleChange('phone', e.target.value)}
-                  placeholder="514-555-0123"
+                  placeholder="581-705-0399"
                   className={`mt-2 text-lg ${errors.phone ? 'border-destructive' : ''}`}
                   aria-invalid={!!errors.phone}
                 />

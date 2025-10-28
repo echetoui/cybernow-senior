@@ -92,7 +92,7 @@ Visitez https://haveibeenpwned.com pour vérifier si vos comptes ont été compr
 
 ## Besoin d'aide ?
 
-Appelez-nous au 514-555-0123 pour une assistance personnalisée.`,
+Appelez-nous au 581-705-0399 pour une assistance personnalisée.`,
       en: `# Create a secure password
 
 ## Why it's important
@@ -150,7 +150,7 @@ Visit https://haveibeenpwned.com to check if your accounts have been compromised
 
 ## Need help?
 
-Call us at 514-555-0123 for personalized assistance.`
+Call us at 581-705-0399 for personalized assistance.`
     },
     difficulty: 'beginner',
     readingTime: 5,
@@ -235,7 +235,7 @@ L'hameçonnage (phishing) est une technique où des fraudeurs se font passer pou
 
 ## En cas de doute
 
-**Règle d'or :** Si vous avez le moindre doute, ne faites rien et appelez-nous au 514-555-0123.
+**Règle d'or :** Si vous avez le moindre doute, ne faites rien et appelez-nous au 581-705-0399.
 
 ## J'ai cliqué, que faire ?
 
@@ -309,7 +309,7 @@ Phishing is a technique where fraudsters impersonate a trusted organization to s
 
 ## When in doubt
 
-**Golden rule:** If you have any doubt, do nothing and call us at 514-555-0123.
+**Golden rule:** If you have any doubt, do nothing and call us at 581-705-0399.
 
 ## I clicked, what to do?
 
@@ -459,7 +459,7 @@ Les réseaux sociaux contiennent beaucoup d'informations personnelles que les fr
 
 ## Besoin d'aide personnalisée ?
 
-Nous offrons des sessions d'aide individualisée pour configurer vos réseaux sociaux. Appelez au 514-555-0123 pour prendre rendez-vous.`,
+Nous offrons des sessions d'aide individualisée pour configurer vos réseaux sociaux. Appelez au 581-705-0399 pour prendre rendez-vous.`,
       en: `# Secure your social media
 
 ## Why it's important
@@ -576,7 +576,7 @@ Social media contains a lot of personal information that fraudsters can use to t
 
 ## Need personalized help?
 
-We offer individual help sessions to configure your social media. Call 514-555-0123 to make an appointment.`
+We offer individual help sessions to configure your social media. Call 581-705-0399 to make an appointment.`
     },
     difficulty: 'intermediate',
     readingTime: 10,

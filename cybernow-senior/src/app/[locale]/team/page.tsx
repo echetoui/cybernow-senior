@@ -93,8 +93,8 @@ export default async function TeamPage({ params }: { params: Promise<{ locale: s
                   role={locale === 'fr' ? `team.${member.key}.role` : `team.${member.key}.role`}
                   bio={locale === 'fr' ? `team.${member.key}.bio` : `team.${member.key}.bio`}
                   experience={locale === 'fr' ? `team.${member.key}.experience` : `team.${member.key}.experience`}
-                  email={`${member.key}@cybernowseniors.ca`}
-                  phone="+1-514-555-0123"
+                  email={`${member.key}@cybernow.io`}
+                  phone="+1-581-705-0399"
                   imagePath={member.imagePath}
                   specialties={
                     locale === 'fr'

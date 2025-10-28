@@ -50,8 +50,8 @@ export function generateSchema(type: 'Organization' | 'Service' | 'FAQ', data: R
         name: 'CyberNow Seniors',
         description: 'Services de sécurité numérique pour les aînés au Québec',
         url: baseUrl,
-        telephone: '+1-514-555-0123',
-        email: 'contact@cybernowseniors.ca',
+        telephone: '+1-581-705-0399',
+        email: 'info@cybernow.io',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Montréal',
