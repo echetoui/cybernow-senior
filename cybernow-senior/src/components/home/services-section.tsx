@@ -9,12 +9,12 @@ import { ColoredIcon } from '@/components/ui/ColoredIcon';
 
 const services = [
   {
-    iconName: 'shield' as const,
+    iconName: 'heart-handshake' as const, // Main guidant une autre main → Soutien et pédagogie
     key: 'proactiveShield',
     href: '/services/proactive-shield',
   },
   {
-    iconName: 'shield' as const, // Utilise shield pour privacy aussi
+    iconName: 'shield' as const, // Utilise shield pour privacy
     key: 'privacyConsent',
     href: '/services/privacy-consent',
   },
@@ -79,8 +79,9 @@ export function ServicesSection() {
                         <Link
                           href={service.href}
                           className="inline-flex items-center text-primary hover:text-primary/80 font-medium focus-visible:outline-primary rounded px-1 py-1"
+                          aria-label={`${t('common.learnMore')} - ${t(`home.services.${service.key}.title`)}`}
                         >
-                          {t('common.learnMore')}
+                          {t('common.learnMore')} - {t(`home.services.${service.key}.title`)}
                           <ArrowRight className="h-4 w-4 ml-1" aria-hidden="true" />
                         </Link>
                       </div>

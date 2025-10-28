@@ -33,12 +33,14 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  
+
   if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cybernowseniors.ca';
+  // Use the production URL for canonical, or the current deployment URL for previews
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ||
+                  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://cybernowseniors.ca');
   
   const title = locale === 'fr' 
     ? 'CyberNow Seniors | Sécurité numérique pour les aînés au Québec'
