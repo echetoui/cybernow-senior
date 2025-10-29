@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Phone, Menu, X, Shield, Lock, ShieldCheck, Home, BookOpen, AlertTriangle, Users } from 'lucide-react';
+import { Phone, Menu, X, Shield, Lock, ShieldCheck, Home, BookOpen, AlertTriangle, Users, Newspaper } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
@@ -18,6 +18,7 @@ export function SiteHeader() {
   const navigation = [
     { href: '/', key: 'home', icon: Home },
     { href: '/services', key: 'services', icon: ShieldCheck },
+    { href: '/blog', key: 'blog', icon: Newspaper },
     { href: '/resources', key: 'resources', icon: BookOpen },
     { href: '/alerts', key: 'alerts', icon: AlertTriangle },
     { href: '/about', key: 'about', icon: Users },
