@@ -75,10 +75,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'CyberNow Seniors',
       images: [
         {
-          url: `${baseUrl}/images/og-image.svg`,
+          url: `${baseUrl}/og-image.svg`,
           width: 1200,
           height: 630,
           alt: title,
+          type: 'image/svg+xml',
         },
       ],
     },
@@ -127,16 +128,34 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
   const messages = await getMessages();
   const organizationSchema = generateSchema('Organization', {});
+  const localBusinessSchema = generateSchema('LocalBusiness', {});
 
   return (
     <html lang={locale} className={`${inter.variable} ${sora.variable}`}>
       <head>
-        {/* Schema.org structured data */}
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#004C97" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="CyberNow Seniors" />
+
+        {/* Schema.org structured data - Organization */}
         {organizationSchema && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organizationSchema),
+            }}
+          />
+        )}
+
+        {/* Schema.org structured data - LocalBusiness */}
+        {localBusinessSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusinessSchema),
             }}
           />
         )}

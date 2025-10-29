@@ -39,19 +39,24 @@ export function getReadingTime(text: string): number {
   return Math.ceil(words / wordsPerMinute);
 }
 
-export function generateSchema(type: 'Organization' | 'Service' | 'FAQ', data: Record<string, unknown>) {
+export function generateSchema(type: 'Organization' | 'LocalBusiness' | 'Service' | 'FAQ' | 'Article', data: Record<string, unknown> = {}) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cybernowseniors.ca';
-  
+
   switch (type) {
     case 'Organization':
       return {
         '@context': 'https://schema.org',
         '@type': 'Organization',
+        '@id': `${baseUrl}/#organization`,
         name: 'CyberNow Seniors',
+        legalName: 'CyberNow Seniors',
         description: 'Services de sécurité numérique pour les aînés au Québec',
         url: baseUrl,
+        logo: `${baseUrl}/icon-digital-care.svg`,
+        image: `${baseUrl}/og-image.svg`,
         telephone: '+1-581-705-0399',
         email: 'info@cybernow.io',
+        foundingDate: '2024',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Montréal',
@@ -61,8 +66,104 @@ export function generateSchema(type: 'Organization' | 'Service' | 'FAQ', data: R
         areaServed: {
           '@type': 'State',
           name: 'Quebec',
+          '@id': 'https://www.wikidata.org/wiki/Q176',
         },
-        serviceType: 'Cybersecurity Services',
+        serviceType: ['Cybersecurity Services', 'Computer Training', 'Technical Support'],
+        sameAs: [
+          // TODO: Ajouter réseaux sociaux quand créés
+        ],
+      };
+
+    case 'LocalBusiness':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': `${baseUrl}/#localbusiness`,
+        name: 'CyberNow Seniors',
+        description: 'Services de cybersécurité adaptés aux aînés au Québec',
+        url: baseUrl,
+        logo: `${baseUrl}/icon-digital-care.svg`,
+        image: `${baseUrl}/og-image.svg`,
+        telephone: '+1-581-705-0399',
+        email: 'info@cybernow.io',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Montréal',
+          addressRegion: 'QC',
+          postalCode: '',
+          addressCountry: 'CA',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 45.5017,
+          longitude: -73.5673,
+        },
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Montréal',
+          },
+          {
+            '@type': 'City',
+            name: 'Québec',
+          },
+          {
+            '@type': 'City',
+            name: 'Laval',
+          },
+          {
+            '@type': 'City',
+            name: 'Gatineau',
+          },
+          {
+            '@type': 'State',
+            name: 'Quebec',
+          },
+        ],
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '09:00',
+            closes: '17:00',
+          },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Services de cybersécurité',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Bouclier Proactif',
+                description: 'Protection en temps réel contre les menaces en ligne',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Aide en Ligne',
+                description: 'Support technique accessible 24/7',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Support Anti-Arnaque',
+                description: 'Assistance en cas de tentative de fraude',
+              },
+            },
+          ],
+        },
+        aggregateRating: data.rating ? {
+          '@type': 'AggregateRating',
+          ratingValue: data.rating,
+          reviewCount: data.reviewCount || 1,
+        } : undefined,
       };
       
     case 'Service':
@@ -86,7 +187,7 @@ export function generateSchema(type: 'Organization' | 'Service' | 'FAQ', data: R
       return {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: Array.isArray(data) ? data.map((item: {question: string; answer: string}) => ({
+        mainEntity: Array.isArray(data.questions) ? data.questions.map((item: {question: string; answer: string}) => ({
           '@type': 'Question',
           name: item.question,
           acceptedAnswer: {
@@ -95,7 +196,39 @@ export function generateSchema(type: 'Organization' | 'Service' | 'FAQ', data: R
           },
         })) : [],
       };
-      
+
+    case 'Article':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        '@id': data.url as string,
+        headline: data.title as string,
+        description: data.description as string,
+        image: data.image || `${baseUrl}/og-image.svg`,
+        datePublished: data.publishedAt as string,
+        dateModified: data.modifiedAt || data.publishedAt as string,
+        author: {
+          '@type': 'Organization',
+          name: 'CyberNow Seniors',
+          url: baseUrl,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'CyberNow Seniors',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${baseUrl}/icon-digital-care.svg`,
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': data.url as string,
+        },
+        articleSection: data.category as string || 'Cybersecurity Alert',
+        keywords: data.keywords as string[] || ['cybersécurité', 'aînés', 'arnaques', 'sécurité numérique'],
+        inLanguage: data.locale === 'en' ? 'en-CA' : 'fr-CA',
+      };
+
     default:
       return null;
   }

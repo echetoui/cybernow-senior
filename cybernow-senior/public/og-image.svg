@@ -1,0 +1,92 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond gradient -->
+  <rect width="1200" height="630" fill="#004C97"/>
+  <rect width="1200" height="630" fill="url(#gradient)" opacity="0.1"/>
+
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#003D7A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Motif de fond subtil -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="80" fill="white"/>
+    <circle cx="1100" cy="530" r="100" fill="white"/>
+    <circle cx="900" cy="100" r="60" fill="white"/>
+  </g>
+
+  <!-- Icône principale (grande) -->
+  <g transform="translate(100, 180)">
+    <!-- Main gauche -->
+    <path d="M40 96C40 96 44 80 52 76C56 74 60 74 62 78V100C62 106 60 112 54 114C48 116 40 110 40 104V96Z"
+          stroke="white"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"/>
+
+    <!-- Main droite -->
+    <path d="M120 96C120 96 116 80 108 76C104 74 100 74 98 78V100C98 106 100 112 106 114C112 116 120 110 120 104V96Z"
+          stroke="white"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"/>
+
+    <!-- Cœur -->
+    <path d="M80 116C80 116 56 96 56 74C56 64 62 58 70 58C76 58 80 62 80 68C80 62 84 58 90 58C98 58 104 64 104 74C104 96 80 116 80 116Z"
+          fill="white"
+          opacity="0.3"/>
+
+    <path d="M80 116C80 116 56 96 56 74C56 64 62 58 70 58C76 58 80 62 80 68C80 62 84 58 90 58C98 58 104 64 104 74C104 96 80 116 80 116Z"
+          stroke="white"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"/>
+
+    <!-- Croix -->
+    <path d="M80 76V84M76 80H84"
+          stroke="white"
+          stroke-width="6"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Texte principal -->
+  <text x="380" y="260" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold">
+    CyberNow Seniors
+  </text>
+
+  <!-- Sous-titre -->
+  <text x="380" y="330" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="normal" opacity="0.9">
+    Cybersécurité pour les aînés
+  </text>
+
+  <!-- Points clés -->
+  <g transform="translate(380, 380)">
+    <!-- Point 1 -->
+    <circle cx="0" cy="0" r="8" fill="#60A5FA"/>
+    <text x="25" y="8" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" opacity="0.95">
+      Protection proactive 24/7
+    </text>
+
+    <!-- Point 2 -->
+    <circle cx="0" cy="60" r="8" fill="#60A5FA"/>
+    <text x="25" y="68" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" opacity="0.95">
+      Support humain et bienveillant
+    </text>
+
+    <!-- Point 3 -->
+    <circle cx="0" cy="120" r="8" fill="#60A5FA"/>
+    <text x="25" y="128" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" opacity="0.95">
+      Formation adaptée aux aînés
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="580" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="24" text-anchor="middle" opacity="0.8">
+    cybernowseniors.ca • 581-705-0399
+  </text>
+</svg>
