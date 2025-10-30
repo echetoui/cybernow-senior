@@ -1,12 +1,11 @@
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Calendar, Clock, User, Tag, ArrowLeft, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { blogPosts, type BlogPost } from '@/lib/data/blog';
+import { blogPosts } from '@/lib/data/blog';
 import { formatDate, generateSchema } from '@/lib/utils';
 
 export async function generateStaticParams() {
@@ -167,60 +166,63 @@ export default async function BlogPostPage({
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  h1: ({ node, ...props }) => (
+                  h1: (props) => (
                     <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground" {...props} />
                   ),
-                  h2: ({ node, ...props }) => (
+                  h2: (props) => (
                     <h3 className="text-2xl font-bold mt-10 mb-4 text-foreground" {...props} />
                   ),
-                  h3: ({ node, ...props }) => (
+                  h3: (props) => (
                     <h4 className="text-xl font-semibold mt-8 mb-3 text-foreground" {...props} />
                   ),
-                  p: ({ node, ...props }) => (
+                  p: (props) => (
                     <p className="mb-6 text-muted-foreground leading-relaxed" {...props} />
                   ),
-                  ul: ({ node, ...props }) => (
+                  ul: (props) => (
                     <ul className="my-6 ml-6 list-disc space-y-2" {...props} />
                   ),
-                  ol: ({ node, ...props }) => (
+                  ol: (props) => (
                     <ol className="my-6 ml-6 list-decimal space-y-2" {...props} />
                   ),
-                  li: ({ node, ...props }) => (
+                  li: (props) => (
                     <li className="text-muted-foreground" {...props} />
                   ),
-                  blockquote: ({ node, ...props }) => (
+                  blockquote: (props) => (
                     <blockquote
                       className="border-l-4 border-primary pl-6 py-4 my-6 bg-primary/5 italic"
                       {...props}
                     />
                   ),
-                  code: ({ node, inline, ...props }: any) =>
-                    inline ? (
+                  code: (props) => {
+                    const { className, ...rest } = props;
+                    const isInline = !className?.includes('language-');
+                    return isInline ? (
                       <code
                         className="bg-secondary px-2 py-1 rounded text-sm font-mono"
-                        {...props}
+                        {...rest}
                       />
                     ) : (
                       <code
                         className="block bg-secondary p-4 rounded-lg overflow-x-auto my-6 font-mono text-sm"
-                        {...props}
+                        {...rest}
                       />
-                    ),
-                  table: ({ node, ...props }) => (
+                    );
+                  },
+                  table: (props) => (
                     <div className="overflow-x-auto my-6">
                       <table className="min-w-full border border-border" {...props} />
                     </div>
                   ),
-                  th: ({ node, ...props }) => (
+                  th: (props) => (
                     <th className="border border-border bg-secondary px-4 py-2 text-left font-semibold" {...props} />
                   ),
-                  td: ({ node, ...props }) => (
+                  td: (props) => (
                     <td className="border border-border px-4 py-2" {...props} />
                   ),
-                  a: ({ node, ...props }) => (
+                  a: (props) => (
                     <a className="text-primary hover:underline font-medium" {...props} />
                   ),
-                  strong: ({ node, ...props }) => (
+                  strong: (props) => (
                     <strong className="font-bold text-foreground" {...props} />
                   ),
                 }}

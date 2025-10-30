@@ -7,9 +7,6 @@ const nextConfig = {
   // Compression for better performance
   compress: true,
 
-  // Font optimization
-  optimizeFonts: true,
-
   // Image optimization
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -25,7 +22,6 @@ const nextConfig = {
   },
 
   // Performance optimizations
-  swcMinify: true,
   reactStrictMode: true,
   poweredByHeader: false,
 
@@ -90,20 +86,11 @@ const nextConfig = {
         ],
       },
       {
-        source: '/icon-:path*.svg',
+        source: '/:path(.*\\.svg)',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/og-image.svg',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400', // 1 day
           },
         ],
       },

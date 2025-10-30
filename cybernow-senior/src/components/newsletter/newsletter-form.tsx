@@ -56,7 +56,7 @@ export function NewsletterForm({ locale }: NewsletterFormProps) {
       setTimeout(() => {
         setIsSuccess(false);
       }, 5000);
-    } catch (err) {
+    } catch {
       setError(
         locale === 'fr'
           ? 'Une erreur est survenue. Veuillez réessayer.'

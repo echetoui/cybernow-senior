@@ -1,5 +1,3 @@
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { Calendar, Clock, Tag, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,7 +7,6 @@ import { formatDate } from '@/lib/utils';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'blog' });
 
   const title = locale === 'fr'
     ? 'Blog | Conseils et guides de cybersécurité pour aînés'
@@ -35,7 +32,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'blog' });
   const categories = getAllCategories(locale as 'fr' | 'en');
 
   // Sort posts by date (most recent first)

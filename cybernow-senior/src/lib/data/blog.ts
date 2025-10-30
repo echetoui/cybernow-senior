@@ -619,11 +619,11 @@ Online banking is convenient, but requires important security precautions. Here'
   }
 ];
 
-export function getBlogPost(slug: string, locale: 'fr' | 'en'): BlogPost | undefined {
+export function getBlogPost(slug: string, _locale?: 'fr' | 'en'): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug);
 }
 
-export function getFeaturedPosts(locale: 'fr' | 'en'): BlogPost[] {
+export function getFeaturedPosts(_locale?: 'fr' | 'en'): BlogPost[] {
   return blogPosts.filter(post => post.featured);
 }
 
